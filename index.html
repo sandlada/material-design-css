@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevApp</title>
+
+    <link rel="stylesheet" href="./color.css" />
+    <link rel="stylesheet" href="./motion.css" />
+    <link rel="stylesheet" href="./shape.css" />
+    <link rel="stylesheet" href="./typography.css" />
+
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .shape-block {
+            height: 96px;
+            width: 96px;
+            display: inline-block;
+            background-color: rgb(163, 219, 98);
+        }
+
+        .filled-button {
+            height: 56px;
+            width: 64px;
+            border-radius: 33px;
+            flex-grow: 1;
+            flex-shrink: 1;
+
+            &:active {
+                width: 512px;
+            }
+        }
+
+        .color-block {
+            display: flex;
+            min-height: 72px;
+            align-items: center;
+            padding: 0px 12px;
+            overflow: auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        span {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            margin: 32px 24px 12px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            box-sizing: border-box;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 24px;
+
+            @media (width >=640px) {
+                max-width: 640px;
+            }
+
+            @media (width >=768px) {
+                max-width: 768px;
+            }
+
+            @media (width >=1024px) {
+                max-width: 1024px;
+            }
+
+            @media (width >=1280px) {
+                max-width: 1280px;
+            }
+        }
+
+        .fixed-bg-1 {
+            position: fixed;
+            left: -128px;
+            top: -256px;
+            background-color: rgb(255, 252, 60);
+            z-index: -1;
+            filter: blur(256px);
+            height: 512px;
+            width: 512px;
+        }
+
+        .fixed-bg-2 {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background-color: rgb(128, 255, 111);
+            opacity: 0.38;
+            z-index: -1;
+            filter: blur(256px);
+            height: 512px;
+            width: 512px;
+        }
+
+        .hero {
+            display: block;
+            text-align: start;
+            padding: 64px 0px;
+
+            &>p {
+                padding: 32px 0px 0px 0px;
+            }
+        }
+
+        .card {
+            border-radius: 24px;
+            border: 1px solid var(--md-sys-color-outline-variant);
+            background-color: white;
+            padding: 12px;
+            overflow: auto;
+            display: block;
+            box-sizing: border-box;
+            margin: 24px 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <span aria-hidden="true" class="fixed-bg-1"></span>
+    <span aria-hidden="true" class="fixed-bg-2"></span>
+
+    <div class="container">
+
+        <section class="hero">
+            <h1 class="emphasized-display-small">@sandlada&sol;material-design-css</h1>
+            <p class="body-large">A ready-made npm package for a collection of css styles in the material design style:
+            </p>
+        </section>
+
+
+        <h2 class="emphasized-headline-medium">Typography</h2>
+
+        <div class="card" style="display: grid; grid-template-columns: 1fr 1fr;">
+            <div class="flex flex-col">
+                <span class="display-large">Display Large</span>
+                <span class="display-medium">Display Medium</span>
+                <span class="display-small">Display Small</span>
+
+                <span class="headline-large">Headline Large</span>
+                <span class="headline-medium">Headline Medium</span>
+                <span class="headline-small">Headline Small</span>
+
+                <span class="title-large">Title Large</span>
+                <span class="title-medium">Title Medium</span>
+                <span class="title-small">Title Small</span>
+
+                <span class="body-large">Body Large</span>
+                <span class="body-medium">Body Medium</span>
+                <span class="body-small">Body Small</span>
+
+                <span class="label-large">Label Large</span>
+                <span class="label-medium">Label Medium</span>
+                <span class="label-small">Label Small</span>
+            </div>
+
+            <div class="flex flex-col">
+                <span class="emphasized-display-large">Display Large</span>
+                <span class="emphasized-display-medium">Display Medium</span>
+                <span class="emphasized-display-small">Display Small</span>
+
+                <span class="emphasized-headline-large">Headline Large</span>
+                <span class="emphasized-headline-medium">Headline Medium</span>
+                <span class="emphasized-headline-small">Headline Small</span>
+
+                <span class="emphasized-title-large">Title Large</span>
+                <span class="emphasized-title-medium">Title Medium</span>
+                <span class="emphasized-title-small">Title Small</span>
+
+                <span class="emphasized-body-large">Body Large</span>
+                <span class="emphasized-body-medium">Body Medium</span>
+                <span class="emphasized-body-small">Body Small</span>
+
+                <span class="emphasized-label-large">Label Large</span>
+                <span class="emphasized-label-medium">Label Medium</span>
+                <span class="emphasized-label-small">Label Small</span>
+            </div>
+        </div>
+
+        <h2 class="emphasized-headline-medium">Shape</h2>
+
+        <div class="card" style="display: grid; grid-template-columns: repeat(9, 96px); gap: 12px;">
+
+            <span class="shape-block shape-none"></span>
+            <span class="shape-block shape-extra-small"></span>
+            <span class="shape-block shape-small"></span>
+            <span class="shape-block shape-medium"></span>
+            <span class="shape-block shape-large"></span>
+            <span class="shape-block shape-large-increased"></span>
+            <span class="shape-block shape-extra-large"></span>
+            <span class="shape-block shape-extra-large-increased"></span>
+            <span class="shape-block shape-extra-extra-large"></span>
+
+            <span class="shape-block shape-none-t"></span>
+            <span class="shape-block shape-extra-small-t"></span>
+            <span class="shape-block shape-small-t"></span>
+            <span class="shape-block shape-medium-t"></span>
+            <span class="shape-block shape-large-t"></span>
+            <span class="shape-block shape-large-increased-t"></span>
+            <span class="shape-block shape-extra-large-t"></span>
+            <span class="shape-block shape-extra-large-increased-t"></span>
+            <span class="shape-block shape-extra-extra-large-t"></span>
+
+            <span class="shape-block shape-none-r"></span>
+            <span class="shape-block shape-extra-small-r"></span>
+            <span class="shape-block shape-small-r"></span>
+            <span class="shape-block shape-medium-r"></span>
+            <span class="shape-block shape-large-r"></span>
+            <span class="shape-block shape-large-increased-r"></span>
+            <span class="shape-block shape-extra-large-r"></span>
+            <span class="shape-block shape-extra-large-increased-r"></span>
+            <span class="shape-block shape-extra-extra-large-r"></span>
+
+            <span class="shape-block shape-none-b"></span>
+            <span class="shape-block shape-extra-small-b"></span>
+            <span class="shape-block shape-small-b"></span>
+            <span class="shape-block shape-medium-b"></span>
+            <span class="shape-block shape-large-b"></span>
+            <span class="shape-block shape-large-increased-b"></span>
+            <span class="shape-block shape-extra-large-b"></span>
+            <span class="shape-block shape-extra-large-increased-b"></span>
+            <span class="shape-block shape-extra-extra-large-b"></span>
+
+            <span class="shape-block shape-none-l"></span>
+            <span class="shape-block shape-extra-small-l"></span>
+            <span class="shape-block shape-small-l"></span>
+            <span class="shape-block shape-medium-l"></span>
+            <span class="shape-block shape-large-l"></span>
+            <span class="shape-block shape-large-increased-l"></span>
+            <span class="shape-block shape-extra-large-l"></span>
+            <span class="shape-block shape-extra-large-increased-l"></span>
+            <span class="shape-block shape-extra-extra-large-l"></span>
+        </div>
+
+        <h2 class="emphasized-headline-medium">Motion</h2>
+
+        <div class="card" style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex;flex-wrap: nowrap;gap: 0px;">
+                <button class="filled-button transition-expressive-fast-spatial"></button>
+                <button class="filled-button transition-expressive-default-spatial"></button>
+                <button class="filled-button transition-expressive-slow-spatial"></button>
+                <button class="filled-button transition-expressive-fast-effects"></button>
+                <button class="filled-button transition-expressive-default-effects"></button>
+                <button class="filled-button transition-expressive-slow-effects"></button>
+            </div>
+
+            <div style="display: flex;flex-wrap: nowrap;gap: 0px;">
+                <button class="filled-button transition-standard-fast-spatial"></button>
+                <button class="filled-button transition-standard-default-spatial"></button>
+                <button class="filled-button transition-standard-slow-spatial"></button>
+                <button class="filled-button transition-standard-fast-effects"></button>
+                <button class="filled-button transition-standard-default-effects"></button>
+                <button class="filled-button transition-standard-slow-effects"></button>
+            </div>
+        </div>
+
+
+        <h2 class="emphasized-headline-medium">Color</h2>
+
+        <div class="card" style="display: grid; grid-template-columns: repeat(6, 1fr);gap: 0px;">
+            <span class="color-block background on-background">background</span>
+            <span class="color-block on-surface surface">surface</span>
+            <span class="color-block on-surface surface-dim">surface-dim</span>
+            <span class="color-block on-surface surface-bright">surface-bright</span>
+            <span class="color-block on-surface surface-container-lowest">surface-container-lowest</span>
+            <span class="color-block on-surface surface-container-low">surface-container-low</span>
+            <span class="color-block on-surface surface-container">surface-container</span>
+            <span class="color-block on-surface surface-container-high">surface-container-high</span>
+            <span class="color-block on-surface surface-container-highest">surface-container-highest</span>
+            <span class="color-block on-surface surface-variant">surface-variant</span>
+            <span class="color-block inverse-on-surface inverse-surface">inverse-surface</span>
+            <span class="color-block inverse-on-surface bg-outline">outline</span>
+            <span class="color-block on-surface bg-outline-variant">outline-variant</span>
+            <span class="color-block inverse-on-surface shadow">shadow</span>
+            <span class="color-block inverse-on-surface scrim">scrim</span>
+            <span class="color-block inverse-on-surface surface-tint">surface-tint</span>
+            <span class="color-block on-primary primary">primary</span>
+            <span class="color-block on-primary-container primary-container">primary-container</span>
+            <span class="color-block primary inverse-primary">inverse-primary</span>
+            <span class="color-block on-secondary secondary">secondary</span>
+            <span class="color-block on-secondary-container secondary-container">secondary-container</span>
+            <span class="color-block on-tertiary tertiary">tertiary</span>
+            <span class="color-block on-tertiary-container tertiary-container">tertiary-container</span>
+            <span class="color-block on-error error">error</span>
+            <span class="color-block on-error-container error-container">error-container</span>
+            <span class="color-block on-primary-fixed primary-fixed">primary-fixed</span>
+            <span class="color-block on-primary-fixed-variant primary-fixed-dim">primary-fixed-dim</span>
+            <span class="color-block on-secondary-fixed secondary-fixed">secondary-fixed</span>
+            <span class="color-block on-secondary-fixed-variant secondary-fixed-dim">secondary-fixed-dim</span>
+            <span class="color-block on-tertiary-fixed tertiary-fixed">tertiary-fixed</span>
+            <span class="color-block on-tertiary-fixed-variant tertiary-fixed-dim">tertiary-fixed-dim</span>
+        </div>
+    </div>
+
+</body>
+
+</html>

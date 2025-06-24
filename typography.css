@@ -1,0 +1,428 @@
+
+@layer material-design-system.typography.variable {
+    :root {
+
+        --_display-large-font: var(--md-sys-typescale-display-large-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_display-large-size: var(--md-sys-typescale-display-large-size, 57px);
+        --_display-large-tracking: var(--md-sys-typescale-display-large-tracking, -0.25px);
+        --_display-large-line-height: var(--md-sys-typescale-display-large-line-height, 64px);
+        --_display-large-weight: var(--md-sys-typescale-display-large-weight, var(--md-ref-typeface-weight-regular, 400));
+
+        --_display-medium-font: var(--md-sys-typescale-display-medium-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_display-medium-size: var(--md-sys-typescale-display-medium-size, 45px);
+        --_display-medium-tracking: var(--md-sys-typescale-display-medium-tracking, 0px);
+        --_display-medium-line-height: var(--md-sys-typescale-display-medium-line-height, 52px);
+        --_display-medium-weight: var(--md-sys-typescale-display-medium-weight, var(--md-ref-typeface-weight-regular, 400));
+
+        --_display-small-font: var(--md-sys-typescale-display-small-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_display-small-size: var(--md-sys-typescale-display-small-size, 36px);
+        --_display-small-tracking: var(--md-sys-typescale-display-small-tracking, 0px);
+        --_display-small-line-height: var(--md-sys-typescale-display-small-line-height, 44px);
+        --_display-small-weight: var(--md-sys-typescale-display-small-weight, var(--md-ref-typeface-weight-regular, 400));
+
+        --_headline-large-font: var(--md-sys-typescale-headline-large-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_headline-large-size: var(--md-sys-typescale-headline-large-size, 32px);
+        --_headline-large-tracking: var(--md-sys-typescale-headline-large-tracking, 0px);
+        --_headline-large-line-height: var(--md-sys-typescale-headline-large-line-height, 40px);
+        --_headline-large-weight: var(--md-sys-typescale-headline-large-weight, var(--md-ref-typeface-weight-regular, 400));
+
+        --_headline-medium-font: var(--md-sys-typescale-headline-medium-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_headline-medium-size: var(--md-sys-typescale-headline-medium-size, 28px);
+        --_headline-medium-tracking: var(--md-sys-typescale-headline-medium-tracking, 0px);
+        --_headline-medium-line-height: var(--md-sys-typescale-headline-medium-line-height, 36px);
+        --_headline-medium-weight: var(--md-sys-typescale-headline-medium-weight, var(--md-ref-typeface-weight-regular, 400));
+
+        --_headline-small-font: var(--md-sys-typescale-headline-small-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_headline-small-size: var(--md-sys-typescale-headline-small-size, 24px);
+        --_headline-small-tracking: var(--md-sys-typescale-headline-small-tracking, 0px);
+        --_headline-small-line-height: var(--md-sys-typescale-headline-small-line-height, 32px);
+        --_headline-small-weight: var(--md-sys-typescale-headline-small-weight, var(--md-ref-typeface-weight-regular, 400));
+
+        --_title-large-font: var(--md-sys-typescale-title-large-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_title-large-size: var(--md-sys-typescale-title-large-size, 22px);
+        --_title-large-tracking: var(--md-sys-typescale-title-large-tracking, 0px);
+        --_title-large-line-height: var(--md-sys-typescale-title-large-line-height, 28px);
+        --_title-large-weight: var(--md-sys-typescale-title-large-weight, var(--md-ref-typeface-weight-regular, 400));
+
+        --_title-medium-font: var(--md-sys-typescale-title-medium-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_title-medium-size: var(--md-sys-typescale-title-medium-size, 16px);
+        --_title-medium-tracking: var(--md-sys-typescale-title-medium-tracking, 0.15px);
+        --_title-medium-line-height: var(--md-sys-typescale-title-medium-line-height, 24px);
+        --_title-medium-weight: var(--md-sys-typescale-title-medium-weight, var(--md-ref-typeface-weight-medium, 500));
+
+        --_title-small-font: var(--md-sys-typescale-title-small-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_title-small-size: var(--md-sys-typescale-title-small-size, 14px);
+        --_title-small-tracking: var(--md-sys-typescale-title-small-tracking, 0.1px);
+        --_title-small-line-height: var(--md-sys-typescale-title-small-line-height, 20px);
+        --_title-small-weight: var(--md-sys-typescale-title-small-weight, var(--md-ref-typeface-weight-medium, 500));
+
+        --_body-large-font: var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_body-large-size: var(--md-sys-typescale-body-large-size, 16px);
+        --_body-large-tracking: var(--md-sys-typescale-body-large-tracking, 0.5px);
+        --_body-large-line-height: var(--md-sys-typescale-body-large-line-height, 24px);
+        --_body-large-weight: var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400));
+
+        --_body-medium-font: var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_body-medium-size: var(--md-sys-typescale-body-medium-size, 14px);
+        --_body-medium-tracking: var(--md-sys-typescale-body-medium-tracking, 0.25px);
+        --_body-medium-line-height: var(--md-sys-typescale-body-medium-line-height, 20px);
+        --_body-medium-weight: var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400));
+
+        --_body-small-font: var(--md-sys-typescale-body-small-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_body-small-size: var(--md-sys-typescale-body-small-size, 12px);
+        --_body-small-tracking: var(--md-sys-typescale-body-small-tracking, 0.4px);
+        --_body-small-line-height: var(--md-sys-typescale-body-small-line-height, 16px);
+        --_body-small-weight: var(--md-sys-typescale-body-small-weight, var(--md-ref-typeface-weight-regular, 400));
+
+        --_label-large-font: var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_label-large-size: var(--md-sys-typescale-label-large-size, 14px);
+        --_label-large-tracking: var(--md-sys-typescale-label-large-tracking, 0.1px);
+        --_label-large-line-height: var(--md-sys-typescale-label-large-line-height, 20px);
+        --_label-large-weight: var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500));
+
+        --_label-medium-font: var(--md-sys-typescale-label-medium-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_label-medium-size: var(--md-sys-typescale-label-medium-size, 12px);
+        --_label-medium-tracking: var(--md-sys-typescale-label-medium-tracking, 0.5px);
+        --_label-medium-line-height: var(--md-sys-typescale-label-medium-line-height, 16px);
+        --_label-medium-weight: var(--md-sys-typescale-label-medium-weight, var(--md-ref-typeface-weight-medium, 500));
+
+        --_label-small-font: var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_label-small-size: var(--md-sys-typescale-label-small-size, 11px);
+        --_label-small-tracking: var(--md-sys-typescale-label-small-tracking, 0.5px);
+        --_label-small-line-height: var(--md-sys-typescale-label-small-line-height, 16px);
+        --_label-small-weight: var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));
+
+        --_emphasized-display-large-font: var(--md-sys-typescale-emphasized-display-large-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_emphasized-display-large-size: var(--md-sys-typescale-emphasized-display-large-size, 57px);
+        --_emphasized-display-large-tracking: var(--md-sys-typescale-emphasized-display-large-tracking, -0.25px);
+        --_emphasized-display-large-line-height: var(--md-sys-typescale-emphasized-display-large-line-height, 64px);
+        --_emphasized-display-large-weight: var(--md-sys-typescale-emphasized-display-large-weight, var(--md-ref-typeface-weight-regular, 500));
+
+        --_emphasized-display-medium-font: var(--md-sys-typescale-emphasized-display-medium-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_emphasized-display-medium-size: var(--md-sys-typescale-emphasized-display-medium-size, 45px);
+        --_emphasized-display-medium-tracking: var(--md-sys-typescale-emphasized-display-medium-tracking, 0px);
+        --_emphasized-display-medium-line-height: var(--md-sys-typescale-emphasized-display-medium-line-height, 52px);
+        --_emphasized-display-medium-weight: var(--md-sys-typescale-emphasized-display-medium-weight, var(--md-ref-typeface-weight-regular, 500));
+
+        --_emphasized-display-small-font: var(--md-sys-typescale-emphasized-display-small-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_emphasized-display-small-size: var(--md-sys-typescale-emphasized-display-small-size, 36px);
+        --_emphasized-display-small-tracking: var(--md-sys-typescale-emphasized-display-small-tracking, 0px);
+        --_emphasized-display-small-line-height: var(--md-sys-typescale-emphasized-display-small-line-height, 44px);
+        --_emphasized-display-small-weight: var(--md-sys-typescale-emphasized-display-small-weight, var(--md-ref-typeface-weight-regular, 500));
+
+        --_emphasized-headline-large-font: var(--md-sys-typescale-emphasized-headline-large-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_emphasized-headline-large-size: var(--md-sys-typescale-emphasized-headline-large-size, 32px);
+        --_emphasized-headline-large-tracking: var(--md-sys-typescale-emphasized-headline-large-tracking, 0px);
+        --_emphasized-headline-large-line-height: var(--md-sys-typescale-emphasized-headline-large-line-height, 40px);
+        --_emphasized-headline-large-weight: var(--md-sys-typescale-emphasized-headline-large-weight, var(--md-ref-typeface-weight-regular, 500));
+
+        --_emphasized-headline-medium-font: var(--md-sys-typescale-emphasized-headline-medium-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_emphasized-headline-medium-size: var(--md-sys-typescale-emphasized-headline-medium-size, 28px);
+        --_emphasized-headline-medium-tracking: var(--md-sys-typescale-emphasized-headline-medium-tracking, 0px);
+        --_emphasized-headline-medium-line-height: var(--md-sys-typescale-emphasized-headline-medium-line-height, 36px);
+        --_emphasized-headline-medium-weight: var(--md-sys-typescale-emphasized-headline-medium-weight, var(--md-ref-typeface-weight-regular, 500));
+
+        --_emphasized-headline-small-font: var(--md-sys-typescale-emphasized-headline-small-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_emphasized-headline-small-size: var(--md-sys-typescale-emphasized-headline-small-size, 24px);
+        --_emphasized-headline-small-tracking: var(--md-sys-typescale-emphasized-headline-small-tracking, 0px);
+        --_emphasized-headline-small-line-height: var(--md-sys-typescale-emphasized-headline-small-line-height, 32px);
+        --_emphasized-headline-small-weight: var(--md-sys-typescale-emphasized-headline-small-weight, var(--md-ref-typeface-weight-regular, 500));
+
+        --_emphasized-title-large-font: var(--md-sys-typescale-emphasized-title-large-font, var(--md-ref-typeface-brand, "Roboto"));
+        --_emphasized-title-large-size: var(--md-sys-typescale-emphasized-title-large-size, 22px);
+        --_emphasized-title-large-tracking: var(--md-sys-typescale-emphasized-title-large-tracking, 0px);
+        --_emphasized-title-large-line-height: var(--md-sys-typescale-emphasized-title-large-line-height, 28px);
+        --_emphasized-title-large-weight: var(--md-sys-typescale-emphasized-title-large-weight, var(--md-ref-typeface-weight-regular, 500));
+
+        --_emphasized-title-medium-font: var(--md-sys-typescale-emphasized-title-medium-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_emphasized-title-medium-size: var(--md-sys-typescale-emphasized-title-medium-size, 16px);
+        --_emphasized-title-medium-tracking: var(--md-sys-typescale-emphasized-title-medium-tracking, 0.15px);
+        --_emphasized-title-medium-line-height: var(--md-sys-typescale-emphasized-title-medium-line-height, 24px);
+        --_emphasized-title-medium-weight: var(--md-sys-typescale-emphasized-title-medium-weight, var(--md-ref-typeface-weight-medium, 700));
+
+        --_emphasized-title-small-font: var(--md-sys-typescale-emphasized-title-small-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_emphasized-title-small-size: var(--md-sys-typescale-emphasized-title-small-size, 14px);
+        --_emphasized-title-small-tracking: var(--md-sys-typescale-emphasized-title-small-tracking, 0.1px);
+        --_emphasized-title-small-line-height: var(--md-sys-typescale-emphasized-title-small-line-height, 20px);
+        --_emphasized-title-small-weight: var(--md-sys-typescale-emphasized-title-small-weight, var(--md-ref-typeface-weight-medium, 700));
+
+        --_emphasized-body-large-font: var(--md-sys-typescale-emphasized-body-large-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_emphasized-body-large-size: var(--md-sys-typescale-emphasized-body-large-size, 16px);
+        --_emphasized-body-large-tracking: var(--md-sys-typescale-emphasized-body-large-tracking, 0.5px);
+        --_emphasized-body-large-line-height: var(--md-sys-typescale-emphasized-body-large-line-height, 24px);
+        --_emphasized-body-large-weight: var(--md-sys-typescale-emphasized-body-large-weight, var(--md-ref-typeface-weight-regular, 500));
+
+        --_emphasized-body-medium-font: var(--md-sys-typescale-emphasized-body-medium-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_emphasized-body-medium-size: var(--md-sys-typescale-emphasized-body-medium-size, 14px);
+        --_emphasized-body-medium-tracking: var(--md-sys-typescale-emphasized-body-medium-tracking, 0.25px);
+        --_emphasized-body-medium-line-height: var(--md-sys-typescale-emphasized-body-medium-line-height, 20px);
+        --_emphasized-body-medium-weight: var(--md-sys-typescale-emphasized-body-medium-weight, var(--md-ref-typeface-weight-regular, 500));
+
+        --_emphasized-body-small-font: var(--md-sys-typescale-emphasized-body-small-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_emphasized-body-small-size: var(--md-sys-typescale-emphasized-body-small-size, 12px);
+        --_emphasized-body-small-tracking: var(--md-sys-typescale-emphasized-body-small-tracking, 0.4px);
+        --_emphasized-body-small-line-height: var(--md-sys-typescale-emphasized-body-small-line-height, 16px);
+        --_emphasized-body-small-weight: var(--md-sys-typescale-emphasized-body-small-weight, var(--md-ref-typeface-weight-regular, 500));
+
+        --_emphasized-label-large-font: var(--md-sys-typescale-emphasized-label-large-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_emphasized-label-large-size: var(--md-sys-typescale-emphasized-label-large-size, 14px);
+        --_emphasized-label-large-tracking: var(--md-sys-typescale-emphasized-label-large-tracking, 0.1px);
+        --_emphasized-label-large-line-height: var(--md-sys-typescale-emphasized-label-large-line-height, 20px);
+        --_emphasized-label-large-weight: var(--md-sys-typescale-emphasized-label-large-weight, var(--md-ref-typeface-weight-medium, 700));
+
+        --_emphasized-label-medium-font: var(--md-sys-typescale-emphasized-label-medium-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_emphasized-label-medium-size: var(--md-sys-typescale-emphasized-label-medium-size, 12px);
+        --_emphasized-label-medium-tracking: var(--md-sys-typescale-emphasized-label-medium-tracking, 0.5px);
+        --_emphasized-label-medium-line-height: var(--md-sys-typescale-emphasized-label-medium-line-height, 16px);
+        --_emphasized-label-medium-weight: var(--md-sys-typescale-emphasized-label-medium-weight, var(--md-ref-typeface-weight-medium, 700));
+
+        --_emphasized-label-small-font: var(--md-sys-typescale-emphasized-label-small-font, var(--md-ref-typeface-plain, "Roboto"));
+        --_emphasized-label-small-size: var(--md-sys-typescale-emphasized-label-small-size, 11px);
+        --_emphasized-label-small-tracking: var(--md-sys-typescale-emphasized-label-small-tracking, 0.5px);
+        --_emphasized-label-small-line-height: var(--md-sys-typescale-emphasized-label-small-line-height, 16px);
+        --_emphasized-label-small-weight: var(--md-sys-typescale-emphasized-label-small-weight, var(--md-ref-typeface-weight-medium, 700));
+
+    }
+}
+
+@layer material-design-system.typography {
+    .display-large {
+        font-family: var(--_display-large-font);
+        font-size: var(--_display-large-size);
+        font-weight: var(--_display-large-weight);
+        line-height: var(--_display-large-line-height);
+        letter-spacing: var(--_display-large-tracking)
+    }
+
+    .display-medium {
+        font-family: var(--_display-medium-font);
+        font-size: var(--_display-medium-size);
+        font-weight: var(--_display-medium-weight);
+        line-height: var(--_display-medium-line-height);
+        letter-spacing: var(--_display-medium-tracking)
+    }
+
+    .display-small {
+        font-family: var(--_display-small-font);
+        font-size: var(--_display-small-size);
+        font-weight: var(--_display-small-weight);
+        line-height: var(--_display-small-line-height);
+        letter-spacing: var(--_display-small-tracking)
+    }
+
+    .headline-large {
+        font-family: var(--_headline-large-font);
+        font-size: var(--_headline-large-size);
+        font-weight: var(--_headline-large-weight);
+        line-height: var(--_headline-large-line-height);
+        letter-spacing: var(--_headline-large-tracking)
+    }
+
+    .headline-medium {
+        font-family: var(--_headline-medium-font);
+        font-size: var(--_headline-medium-size);
+        font-weight: var(--_headline-medium-weight);
+        line-height: var(--_headline-medium-line-height);
+        letter-spacing: var(--_headline-medium-tracking)
+    }
+
+    .headline-small {
+        font-family: var(--_headline-small-font);
+        font-size: var(--_headline-small-size);
+        font-weight: var(--_headline-small-weight);
+        line-height: var(--_headline-small-line-height);
+        letter-spacing: var(--_headline-small-tracking)
+    }
+
+    .title-large {
+        font-family: var(--_title-large-font);
+        font-size: var(--_title-large-size);
+        font-weight: var(--_title-large-weight);
+        line-height: var(--_title-large-line-height);
+        letter-spacing: var(--_title-large-tracking)
+    }
+
+    .title-medium {
+        font-family: var(--_title-medium-font);
+        font-size: var(--_title-medium-size);
+        font-weight: var(--_title-medium-weight);
+        line-height: var(--_title-medium-line-height);
+        letter-spacing: var(--_title-medium-tracking)
+    }
+
+    .title-small {
+        font-family: var(--_title-small-font);
+        font-size: var(--_title-small-size);
+        font-weight: var(--_title-small-weight);
+        line-height: var(--_title-small-line-height);
+        letter-spacing: var(--_title-small-tracking)
+    }
+
+    .label-large {
+        font-family: var(--_label-large-font);
+        font-size: var(--_label-large-size);
+        font-weight: var(--_label-large-weight);
+        line-height: var(--_label-large-line-height);
+        letter-spacing: var(--_label-large-tracking)
+    }
+
+    .label-medium {
+        font-family: var(--_label-medium-font);
+        font-size: var(--_label-medium-size);
+        font-weight: var(--_label-medium-weight);
+        line-height: var(--_label-medium-line-height);
+        letter-spacing: var(--_label-medium-tracking)
+    }
+
+    .label-small {
+        font-family: var(--_label-small-font);
+        font-size: var(--_label-small-size);
+        font-weight: var(--_label-small-weight);
+        line-height: var(--_label-small-line-height);
+        letter-spacing: var(--_label-small-tracking)
+    }
+
+    .body-large {
+        font-family: var(--_body-large-font);
+        font-size: var(--_body-large-size);
+        font-weight: var(--_body-large-weight);
+        line-height: var(--_body-large-line-height);
+        letter-spacing: var(--_body-large-tracking)
+    }
+
+    .body-medium {
+        font-family: var(--_body-medium-font);
+        font-size: var(--_body-medium-size);
+        font-weight: var(--_body-medium-weight);
+        line-height: var(--_body-medium-line-height);
+        letter-spacing: var(--_body-medium-tracking)
+    }
+
+    .body-small {
+        font-family: var(--_body-small-font);
+        font-size: var(--_body-small-size);
+        font-weight: var(--_body-small-weight);
+        line-height: var(--_body-small-line-height);
+        letter-spacing: var(--_body-small-tracking)
+    }
+
+    .emphasized-display-large {
+        font-family: var(--_emphasized-display-large-font);
+        font-size: var(--_emphasized-display-large-size);
+        font-weight: var(--_emphasized-display-large-weight);
+        line-height: var(--_emphasized-display-large-line-height);
+        letter-spacing: var(--_emphasized-display-large-tracking)
+    }
+
+    .emphasized-display-medium {
+        font-family: var(--_emphasized-display-medium-font);
+        font-size: var(--_emphasized-display-medium-size);
+        font-weight: var(--_emphasized-display-medium-weight);
+        line-height: var(--_emphasized-display-medium-line-height);
+        letter-spacing: var(--_emphasized-display-medium-tracking)
+    }
+
+    .emphasized-display-small {
+        font-family: var(--_emphasized-display-small-font);
+        font-size: var(--_emphasized-display-small-size);
+        font-weight: var(--_emphasized-display-small-weight);
+        line-height: var(--_emphasized-display-small-line-height);
+        letter-spacing: var(--_emphasized-display-small-tracking)
+    }
+
+    .emphasized-headline-large {
+        font-family: var(--_emphasized-headline-large-font);
+        font-size: var(--_emphasized-headline-large-size);
+        font-weight: var(--_emphasized-headline-large-weight);
+        line-height: var(--_emphasized-headline-large-line-height);
+        letter-spacing: var(--_emphasized-headline-large-tracking)
+    }
+
+    .emphasized-headline-medium {
+        font-family: var(--_emphasized-headline-medium-font);
+        font-size: var(--_emphasized-headline-medium-size);
+        font-weight: var(--_emphasized-headline-medium-weight);
+        line-height: var(--_emphasized-headline-medium-line-height);
+        letter-spacing: var(--_emphasized-headline-medium-tracking)
+    }
+
+    .emphasized-headline-small {
+        font-family: var(--_emphasized-headline-small-font);
+        font-size: var(--_emphasized-headline-small-size);
+        font-weight: var(--_emphasized-headline-small-weight);
+        line-height: var(--_emphasized-headline-small-line-height);
+        letter-spacing: var(--_emphasized-headline-small-tracking)
+    }
+
+    .emphasized-title-large {
+        font-family: var(--_emphasized-title-large-font);
+        font-size: var(--_emphasized-title-large-size);
+        font-weight: var(--_emphasized-title-large-weight);
+        line-height: var(--_emphasized-title-large-line-height);
+        letter-spacing: var(--_emphasized-title-large-tracking)
+    }
+
+    .emphasized-title-medium {
+        font-family: var(--_emphasized-title-medium-font);
+        font-size: var(--_emphasized-title-medium-size);
+        font-weight: var(--_emphasized-title-medium-weight);
+        line-height: var(--_emphasized-title-medium-line-height);
+        letter-spacing: var(--_emphasized-title-medium-tracking)
+    }
+
+    .emphasized-title-small {
+        font-family: var(--_emphasized-title-small-font);
+        font-size: var(--_emphasized-title-small-size);
+        font-weight: var(--_emphasized-title-small-weight);
+        line-height: var(--_emphasized-title-small-line-height);
+        letter-spacing: var(--_emphasized-title-small-tracking)
+    }
+
+    .emphasized-label-large {
+        font-family: var(--_emphasized-label-large-font);
+        font-size: var(--_emphasized-label-large-size);
+        font-weight: var(--_emphasized-label-large-weight);
+        line-height: var(--_emphasized-label-large-line-height);
+        letter-spacing: var(--_emphasized-label-large-tracking)
+    }
+
+    .emphasized-label-medium {
+        font-family: var(--_emphasized-label-medium-font);
+        font-size: var(--_emphasized-label-medium-size);
+        font-weight: var(--_emphasized-label-medium-weight);
+        line-height: var(--_emphasized-label-medium-line-height);
+        letter-spacing: var(--_emphasized-label-medium-tracking)
+    }
+
+    .emphasized-label-small {
+        font-family: var(--_emphasized-label-small-font);
+        font-size: var(--_emphasized-label-small-size);
+        font-weight: var(--_emphasized-label-small-weight);
+        line-height: var(--_emphasized-label-small-line-height);
+        letter-spacing: var(--_emphasized-label-small-tracking)
+    }
+
+    .emphasized-body-large {
+        font-family: var(--_emphasized-body-large-font);
+        font-size: var(--_emphasized-body-large-size);
+        font-weight: var(--_emphasized-body-large-weight);
+        line-height: var(--_emphasized-body-large-line-height);
+        letter-spacing: var(--_emphasized-body-large-tracking)
+    }
+
+    .emphasized-body-medium {
+        font-family: var(--_emphasized-body-medium-font);
+        font-size: var(--_emphasized-body-medium-size);
+        font-weight: var(--_emphasized-body-medium-weight);
+        line-height: var(--_emphasized-body-medium-line-height);
+        letter-spacing: var(--_emphasized-body-medium-tracking)
+    }
+
+    .emphasized-body-small {
+        font-family: var(--_emphasized-body-small-font);
+        font-size: var(--_emphasized-body-small-size);
+        font-weight: var(--_emphasized-body-small-weight);
+        line-height: var(--_emphasized-body-small-line-height);
+        letter-spacing: var(--_emphasized-body-small-tracking)
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "name": "@sandlada/material-design-css",
+    "version": "1.0.0",
+    "description": "A ready-made npm package for a collection of css styles in the material design style.",
+    "license": "MIT",
+    "author": "Sandlada & Kai-Orion",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sandlada/material-design-css.git"
+    },
+    "bugs": "https://github.com/sandlada/material-design-css/issues",
+    "homepage": "https://material-design-css.sandlada.com",
+    "publishConfig": {
+        "access": "public"
+    },
+    "exports": {
+        ".": {
+            "style": "./index.css"
+        },
+        "./index.css": "./index.css",
+        "./index": "./index.css",
+        "./color.css": "./color.css",
+        "./color": "./color.css",
+        "./motion.css": "./motion.css",
+        "./motion": "./motion.css",
+        "./shape.css": "./shape.css",
+        "./shape": "./shape.css",
+        "./typography.css": "./typography.css",
+        "./typography": "./typography.css"
+    },
+    "style": "index.css",
+    "files": [
+        "index.css",
+        "color.css",
+        "motion.css",
+        "shape.css",
+        "typography.css"
+    ]
+}
