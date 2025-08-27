@@ -15,6 +15,8 @@
 - Shape
 - Typography
 
+It also **supports TailwindCSS**.
+
 ## Installation
 
 ```plaintext
@@ -22,6 +24,8 @@ npm i @sandlada/material-design-css
 ```
 
 ## Import
+
+### For CSS
 
 ```typescript
 // TypeScript File
@@ -59,6 +63,49 @@ import '@sandlada/material-design-css/animation-utilities.css'
 
 // transition-easing-expressive-fast-spatial
 import '@sandlada/material-design-css/transition-utilities.css'
+```
+
+### For TailwindCSS v4
+
+```css
+@layer theme, base, components, utilities;
+
+/* bg-primary */
+@import "@sandlada/material-design-css/tailwind-color/bg-utilities.css";
+
+/* text-on-primary */
+@import "@sandlada/material-design-css/tailwind-color/text-utilities.css";
+
+/* bg-primary-90 */
+@import "@sandlada/material-design-css/tailwind-palette/bg-utilities.css";
+
+/* text-on-primary-0 */
+@import "@sandlada/material-design-css/tailwind-palette/text-utilities.css";
+
+/* shape-medium */
+@import "@sandlada/material-design-css/tailwind-shape/shape-utilities.css";
+
+/* display-large */
+@import "@sandlada/material-design-css/tailwind-typography/typography-utilities.css";
+
+/* transition-duration-short1 */
+@import "@sandlada/material-design-css/tailwind-motion/animation-utilities.css";
+
+/* animation-duration-short1 */
+@import "@sandlada/material-design-css/tailwind-motion/transition-utilities.css";
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@layer base {
+    :root:not([dark]) {
+        color-scheme: light;
+    }
+    :root[dark] {
+        color-scheme: dark;
+    }
+}
 ```
 
 ## Usage
