@@ -1,0 +1,210 @@
+@layer material-design-system.motion.animation.duration {
+    :root {
+        --_animation-duration-short1     : var(--md-sys-motion-duration-short1, 50ms);
+        --_animation-duration-short2     : var(--md-sys-motion-duration-short2, 100ms);
+        --_animation-duration-short3     : var(--md-sys-motion-duration-short3, 150ms);
+        --_animation-duration-short4     : var(--md-sys-motion-duration-short4, 200ms);
+        --_animation-duration-medium1    : var(--md-sys-motion-duration-medium1, 250ms);
+        --_animation-duration-medium2    : var(--md-sys-motion-duration-medium2, 300ms);
+        --_animation-duration-medium3    : var(--md-sys-motion-duration-medium3, 350ms);
+        --_animation-duration-medium4    : var(--md-sys-motion-duration-medium4, 400ms);
+        --_animation-duration-long1      : var(--md-sys-motion-duration-long1, 450ms);
+        --_animation-duration-long2      : var(--md-sys-motion-duration-long2, 500ms);
+        --_animation-duration-long3      : var(--md-sys-motion-duration-long3, 550ms);
+        --_animation-duration-long4      : var(--md-sys-motion-duration-long4, 600ms);
+        --_animation-duration-extra-long1: var(--md-sys-motion-duration-extra-long1, 700ms);
+        --_animation-duration-extra-long2: var(--md-sys-motion-duration-extra-long2, 800ms);
+        --_animation-duration-extra-long3: var(--md-sys-motion-duration-extra-long3, 900ms);
+        --_animation-duration-extra-long4: var(--md-sys-motion-duration-extra-long4, 1000ms);
+    }
+}
+
+@layer material-design-system.motion.animation.duration {
+    .animation-duration-short1 {
+        animation-duration: var(--_animation-duration-short1);
+    }
+    .animation-duration-short2 {
+        animation-duration: var(--_animation-duration-short2);
+    }
+    .animation-duration-short3 {
+        animation-duration: var(--_animation-duration-short3);
+    }
+    .animation-duration-short4 {
+        animation-duration: var(--_animation-duration-short4);
+    }
+    .animation-duration-medium1 {
+        animation-duration: var(--_animation-duration-medium1);
+    }
+    .animation-duration-medium2 {
+        animation-duration: var(--_animation-duration-medium2);
+    }
+    .animation-duration-medium3 {
+        animation-duration: var(--_animation-duration-medium3);
+    }
+    .animation-duration-medium4 {
+        animation-duration: var(--_animation-duration-medium4);
+    }
+    .animation-duration-long1 {
+        animation-duration: var(--_animation-duration-long1);
+    }
+    .animation-duration-long2 {
+        animation-duration: var(--_animation-duration-long2);
+    }
+    .animation-duration-long3 {
+        animation-duration: var(--_animation-duration-long3);
+    }
+    .animation-duration-long4 {
+        animation-duration: var(--_animation-duration-long4);
+    }
+    .animation-duration-extra-long1 {
+        animation-duration: var(--_animation-duration-extra-long1);
+    }
+    .animation-duration-extra-long2 {
+        animation-duration: var(--_animation-duration-extra-long2);
+    }
+    .animation-duration-extra-long3 {
+        animation-duration: var(--_animation-duration-extra-long3);
+    }
+    .animation-duration-extra-long4 {
+        animation-duration: var(--_animation-duration-extra-long4);
+    }
+}
+
+@layer material-design-system.motion.animation.easing {
+    :root {
+        --_animation-emphasized: var(--md-sys-motion-easing-emphasized ,cubic-bezier(0.2, 0.0, 0, 1.0));
+        --_animation-emphasized-decelerate: var(--md-sys-motion-easing-emphasized-decelerate ,cubic-bezier(0.05, 0.7, 0.1, 1.0));
+        --_animation-emphasized-accelerate: var(--md-sys-motion-easing-emphasized-accelerate ,cubic-bezier(0.3, 0.0, 0.8, 0.15));
+        --_animation-standard: var(--md-sys-motion-easing-standard ,cubic-bezier(0.2, 0.0, 0, 1.0));
+        --_animation-standard-decelerate: var(--md-sys-motion-easing-standard-decelerate ,cubic-bezier(0, 0, 0, 1));
+        --_animation-standard-accelerate: var(--md-sys-motion-easing-standard-accelerate ,cubic-bezier(0.3, 0, 1, 1));
+    }
+}
+
+@layer material-design-system.motion.animation.easing {
+    .animation-easing-emphasized {
+        animation-timing-function: var(--_animation-emphasized);
+    }
+    .animation-easing-emphasized-decelerate {
+        animation-timing-function: var(--_animation-emphasized-decelerate);
+    }
+    .animation-easing-emphasized-accelerate {
+        animation-timing-function: var(--_animation-emphasized-accelerate);
+    }
+    .animation-easing-standard {
+        animation-timing-function: var(--_animation-standard);
+    }
+    .animation-easing-standard-decelerate {
+        animation-timing-function: var(--_animation-standard-decelerate);
+    }
+    .animation-easing-standard-accelerate {
+        animation-timing-function: var(--_animation-standard-accelerate);
+    }
+}
+
+@layer material-design-system.motion.animation.springs {
+    :root {
+        --_animation-easing-expressive-fast-spatial: cubic-bezier(0.42, 1.67, 0.21, 0.90);
+        --_animation-easing-expressive-default-spatial: cubic-bezier(0.38, 1.21, 0.22, 1.00);
+        --_animation-easing-expressive-slow-spatial: cubic-bezier(0.39, 1.29, 0.35, 0.98);
+        --_animation-easing-expressive-fast-effects: cubic-bezier(0.31, 0.94, 0.34, 1.00);
+        --_animation-easing-expressive-default-effects: cubic-bezier(0.34, 0.80, 0.34, 1.00);
+        --_animation-easing-expressive-slow-effects: cubic-bezier(0.34, 0.88, 0.34, 1.00);
+        --_animation-easing-standard-fast-spatial: cubic-bezier(0.27, 1.06, 0.18, 1.00);
+        --_animation-easing-standard-default-spatial: cubic-bezier(0.27, 1.06, 0.18, 1.00);
+        --_animation-easing-standard-slow-spatial: cubic-bezier(0.27, 1.06, 0.18, 1.00);
+        --_animation-easing-standard-fast-effects: cubic-bezier(0.31, 0.94, 0.34, 1.00);
+        --_animation-easing-standard-default-effects: cubic-bezier(0.34, 0.80, 0.34, 1.00);
+        --_animation-easing-standard-slow-effects: cubic-bezier(0.34, 0.88, 0.34, 1.00);
+        --_animation-duration-expressive-fast-spatial: 350ms;
+        --_animation-duration-expressive-default-spatial: 500ms;
+        --_animation-duration-expressive-slow-spatial: 650ms;
+        --_animation-duration-expressive-fast-effects: 150ms;
+        --_animation-duration-expressive-default-effects: 200ms;
+        --_animation-duration-expressive-slow-effects: 300ms;
+        --_animation-duration-standard-fast-spatial: 350ms;
+        --_animation-duration-standard-default-spatial: 500ms;
+        --_animation-duration-standard-slow-spatial: 750ms;
+        --_animation-duration-standard-fast-effects: 150ms;
+        --_animation-duration-standard-default-effects: 200ms;
+        --_animation-duration-standard-slow-effects: 300ms;
+    }
+}
+
+@layer material-design-system.motion.animation.springs.easing {
+    .animation-easing-expressive-fast-spatial {
+        animation-timing-function: var(--_animation-easing-expressive-fast-spatial);
+    }
+    .animation-easing-expressive-default-spatial {
+        animation-timing-function: var(--_animation-easing-expressive-default-spatial);
+    }
+    .animation-easing-expressive-slow-spatial {
+        animation-timing-function: var(--_animation-easing-expressive-slow-spatial);
+    }
+    .animation-easing-expressive-fast-effects {
+        animation-timing-function: var(--_animation-easing-expressive-fast-effects);
+    }
+    .animation-easing-expressive-default-effects {
+        animation-timing-function: var(--_animation-easing-expressive-default-effects);
+    }
+    .animation-easing-expressive-slow-effects {
+        animation-timing-function: var(--_animation-easing-expressive-slow-effects);
+    }
+    .animation-easing-standard-fast-spatial {
+    	animation-timing-function: var(--_animation-easing-standard-fast-spatial);
+    }
+    .animation-easing-standard-default-spatial {
+    	animation-timing-function: var(--_animation-easing-standard-default-spatial);
+    }
+    .animation-easing-standard-slow-spatial {
+    	animation-timing-function: var(--_animation-easing-standard-slow-spatial);
+    }
+    .animation-easing-standard-fast-effects {
+    	animation-timing-function: var(--_animation-easing-standard-fast-effects);
+    }
+    .animation-easing-standard-default-effects {
+    	animation-timing-function: var(--_animation-easing-standard-default-effects);
+    }
+    .animation-easing-standard-slow-effects {
+    	animation-timing-function: var(--_animation-easing-standard-slow-effects);
+    }
+}
+
+@layer material-design-system.motion.animation.springs.duration {
+    .animation-duration-expressive-fast-spatial {
+        animation-duration: var(--_animation-duration-expressive-fast-spatial);
+    }
+    .animation-duration-expressive-default-spatial {
+        animation-duration: var(--_animation-duration-expressive-default-spatial);
+    }
+    .animation-duration-expressive-slow-spatial {
+        animation-duration: var(--_animation-duration-expressive-slow-spatial);
+    }
+    .animation-duration-expressive-fast-effects {
+        animation-duration: var(--_animation-duration-expressive-fast-effects);
+    }
+    .animation-duration-expressive-default-effects {
+        animation-duration: var(--_animation-duration-expressive-default-effects);
+    }
+    .animation-duration-expressive-slow-effects {
+        animation-duration: var(--_animation-duration-expressive-slow-effects);
+    }
+    .animation-duration-standard-fast-spatial {
+        animation-duration: var(--_animation-duration-standard-fast-spatial);
+    }
+    .animation-duration-standard-default-spatial {
+        animation-duration: var(--_animation-duration-standard-default-spatial);
+    }
+    .animation-duration-standard-slow-spatial {
+        animation-duration: var(--_animation-duration-standard-slow-spatial);
+    }
+    .animation-duration-standard-fast-effects {
+        animation-duration: var(--_animation-duration-standard-fast-effects);
+    }
+    .animation-duration-standard-default-effects {
+        animation-duration: var(--_animation-duration-standard-default-effects);
+    }
+    .animation-duration-standard-slow-effects {
+        animation-duration: var(--_animation-duration-standard-slow-effects);
+    }
+}

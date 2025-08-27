@@ -10,6 +10,7 @@
 `@sandlada/material-design-css` is a CSS npm package for Material Design, styles include:
 
 - Color
+- Palette
 - Motion
 - Shape
 - Typography
@@ -26,11 +27,38 @@ npm i @sandlada/material-design-css
 // TypeScript File
 // If you are using Vite or Webpack.
 
-// This will import all styles.
+/**
+ * This will import all styles.
+ * Loading all styles will cause the style file to be too large, please load as needed. 
+ */ 
 import '@sandlada/material-design-css'
 
-// This will import colors only.
-import '@sandlada/material-design-css/color.css'
+// Load preset, if using color
+import '@sandlada/material-design-css/preset'
+
+// text-on-surface
+import '@sandlada/material-design-css/color/text-utilities.css'
+
+// bg-surface
+import '@sandlada/material-design-css/color/bg-utilities.css'
+
+// text-primary-0 (black)
+import '@sandlada/material-design-css/palette/text-utilities.css'
+
+// bg-primary-100 (white)
+import '@sandlada/material-design-css/palette/bg-utilities.css'
+
+// display-large
+import '@sandlada/material-design-css/typography.css'
+
+// shape-medium
+import '@sandlada/material-design-css/shape.css'
+
+// animation-easing-expressive-fast-spatial
+import '@sandlada/material-design-css/animation-utilities.css'
+
+// transition-easing-expressive-fast-spatial
+import '@sandlada/material-design-css/transition-utilities.css'
 ```
 
 ## Usage
@@ -38,7 +66,7 @@ import '@sandlada/material-design-css/color.css'
 Copy this code into your configured project and you will see a button with color and rounded corners.
 
 ```html
-<button class="shape-medium primary on-primary">
+<button class="shape-medium bg-primary text-on-primary">
     A rounded button
 </button>
 ```

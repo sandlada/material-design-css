@@ -1,4 +1,13 @@
-@import "./color.css";
-@import "./motion.css";
+@import "./preset.css";
+
+@import "./color/bg-utilities.css";
+@import "./color/text-utilities.css";
+
+@import "./palette/bg-utilities.css";
+@import "./palette/text-utilities.css";
+
+@import "./motion/animation-utilities.css";
+@import "./motion/transition-utilities.css";
+
 @import "./shape.css";
 @import "./typography.css";

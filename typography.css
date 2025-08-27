@@ -1,5 +1,5 @@
 
-@layer material-design-system.typography.variable {
+@layer material-design-system.typography {
     :root {
 
         --_display-large-font: var(--md-sys-typescale-display-large-font, var(--md-ref-typeface-brand, "Roboto"));

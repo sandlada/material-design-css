@@ -1,4 +1,4 @@
-@layer material-design-system.shape.corner.variable {
+@layer material-design-system.shape.corner {
     :root {
         --_none: var(--md-sys-shape-corner-value-none, 0px);
         --_extra-small: var(--md-sys-shape-corner-value-extra-small, 4px);
