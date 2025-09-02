@@ -6,8 +6,7 @@
 ![NPM Version](https://img.shields.io/npm/v/%40sandlada%2Fmaterial-design-css?label=NPM%20Version&labelColor=%2300531f&color=%23a3f5aa)
 ![GitHub License](https://img.shields.io/github/license/sandlada/material-design-css?label=License&labelColor=%2300531f&color=%23a3f5aa)
 
-
-`@sandlada/material-design-css` is a CSS npm package for Material Design, styles include:
+`@sandlada/material-design-css` is a CSS npm package for Material Design Tokens, styles include:
 
 - Color
 - Palette
@@ -15,7 +14,7 @@
 - Shape
 - Typography
 
-It also **supports TailwindCSS**.
+It also **supports TailwindCSS v4**.
 
 ## Installation
 
@@ -31,14 +30,8 @@ npm i @sandlada/material-design-css
 // TypeScript File
 // If you are using Vite or Webpack.
 
-/**
- * This will import all styles.
- * Loading all styles will cause the style file to be too large, please load as needed. 
- */ 
-import '@sandlada/material-design-css'
-
 // Load preset, if using color
-import '@sandlada/material-design-css/preset'
+import '@sandlada/material-design-css/preset.css'
 
 // text-on-surface
 import '@sandlada/material-design-css/color/text-utilities.css'
@@ -53,16 +46,16 @@ import '@sandlada/material-design-css/palette/text-utilities.css'
 import '@sandlada/material-design-css/palette/bg-utilities.css'
 
 // display-large
-import '@sandlada/material-design-css/typography.css'
+import '@sandlada/material-design-css/typography/typography.css'
 
 // shape-medium
-import '@sandlada/material-design-css/shape.css'
+import '@sandlada/material-design-css/shape/shape.css'
 
 // animation-easing-expressive-fast-spatial
-import '@sandlada/material-design-css/animation-utilities.css'
+import '@sandlada/material-design-css/motion/animation-utilities.css'
 
 // transition-easing-expressive-fast-spatial
-import '@sandlada/material-design-css/transition-utilities.css'
+import '@sandlada/material-design-css/motion/transition-utilities.css'
 ```
 
 ### For TailwindCSS v4
@@ -70,33 +63,40 @@ import '@sandlada/material-design-css/transition-utilities.css'
 ```css
 @layer theme, base, components, utilities;
 
-/* bg-primary */
-@import "@sandlada/material-design-css/tailwind-color/bg-utilities.css";
+@import "tailwindcss";
 
-/* text-on-primary */
-@import "@sandlada/material-design-css/tailwind-color/text-utilities.css";
+/** 
+ * bg-primary
+ * text-on-primary
+ */ 
+@import "@sandlada/material-design-css/color/tailwind-theme.css";
 
-/* bg-primary-90 */
-@import "@sandlada/material-design-css/tailwind-palette/bg-utilities.css";
-
-/* text-on-primary-0 */
-@import "@sandlada/material-design-css/tailwind-palette/text-utilities.css";
+/**
+ * bg-primary-90
+ * text-primary-10
+ */
+@import "@sandlada/material-design-css/palette/tailwind-theme.css";
 
 /* shape-medium */
-@import "@sandlada/material-design-css/tailwind-shape/shape-utilities.css";
+@import "@sandlada/material-design-css/shape/tailwind-theme.css";
+
+/* 
+ * font-display-large
+ * text-display-large
+ * tracking-display-large
+ * leading-display-large
+ * font-weight-display-large
+ */
+@import "@sandlada/material-design-css/typography/tailwind-theme.css";
 
 /* display-large */
-@import "@sandlada/material-design-css/tailwind-typography/typography-utilities.css";
+@import "@sandlada/material-design-css/typography/tailwind-utilities.css";
 
-/* transition-duration-short1 */
-@import "@sandlada/material-design-css/tailwind-motion/animation-utilities.css";
-
-/* animation-duration-short1 */
-@import "@sandlada/material-design-css/tailwind-motion/transition-utilities.css";
-
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
+/**
+ * ease-emphasized
+ * duration-[var(--duration-medium1)]
+ */
+@import "@sandlada/material-design-css/motion/tailwind-theme.css";
 
 @layer base {
     :root:not([dark]) {
@@ -113,7 +113,7 @@ import '@sandlada/material-design-css/transition-utilities.css'
 Copy this code into your configured project and you will see a button with color and rounded corners.
 
 ```html
-<button class="shape-medium bg-primary text-on-primary">
+<button class="rounded-medium bg-primary text-on-primary px-4 py-2">
     A rounded button
 </button>
 ```

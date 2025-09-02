@@ -1,6 +1,6 @@
 {
     "name"       : "@sandlada/material-design-css",
-    "version"    : "2.1.0-20250827.a",
+    "version"    : "2.2.0-20250902.a",
     "description": "A ready-made npm package for a collection of css styles in the material design style.",
     "license"    : "MIT",
     "author"     : "Sandlada & Kai-Orion",
@@ -23,32 +23,32 @@
         "motion",
         "typography",
         "color",
-        "palette"
+        "palette",
+        "tailwindcss",
+        "tailwind-plugin"
     ],
     "exports": {
-        ".": {
-            "style": "./index.css"
-        },
         "./*"                              : "./*",
-        "./index.css"                      : "./index.css",
         "./preset.css"                     : "./preset.css",
+
         "./color/bg-utilities.css"         : "./color/bg-utilities.css",
         "./color/text-utilities.css"       : "./color/text-utilities.css",
+        "./color/tailwind-theme.css"       : "./color/tailwind-theme.css",
+
         "./motion/transition-utilities.css": "./motion/transition-utilities.css",
         "./motion/animation-utilities.css" : "./motion/animation-utilities.css",
+        "./motion/tailwind-theme.css"      : "./motion/tailwind-theme.css",
+
         "./palette/bg-utilities.css"       : "./palette/bg-utilities.css",
         "./palette/text-utilities.css"     : "./palette/text-utilities.css",
-        "./shape.css"                      : "./shape.css",
-        "./typography.css"                 : "./typography.css",
+        "./palette/tailwind-theme.css"     : "./palette/tailwind-theme.css",
 
-        "./tailwind-color/bg-utilities.css"             : "./tailwind-color/bg-utilities.css",
-        "./tailwind-color/text-utilities.css"           : "./tailwind-color/text-utilities.css",
-        "./tailwind-motion/transition-utilities.css"    : "./tailwind-motion/transition-utilities.css",
-        "./tailwind-motion/animation-utilities.css"     : "./tailwind-motion/animation-utilities.css",
-        "./tailwind-palette/bg-utilities.css"           : "./tailwind-palette/bg-utilities.css",
-        "./tailwind-palette/text-utilities.css"         : "./tailwind-palette/text-utilities.css",
-        "./tailwind-shape/shape-utilities.css"          : "./tailwind-shape/shape-utilities.css",
-        "./tailwind-typography/typography-utilities.css": "./tailwind-typography/typography-utilities.css",
+        "./shape/shape-utilities.css"      : "./shape/shape-utilities.css",
+        "./shape/tailwind-theme.css"       : "./shape/tailwind-theme.css",
+
+        "./typography/typography-utilities.css": "./typography/typography-utilities.css",
+        "./typography/tailwind-theme.css"      : "./typography/tailwind-theme.css",
+        "./typography/tailwind-utilities.css"  : "./typography/tailwind-utilities.css",
 
         "./prebuild-color/blue.css"       : "./prebuild-color/blue.css",
         "./prebuild-color/green.css"      : "./prebuild-color/green.css",
@@ -61,26 +61,24 @@
         "color/bg-utilities.css",
         "color/text-utilities.css",
         "color/classic-utilities.css",
+        "color/tailwind-theme.css",
         "motion/transition-utilities.css",
         "motion/animation-utilities.css",
+        "motion/tailwind-theme.css",
         "palette/bg-utilities.css",
         "palette/text-utilities.css",
+        "palette/tailwind-theme.css",
         "prebuild-color/blue.css",
         "prebuild-color/green.css",
         "prebuild-color/light-green.css",
         "prebuild-color/pink.css",
         "prebuild-color/yellow.css",
-        "index.css",
         "preset.css",
-        "shape.css",
-        "typography.css",
-        "tailwind-color/bg-utilities.css",
-        "tailwind-color/text-utilities.css",
-        "tailwind-motion/transition-utilities.css",
-        "tailwind-motion/animation-utilities.css",
-        "tailwind-palette/bg-utilities.css",
-        "tailwind-palette/text-utilities.css",
-        "tailwind-shape/shape-utilities.css",
-        "tailwind-typography/typography-utilities.css"
+        "shape/shape-utilities.css",
+        "shape/tailwind-theme.css",
+        "typography/typography-utilities.css",
+        "typography/tailwind-theme.css",
+        "typography/tailwind-utilities.css"
+
     ]
 }

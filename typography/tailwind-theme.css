@@ -1,0 +1,181 @@
+@theme inline {
+    --font-display-large              : var(--md-sys-typescale-display-large-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-display-large              : var(--md-sys-typescale-display-large-size, 57px);
+    --tracking-display-large          : var(--md-sys-typescale-display-large-tracking, -0.25px);
+    --leading-display-large           : var(--md-sys-typescale-display-large-line-height, 64px);
+    --font-weight-weight-display-large: var(--md-sys-typescale-display-large-weight, var(--md-ref-typeface-weight-regular, 400));
+
+    --font-display-medium              : var(--md-sys-typescale-display-medium-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-display-medium              : var(--md-sys-typescale-display-medium-size, 45px);
+    --tracking-display-medium          : var(--md-sys-typescale-display-medium-tracking, 0px);
+    --leading-display-medium           : var(--md-sys-typescale-display-medium-line-height, 52px);
+    --font-weight-weight-display-medium: var(--md-sys-typescale-display-medium-weight, var(--md-ref-typeface-weight-regular, 400));
+
+    --font-display-small              : var(--md-sys-typescale-display-small-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-display-small              : var(--md-sys-typescale-display-small-size, 36px);
+    --tracking-display-small          : var(--md-sys-typescale-display-small-tracking, 0px);
+    --leading-display-small           : var(--md-sys-typescale-display-small-line-height, 44px);
+    --font-weight-weight-display-small: var(--md-sys-typescale-display-small-weight, var(--md-ref-typeface-weight-regular, 400));
+
+    --font-headline-large              : var(--md-sys-typescale-headline-large-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-headline-large              : var(--md-sys-typescale-headline-large-size, 32px);
+    --tracking-headline-large          : var(--md-sys-typescale-headline-large-tracking, 0px);
+    --leading-headline-large           : var(--md-sys-typescale-headline-large-line-height, 40px);
+    --font-weight-weight-headline-large: var(--md-sys-typescale-headline-large-weight, var(--md-ref-typeface-weight-regular, 400));
+
+    --font-headline-medium              : var(--md-sys-typescale-headline-medium-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-headline-medium              : var(--md-sys-typescale-headline-medium-size, 28px);
+    --tracking-headline-medium          : var(--md-sys-typescale-headline-medium-tracking, 0px);
+    --leading-headline-medium           : var(--md-sys-typescale-headline-medium-line-height, 36px);
+    --font-weight-weight-headline-medium: var(--md-sys-typescale-headline-medium-weight, var(--md-ref-typeface-weight-regular, 400));
+
+    --font-headline-small              : var(--md-sys-typescale-headline-small-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-headline-small              : var(--md-sys-typescale-headline-small-size, 24px);
+    --tracking-headline-small          : var(--md-sys-typescale-headline-small-tracking, 0px);
+    --leading-headline-small           : var(--md-sys-typescale-headline-small-line-height, 32px);
+    --font-weight-weight-headline-small: var(--md-sys-typescale-headline-small-weight, var(--md-ref-typeface-weight-regular, 400));
+
+    --font-title-large              : var(--md-sys-typescale-title-large-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-title-large              : var(--md-sys-typescale-title-large-size, 22px);
+    --tracking-title-large          : var(--md-sys-typescale-title-large-tracking, 0px);
+    --leading-title-large           : var(--md-sys-typescale-title-large-line-height, 28px);
+    --font-weight-weight-title-large: var(--md-sys-typescale-title-large-weight, var(--md-ref-typeface-weight-regular, 400));
+
+    --font-title-medium              : var(--md-sys-typescale-title-medium-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-title-medium              : var(--md-sys-typescale-title-medium-size, 16px);
+    --tracking-title-medium          : var(--md-sys-typescale-title-medium-tracking, 0.15px);
+    --leading-title-medium           : var(--md-sys-typescale-title-medium-line-height, 24px);
+    --font-weight-weight-title-medium: var(--md-sys-typescale-title-medium-weight, var(--md-ref-typeface-weight-medium, 500));
+
+    --font-title-small              : var(--md-sys-typescale-title-small-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-title-small              : var(--md-sys-typescale-title-small-size, 14px);
+    --tracking-title-small          : var(--md-sys-typescale-title-small-tracking, 0.1px);
+    --leading-title-small           : var(--md-sys-typescale-title-small-line-height, 20px);
+    --font-weight-weight-title-small: var(--md-sys-typescale-title-small-weight, var(--md-ref-typeface-weight-medium, 500));
+
+    --font-body-large              : var(--md-sys-typescale-body-large-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-body-large              : var(--md-sys-typescale-body-large-size, 16px);
+    --tracking-body-large          : var(--md-sys-typescale-body-large-tracking, 0.5px);
+    --leading-body-large           : var(--md-sys-typescale-body-large-line-height, 24px);
+    --font-weight-weight-body-large: var(--md-sys-typescale-body-large-weight, var(--md-ref-typeface-weight-regular, 400));
+
+    --font-body-medium              : var(--md-sys-typescale-body-medium-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-body-medium              : var(--md-sys-typescale-body-medium-size, 14px);
+    --tracking-body-medium          : var(--md-sys-typescale-body-medium-tracking, 0.25px);
+    --leading-body-medium           : var(--md-sys-typescale-body-medium-line-height, 20px);
+    --font-weight-weight-body-medium: var(--md-sys-typescale-body-medium-weight, var(--md-ref-typeface-weight-regular, 400));
+
+    --font-body-small              : var(--md-sys-typescale-body-small-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-body-small              : var(--md-sys-typescale-body-small-size, 12px);
+    --tracking-body-small          : var(--md-sys-typescale-body-small-tracking, 0.4px);
+    --leading-body-small           : var(--md-sys-typescale-body-small-line-height, 16px);
+    --font-weight-weight-body-small: var(--md-sys-typescale-body-small-weight, var(--md-ref-typeface-weight-regular, 400));
+
+    --font-label-large              : var(--md-sys-typescale-label-large-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-label-large              : var(--md-sys-typescale-label-large-size, 14px);
+    --tracking-label-large          : var(--md-sys-typescale-label-large-tracking, 0.1px);
+    --leading-label-large           : var(--md-sys-typescale-label-large-line-height, 20px);
+    --font-weight-weight-label-large: var(--md-sys-typescale-label-large-weight, var(--md-ref-typeface-weight-medium, 500));
+
+    --font-label-medium              : var(--md-sys-typescale-label-medium-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-label-medium              : var(--md-sys-typescale-label-medium-size, 12px);
+    --tracking-label-medium          : var(--md-sys-typescale-label-medium-tracking, 0.5px);
+    --leading-label-medium           : var(--md-sys-typescale-label-medium-line-height, 16px);
+    --font-weight-weight-label-medium: var(--md-sys-typescale-label-medium-weight, var(--md-ref-typeface-weight-medium, 500));
+
+    --font-label-small              : var(--md-sys-typescale-label-small-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-label-small              : var(--md-sys-typescale-label-small-size, 11px);
+    --tracking-label-small          : var(--md-sys-typescale-label-small-tracking, 0.5px);
+    --leading-label-small           : var(--md-sys-typescale-label-small-line-height, 16px);
+    --font-weight-weight-label-small: var(--md-sys-typescale-label-small-weight, var(--md-ref-typeface-weight-medium, 500));
+
+    --font-emphasized-display-large              : var(--md-sys-typescale-emphasized-display-large-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-emphasized-display-large              : var(--md-sys-typescale-emphasized-display-large-size, 57px);
+    --tracking-emphasized-display-large          : var(--md-sys-typescale-emphasized-display-large-tracking, -0.25px);
+    --leading-emphasized-display-large           : var(--md-sys-typescale-emphasized-display-large-line-height, 64px);
+    --font-weight-weight-emphasized-display-large: var(--md-sys-typescale-emphasized-display-large-weight, var(--md-ref-typeface-weight-regular, 500));
+
+    --font-emphasized-display-medium              : var(--md-sys-typescale-emphasized-display-medium-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-emphasized-display-medium              : var(--md-sys-typescale-emphasized-display-medium-size, 45px);
+    --tracking-emphasized-display-medium          : var(--md-sys-typescale-emphasized-display-medium-tracking, 0px);
+    --leading-emphasized-display-medium           : var(--md-sys-typescale-emphasized-display-medium-line-height, 52px);
+    --font-weight-weight-emphasized-display-medium: var(--md-sys-typescale-emphasized-display-medium-weight, var(--md-ref-typeface-weight-regular, 500));
+
+    --font-emphasized-display-small              : var(--md-sys-typescale-emphasized-display-small-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-emphasized-display-small              : var(--md-sys-typescale-emphasized-display-small-size, 36px);
+    --tracking-emphasized-display-small          : var(--md-sys-typescale-emphasized-display-small-tracking, 0px);
+    --leading-emphasized-display-small           : var(--md-sys-typescale-emphasized-display-small-line-height, 44px);
+    --font-weight-weight-emphasized-display-small: var(--md-sys-typescale-emphasized-display-small-weight, var(--md-ref-typeface-weight-regular, 500));
+
+    --font-emphasized-headline-large              : var(--md-sys-typescale-emphasized-headline-large-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-emphasized-headline-large              : var(--md-sys-typescale-emphasized-headline-large-size, 32px);
+    --tracking-emphasized-headline-large          : var(--md-sys-typescale-emphasized-headline-large-tracking, 0px);
+    --leading-emphasized-headline-large           : var(--md-sys-typescale-emphasized-headline-large-line-height, 40px);
+    --font-weight-weight-emphasized-headline-large: var(--md-sys-typescale-emphasized-headline-large-weight, var(--md-ref-typeface-weight-regular, 500));
+
+    --font-emphasized-headline-medium              : var(--md-sys-typescale-emphasized-headline-medium-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-emphasized-headline-medium              : var(--md-sys-typescale-emphasized-headline-medium-size, 28px);
+    --tracking-emphasized-headline-medium          : var(--md-sys-typescale-emphasized-headline-medium-tracking, 0px);
+    --leading-emphasized-headline-medium           : var(--md-sys-typescale-emphasized-headline-medium-line-height, 36px);
+    --font-weight-weight-emphasized-headline-medium: var(--md-sys-typescale-emphasized-headline-medium-weight, var(--md-ref-typeface-weight-regular, 500));
+
+    --font-emphasized-headline-small              : var(--md-sys-typescale-emphasized-headline-small-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-emphasized-headline-small              : var(--md-sys-typescale-emphasized-headline-small-size, 24px);
+    --tracking-emphasized-headline-small          : var(--md-sys-typescale-emphasized-headline-small-tracking, 0px);
+    --leading-emphasized-headline-small           : var(--md-sys-typescale-emphasized-headline-small-line-height, 32px);
+    --font-weight-weight-emphasized-headline-small: var(--md-sys-typescale-emphasized-headline-small-weight, var(--md-ref-typeface-weight-regular, 500));
+
+    --font-emphasized-title-large              : var(--md-sys-typescale-emphasized-title-large-font, var(--md-ref-typeface-brand, "Roboto"));
+    --text-emphasized-title-large              : var(--md-sys-typescale-emphasized-title-large-size, 22px);
+    --tracking-emphasized-title-large          : var(--md-sys-typescale-emphasized-title-large-tracking, 0px);
+    --leading-emphasized-title-large           : var(--md-sys-typescale-emphasized-title-large-line-height, 28px);
+    --font-weight-weight-emphasized-title-large: var(--md-sys-typescale-emphasized-title-large-weight, var(--md-ref-typeface-weight-regular, 500));
+
+    --font-emphasized-title-medium              : var(--md-sys-typescale-emphasized-title-medium-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-emphasized-title-medium              : var(--md-sys-typescale-emphasized-title-medium-size, 16px);
+    --tracking-emphasized-title-medium          : var(--md-sys-typescale-emphasized-title-medium-tracking, 0.15px);
+    --leading-emphasized-title-medium           : var(--md-sys-typescale-emphasized-title-medium-line-height, 24px);
+    --font-weight-weight-emphasized-title-medium: var(--md-sys-typescale-emphasized-title-medium-weight, var(--md-ref-typeface-weight-medium, 700));
+
+    --font-emphasized-title-small              : var(--md-sys-typescale-emphasized-title-small-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-emphasized-title-small              : var(--md-sys-typescale-emphasized-title-small-size, 14px);
+    --tracking-emphasized-title-small          : var(--md-sys-typescale-emphasized-title-small-tracking, 0.1px);
+    --leading-emphasized-title-small           : var(--md-sys-typescale-emphasized-title-small-line-height, 20px);
+    --font-weight-weight-emphasized-title-small: var(--md-sys-typescale-emphasized-title-small-weight, var(--md-ref-typeface-weight-medium, 700));
+
+    --font-emphasized-body-large              : var(--md-sys-typescale-emphasized-body-large-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-emphasized-body-large              : var(--md-sys-typescale-emphasized-body-large-size, 16px);
+    --tracking-emphasized-body-large          : var(--md-sys-typescale-emphasized-body-large-tracking, 0.5px);
+    --leading-emphasized-body-large           : var(--md-sys-typescale-emphasized-body-large-line-height, 24px);
+    --font-weight-weight-emphasized-body-large: var(--md-sys-typescale-emphasized-body-large-weight, var(--md-ref-typeface-weight-regular, 500));
+
+    --font-emphasized-body-medium              : var(--md-sys-typescale-emphasized-body-medium-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-emphasized-body-medium              : var(--md-sys-typescale-emphasized-body-medium-size, 14px);
+    --tracking-emphasized-body-medium          : var(--md-sys-typescale-emphasized-body-medium-tracking, 0.25px);
+    --leading-emphasized-body-medium           : var(--md-sys-typescale-emphasized-body-medium-line-height, 20px);
+    --font-weight-weight-emphasized-body-medium: var(--md-sys-typescale-emphasized-body-medium-weight, var(--md-ref-typeface-weight-regular, 500));
+
+    --font-emphasized-body-small              : var(--md-sys-typescale-emphasized-body-small-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-emphasized-body-small              : var(--md-sys-typescale-emphasized-body-small-size, 12px);
+    --tracking-emphasized-body-small          : var(--md-sys-typescale-emphasized-body-small-tracking, 0.4px);
+    --leading-emphasized-body-small           : var(--md-sys-typescale-emphasized-body-small-line-height, 16px);
+    --font-weight-weight-emphasized-body-small: var(--md-sys-typescale-emphasized-body-small-weight, var(--md-ref-typeface-weight-regular, 500));
+
+    --font-emphasized-label-large              : var(--md-sys-typescale-emphasized-label-large-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-emphasized-label-large              : var(--md-sys-typescale-emphasized-label-large-size, 14px);
+    --tracking-emphasized-label-large          : var(--md-sys-typescale-emphasized-label-large-tracking, 0.1px);
+    --leading-emphasized-label-large           : var(--md-sys-typescale-emphasized-label-large-line-height, 20px);
+    --font-weight-weight-emphasized-label-large: var(--md-sys-typescale-emphasized-label-large-weight, var(--md-ref-typeface-weight-medium, 700));
+
+    --font-emphasized-label-medium              : var(--md-sys-typescale-emphasized-label-medium-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-emphasized-label-medium              : var(--md-sys-typescale-emphasized-label-medium-size, 12px);
+    --tracking-emphasized-label-medium          : var(--md-sys-typescale-emphasized-label-medium-tracking, 0.5px);
+    --leading-emphasized-label-medium           : var(--md-sys-typescale-emphasized-label-medium-line-height, 16px);
+    --font-weight-weight-emphasized-label-medium: var(--md-sys-typescale-emphasized-label-medium-weight, var(--md-ref-typeface-weight-medium, 700));
+
+    --font-emphasized-label-small              : var(--md-sys-typescale-emphasized-label-small-font, var(--md-ref-typeface-plain, "Roboto"));
+    --text-emphasized-label-small              : var(--md-sys-typescale-emphasized-label-small-size, 11px);
+    --tracking-emphasized-label-small          : var(--md-sys-typescale-emphasized-label-small-tracking, 0.5px);
+    --leading-emphasized-label-small           : var(--md-sys-typescale-emphasized-label-small-line-height, 16px);
+    --font-weight-weight-emphasized-label-small: var(--md-sys-typescale-emphasized-label-small-weight, var(--md-ref-typeface-weight-medium, 700));
+}
