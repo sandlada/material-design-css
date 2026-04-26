@@ -1,0 +1,62 @@
+@layer material-design-system.color.variable {
+    :root {
+        --md-sys-color-primary-key-color: #7073a5;
+        --md-sys-color-secondary-key-color: #75758b;
+        --md-sys-color-tertiary-key-color: #8c6c93;
+        --md-sys-color-error-key-color: #c74d61;
+        --md-sys-color-neutral-key-color: #78767c;
+        --md-sys-color-neutral-variant-key-color: #777680;
+    }
+
+    :root {
+        --md-sys-color-background: light-dark(#fbf8fe, #0e0e12);
+        --md-sys-color-on-background: light-dark(#32323b, #e6e4f0);
+        --md-sys-color-surface: light-dark(#fbf8fe, #0e0e12);
+        --md-sys-color-surface-dim: light-dark(#dbd8e4, #0e0e12);
+        --md-sys-color-surface-bright: light-dark(#fbf8fe, #2b2b34);
+        --md-sys-color-surface-container-lowest: light-dark(#ffffff, #000000);
+        --md-sys-color-surface-container-low: light-dark(#f5f2fb, #131318);
+        --md-sys-color-surface-container: light-dark(#efecf6, #191920);
+        --md-sys-color-surface-container-high: light-dark(#e9e7f1, #1f1f26);
+        --md-sys-color-surface-container-highest: light-dark(#e3e1ed, #25252e);
+        --md-sys-color-on-surface: light-dark(#32323b, #e6e4f0);
+        --md-sys-color-on-surface-variant: light-dark(#5f5e68, #abaab5);
+        --md-sys-color-outline: light-dark(#7b7a84, #75747f);
+        --md-sys-color-outline-variant: light-dark(#b2b1bc, #474750);
+        --md-sys-color-inverse-surface: light-dark(#0e0e12, #fbf8fe);
+        --md-sys-color-inverse-on-surface: light-dark(#9e9ca2, #55545a);
+        --md-sys-color-primary: light-dark(#585b8c, #c2c3ee);
+        --md-sys-color-primary-dim: light-dark(#4c4f7f, #b4b5e0);
+        --md-sys-color-on-primary: light-dark(#fbf8ff, #3b3d61);
+        --md-sys-color-primary-container: light-dark(#c2c5fd, #4d4f74);
+        --md-sys-color-on-primary-container: light-dark(#3a3e6c, #e1e1ff);
+        --md-sys-color-primary-fixed: light-dark(#c2c5fd, #d0d1fd);
+        --md-sys-color-primary-fixed-dim: light-dark(#b4b7ee, #c2c3ee);
+        --md-sys-color-on-primary-fixed: light-dark(#262a57, #313356);
+        --md-sys-color-on-primary-fixed-variant: light-dark(#444776, #4d4f74);
+        --md-sys-color-inverse-primary: light-dark(#c2c5fd, #5a5c82);
+        --md-sys-color-secondary: light-dark(#5d5d72, #c5c4dd);
+        --md-sys-color-secondary-dim: light-dark(#515166, #b7b7cf);
+        --md-sys-color-on-secondary: light-dark(#fbf8ff, #3e3f52);
+        --md-sys-color-secondary-container: light-dark(#e1e0f9, #393a4d);
+        --md-sys-color-on-secondary-container: light-dark(#4f5064, #bebdd5);
+        --md-sys-color-secondary-fixed: light-dark(#e1e0f9, #e1e0f9);
+        --md-sys-color-secondary-fixed-dim: light-dark(#d3d2eb, #d3d2eb);
+        --md-sys-color-on-secondary-fixed: light-dark(#3d3e51, #3d3e51);
+        --md-sys-color-on-secondary-fixed-variant: light-dark(#595a6f, #595a6f);
+        --md-sys-color-tertiary: light-dark(#73547a, #fde3ff);
+        --md-sys-color-tertiary-dim: light-dark(#66486d, #f7d0fd);
+        --md-sys-color-on-tertiary: light-dark(#fff7fb, #6a4c71);
+        --md-sys-color-tertiary-container: light-dark(#f7d0fd, #f7d0fd);
+        --md-sys-color-on-tertiary-container: light-dark(#614468, #614468);
+        --md-sys-color-tertiary-fixed: light-dark(#f7d0fd, #f7d0fd);
+        --md-sys-color-tertiary-fixed-dim: light-dark(#e8c2ee, #e8c2ee);
+        --md-sys-color-on-tertiary-fixed: light-dark(#4d3155, #4d3155);
+        --md-sys-color-on-tertiary-fixed-variant: light-dark(#6b4d72, #6b4d72);
+        --md-sys-color-error: light-dark(#a8364b, #f97386);
+        --md-sys-color-error-dim: light-dark(#6b0221, #c44b5f);
+        --md-sys-color-on-error: light-dark(#fff7f7, #490013);
+        --md-sys-color-error-container: light-dark(#f97386, #871c34);
+        --md-sys-color-on-error-container: light-dark(#6e0523, #ff97a3);
+    }
+}

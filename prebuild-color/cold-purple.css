@@ -1,0 +1,58 @@
+@layer material-design-system.color.variable {
+    :root {
+		--md-sys-color-primary-palette-key-color        : light-dark(#6a6ec9, #6a6ec9);
+		--md-sys-color-secondary-palette-key-color      : light-dark(#73749a, #73749a);
+		--md-sys-color-tertiary-palette-key-color       : light-dark(#7a4100, #7a4100);
+		--md-sys-color-neutral-palette-key-color        : light-dark(#78767d, #78767d);
+		--md-sys-color-neutral-variant-palette-key-color: light-dark(#777683, #777683);
+		--md-sys-color-background                       : light-dark(#fcf8ff, #131319);
+		--md-sys-color-on-background                    : light-dark(#1b1b21, #e4e1e9);
+		--md-sys-color-surface                          : light-dark(#fcf8ff, #131319);
+		--md-sys-color-surface-dim                      : light-dark(#dcd9e1, #131319);
+		--md-sys-color-surface-bright                   : light-dark(#fcf8ff, #39383f);
+		--md-sys-color-surface-container-lowest         : light-dark(#ffffff, #0e0e13);
+		--md-sys-color-surface-container-low            : light-dark(#f6f2fb, #1b1b21);
+		--md-sys-color-surface-container                : light-dark(#f0ecf5, #1f1f25);
+		--md-sys-color-surface-container-high           : light-dark(#eae7ef, #2a2930);
+		--md-sys-color-surface-container-highest        : light-dark(#e4e1e9, #35343a);
+		--md-sys-color-on-surface                       : light-dark(#1b1b21, #e4e1e9);
+		--md-sys-color-surface-variant                  : light-dark(#e3e1f0, #464652);
+		--md-sys-color-on-surface-variant               : light-dark(#464652, #c7c5d3);
+		--md-sys-color-inverse-surface                  : light-dark(#303036, #e4e1e9);
+		--md-sys-color-inverse-on-surface               : light-dark(#f3eff8, #303036);
+		--md-sys-color-outline                          : light-dark(#777683, #918f9d);
+		--md-sys-color-outline-variant                  : light-dark(#c7c5d3, #464652);
+		--md-sys-color-shadow                           : light-dark(#000000, #000000);
+		--md-sys-color-scrim                            : light-dark(#000000, #000000);
+		--md-sys-color-surface-tint                     : light-dark(#5155ae, #c0c1ff);
+		--md-sys-color-primary                          : light-dark(#2a2c86, #c0c1ff);
+		--md-sys-color-on-primary                       : light-dark(#ffffff, #21237d);
+		--md-sys-color-primary-container                : light-dark(#42459e, #42459e);
+		--md-sys-color-on-primary-container             : light-dark(#babcff, #babcff);
+		--md-sys-color-inverse-primary                  : light-dark(#c0c1ff, #5155ae);
+		--md-sys-color-secondary                        : light-dark(#5a5b80, #c3c3ed);
+		--md-sys-color-on-secondary                     : light-dark(#ffffff, #2c2d4f);
+		--md-sys-color-secondary-container              : light-dark(#d1d1fb, #424467);
+		--md-sys-color-on-secondary-container           : light-dark(#57587d, #b1b2db);
+		--md-sys-color-tertiary                         : light-dark(#592e00, #ffb77b);
+		--md-sys-color-on-tertiary                      : light-dark(#ffffff, #4d2700);
+		--md-sys-color-tertiary-container               : light-dark(#7a4100, #7a4100);
+		--md-sys-color-on-tertiary-container            : light-dark(#ffb16e, #ffb16e);
+		--md-sys-color-error                            : light-dark(#ba1a1a, #ffb4ab);
+		--md-sys-color-on-error                         : light-dark(#ffffff, #690005);
+		--md-sys-color-error-container                  : light-dark(#ffdad6, #93000a);
+		--md-sys-color-on-error-container               : light-dark(#93000a, #ffdad6);
+		--md-sys-color-primary-fixed                    : light-dark(#e1e0ff, #e1e0ff);
+		--md-sys-color-primary-fixed-dim                : light-dark(#c0c1ff, #c0c1ff);
+		--md-sys-color-on-primary-fixed                 : light-dark(#06016b, #06016b);
+		--md-sys-color-on-primary-fixed-variant         : light-dark(#393c95, #393c95);
+		--md-sys-color-secondary-fixed                  : light-dark(#e1e0ff, #e1e0ff);
+		--md-sys-color-secondary-fixed-dim              : light-dark(#c3c3ed, #c3c3ed);
+		--md-sys-color-on-secondary-fixed               : light-dark(#171839, #171839);
+		--md-sys-color-on-secondary-fixed-variant       : light-dark(#424467, #424467);
+		--md-sys-color-tertiary-fixed                   : light-dark(#ffdcc2, #ffdcc2);
+		--md-sys-color-tertiary-fixed-dim               : light-dark(#ffb77b, #ffb77b);
+		--md-sys-color-on-tertiary-fixed                : light-dark(#2e1500, #2e1500);
+		--md-sys-color-on-tertiary-fixed-variant        : light-dark(#6d3a00, #6d3a00);
+    }
+}
