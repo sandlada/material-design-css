@@ -5,14 +5,22 @@ import { MaterialColorService, SerializationService } from '@sandlada/material-t
 import { Hct, TonalPalette, hexFromArgb } from '@material/material-color-utilities'
 
 interface IColorOutput {
-    content: string
-    fileName: string
+    content   : string
+    fileName  : string
     outputPath: string
 }
 interface IPaletteOutput {
-    content: string
-    fileName: string
+    content   : string
+    fileName  : string
     outputPath: string
+}
+interface IPalettes {
+    primaryPalette       : TonalPalette
+    secondaryPalette     : TonalPalette
+    tertiaryPalette      : TonalPalette
+    errorPalette         : TonalPalette
+    neutralPalette       : TonalPalette
+    neutralVariantPalette: TonalPalette
 }
 
 const Variants = [
@@ -95,26 +103,83 @@ function createColorOutputsForVariant(variant: string): IColorOutput[] {
 
     return outputs
 }
-function createPaletteOutput(options?: { minimal: boolean }): Array<IPaletteOutput> {
+function createPaletteOutput(options?: Partial<{ minimal: boolean, variant: string }>): Array<IPaletteOutput> {
+    const { minimal = false, variant = 'neutral' } = options || {}
+    const targetVariantNumber = Variants.find(v => v.name === variant)?.variant
+
     const paletteToneNumbers =
-        options?.minimal ?? false
+        minimal
         ? [0, 1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 96, 97, 98, 99, 100]
         : Array.from({ length: 101 }, (_, tone) => tone)
-    const outputPath = path.join(prebuiltPalettesDir).toString()
-
+    const outputPath = path.join(prebuiltPalettesDir, variant)
     const outputs: Array<IPaletteOutput> = []
 
-    for(let hue = 0; hue <= 360; hue += 10) {
-        for(let chroma = 10; chroma <= 100; chroma += 10) {
-            const palette = TonalPalette.fromHueAndChroma(hue, chroma)
+    const generate = (name: string, sourceColor: Hct, minimal: boolean = false) => {
+        const keyColorPalettes2021DP: IPalettes = MaterialColorService.create({ sourceColor, contrast: 0, variant: targetVariantNumber, specVersion: 2021, platform: 'phone' }).palettes
+        const keyColorPalettes2025DP: IPalettes = MaterialColorService.create({ sourceColor, contrast: 0, variant: targetVariantNumber, specVersion: 2025, platform: 'phone' }).palettes
 
-            const serialized: IPaletteOutput = ({
-                content: ':root {\n' + paletteToneNumbers.map(tone => `    --md-ref-palette-h${hue}-c${chroma}-${tone}: ${hexFromArgb(palette.tone(tone))};`).join('\n') + '\n}',
-                fileName: `h${hue}-c${chroma}${options?.minimal ?? false ? '-minimal' : ''}.css`,
-                outputPath,
-            })
+        const s: Array<[string, [string, IPalettes][]]> = [
+            [`${name}-2021${minimal ? '-minimal' : ''}`, [['', keyColorPalettes2021DP]]],
+            [`${name}-2025${minimal ? '-minimal' : ''}`, [['', keyColorPalettes2025DP]]],
+        ]
 
-            outputs.push(serialized)
+        const outputs = s.map(([name, ps]) => {
+            const contents = ps.map(([type, palettes]) => {
+                const {
+                    primaryPalette,
+                    secondaryPalette,
+                    tertiaryPalette,
+                    errorPalette,
+                    neutralPalette,
+                    neutralVariantPalette,
+                } = palettes
+                return new Array<[string, TonalPalette]>(
+                    ['primary', primaryPalette],
+                    ['secondary', secondaryPalette],
+                    ['tertiary', tertiaryPalette],
+                    ['error', errorPalette],
+                    ['neutral', neutralPalette],
+                    ['neutral-variant', neutralVariantPalette],
+                ).map(([name, palette]) => {
+                    let rootSelector = ':root'
+                    if(type === 'low-contrast') rootSelector = ':root[low-contrast]'
+                    else if(type === 'high-contrast') rootSelector = ':root[high-contrast]'
+
+                    return `${rootSelector} {\n` + paletteToneNumbers.map(tone => `    --md-ref-palette-${name}-${tone}: ${hexFromArgb(palette.tone(tone))};`).join('\n') + '\n}'
+                }).join('\n')
+            }).join('')
+
+            const serialized: IPaletteOutput = {
+                content: contents,
+                fileName: `${name}.css`,
+                outputPath: outputPath
+            }
+
+            return serialized
+        })
+
+        return outputs
+    }
+
+    if(variant === 'monochrome') {
+        const sourceColor = Hct.from(0, 60, 50)
+        outputs.push(...generate(`black`, sourceColor, minimal))
+    }
+    else if (['neutral', 'tonal-spot', 'vibrant', 'expressive', 'rainbow', 'fruit-salad'].includes(variant)) {
+        for(let hue = 0; hue <= 360; hue += 30) {
+            const sourceColor = Hct.from(hue, 60, 50)
+            outputs.push(...generate(`h${hue}`, sourceColor, minimal))
+        }
+    }
+    else if(['content', 'fidelity'].includes(variant)) {
+        for(let hue = 0; hue <= 360; hue += 30) {
+            for(let chroma = 30; chroma <= 90; chroma += 30) {
+                for(let tone = 20; tone <= 100; tone += 30) {
+                    const sourceColor = Hct.from(hue, chroma, tone)
+                    outputs.push(...generate(`h${hue}c${chroma}t${tone}`, sourceColor, minimal))
+                }
+
+            }
         }
     }
 
@@ -128,11 +193,21 @@ function buildColors() {
     ]
     return outputs
 }
+
+/**
+ * @prop fromSingleSourceColor - whether to create --md-sys-palette-h${hue}-c${chroma}-${tone}.
+ * If false, it will create --md-sys-palette-${parimary|secondary|tertiary|error|neutral|neutral-variant}-${tone}.
+ * If true, it will create --md-sys-color-h${hue}-c${chroma}-t${tone}.
+ * Defaults to true.
+ */
 function buildPalettes() {
-    const outputs = [
-        ...createPaletteOutput(),
-        ...createPaletteOutput({ minimal: true }),
-    ]
+    const outputs: Array<IPaletteOutput> = []
+
+    Variants.map(({name}) => {
+        outputs.push(...createPaletteOutput({ variant: name }))
+        outputs.push(...createPaletteOutput({ variant: name, minimal: true }))
+    })
+
     return outputs
 }
 
@@ -155,6 +230,8 @@ async function writeOutputsToFileAsync(outputs: Array<IColorOutput | IPaletteOut
 console.log('== Start to make prebuild colors.');
 
 const OutputReady: Array<IColorOutput> = buildPalettes()
+
+// console.log(OutputReady);
 
 await writeOutputsToFileAsync(OutputReady)
     .then(() => {console.log('All directories have been created successfully.')})

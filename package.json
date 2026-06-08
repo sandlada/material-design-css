@@ -9,6 +9,8 @@
         "./palette/*": "./palette/*",
         "./prebuilt-colors/*": "./prebuilt-colors/*",
         "./prebuilt-colors/**/*": "./prebuilt-colors/**/*",
+        "./prebuilt-palettes/*": "./prebuilt-palettes/*",
+        "./prebuilt-palettes/**/*": "./prebuilt-palettes/**/*",
         "./shape/*": "./shape/*",
         "./typography/*": "./typography/*"
     },
@@ -18,6 +20,7 @@
         "motion/**/*",
         "palette/**/*",
         "prebuilt-colors/**/*",
+        "prebuilt-palettes/**/*",
         "preset.css",
         "shape/**/*",
         "typography/**/*"
@@ -46,9 +49,11 @@
         "url": "https://github.com/sandlada/material-design-css.git"
     },
     "type": "module",
-    "version": "2.5.0-20260607.a",
+    "version": "3.0.0-20260608.a",
     "devDependencies": {
         "@material/material-color-utilities": "^0.4.0",
-        "@sandlada/material-theme-cli": "^1.0.0-20260525.a"
+        "@sandlada/material-theme-cli": "^1.0.0-20260525.a",
+        "@types/node": "^25.9.2",
+        "typescript": "^6.0.3"
     }
 }
