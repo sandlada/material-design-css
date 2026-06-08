@@ -49,7 +49,7 @@
         "url": "https://github.com/sandlada/material-design-css.git"
     },
     "type": "module",
-    "version": "3.0.0-20260608.a",
+    "version": "3.0.0-20260608.b",
     "devDependencies": {
         "@material/material-color-utilities": "^0.4.0",
         "@sandlada/material-theme-cli": "^1.0.0-20260525.a",
