@@ -1,338 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevApp</title>
-
-    <link rel="stylesheet" href="./preset.css" />
-    <link rel="stylesheet" href="./color/bg-utilities.css" />
-    <link rel="stylesheet" href="./color/text-utilities.css" />
-    <link rel="stylesheet" href="./prebuild-color/orange.css" />
-    <link rel="stylesheet" href="./motion/animation-utilities.css" />
-    <link rel="stylesheet" href="./motion/transition-utilities.css" />
-    <link rel="stylesheet" href="./shape/shape-utilities.css" />
-    <link rel="stylesheet" href="./typography/typography-utilities.css" />
+    <title>Document</title>
 
     <style>
-        .flex {
-            display: flex;
-        }
-
-        .flex-col {
-            flex-direction: column;
-        }
-
-        .shape-block {
-            height: 96px;
-            width: 96px;
-            display: inline-block;
-            background-color: rgb(163, 219, 98);
-        }
-
-        .filled-button {
-            height: 56px;
-            width: 64px;
-            border-radius: 33px;
-            flex-grow: 1;
-            flex-shrink: 1;
-
-            &:active {
-                width: 512px;
-            }
-        }
-
-        .color-block {
-            display: flex;
-            min-height: 72px;
-            align-items: center;
-            padding: 0px 12px;
-            overflow: auto;
-        }
-
-        h1,
-        h2,
-        h3,
-        p,
-        span {
-            margin: 0;
-            padding: 0;
-        }
-
-        h2 {
-            margin: 32px 24px 12px;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            box-sizing: border-box;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 24px;
-
-            @media (width >=640px) {
-                max-width: 640px;
-            }
-
-            @media (width >=768px) {
-                max-width: 768px;
-            }
-
-            @media (width >=1024px) {
-                max-width: 1024px;
-            }
-
-            @media (width >=1280px) {
-                max-width: 1280px;
-            }
-        }
-
-        .fixed-bg-1 {
-            position: fixed;
-            left: -128px;
-            top: -256px;
-            background-color: rgb(255, 252, 60);
-            z-index: -1;
-            filter: blur(256px);
-            height: 512px;
-            width: 512px;
-        }
-
-        .fixed-bg-2 {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            background-color: rgb(128, 255, 111);
-            opacity: 0.38;
-            z-index: -1;
-            filter: blur(256px);
-            height: 512px;
-            width: 512px;
-        }
-
-        .hero {
-            display: block;
-            text-align: start;
-            padding: 64px 0px;
-
-            &>p {
-                padding: 32px 0px 0px 0px;
-            }
-        }
-
-        .card {
-            border-radius: 24px;
-            border: 1px solid var(--md-sys-color-outline-variant);
-            background-color: white;
-            padding: 12px;
-            overflow: auto;
-            display: block;
-            box-sizing: border-box;
-            margin: 24px 0px;
-        }
+        @import "tailwindcss";
+        @import "./spacing/tw.css";
+        @import "./color/tw.css";
+        @import "./prebuilt-colors/content/h0c90t20-2025.css";
+        @import "./typography/tw.css";
     </style>
 </head>
-
 <body>
 
-    <span aria-hidden="true" class="fixed-bg-1"></span>
-    <span aria-hidden="true" class="fixed-bg-2"></span>
-
-    <div class="container">
-
-        <section class="hero">
-            <h1 class="emphasized-display-small">@sandlada&sol;material-design-css</h1>
-            <p class="body-large">A ready-made npm package for a collection of css styles in the material design style.
-                This demo loads the orange prebuilt color preset.
-            </p>
-        </section>
-
-
-        <h2 class="emphasized-headline-medium">Typography</h2>
-
-        <div class="card" style="display: grid; grid-template-columns: 1fr 1fr;">
-            <div class="flex flex-col">
-                <span class="display-large">Display Large</span>
-                <span class="display-medium">Display Medium</span>
-                <span class="display-small">Display Small</span>
-
-                <span class="headline-large">Headline Large</span>
-                <span class="headline-medium">Headline Medium</span>
-                <span class="headline-small">Headline Small</span>
-
-                <span class="title-large">Title Large</span>
-                <span class="title-medium">Title Medium</span>
-                <span class="title-small">Title Small</span>
-
-                <span class="body-large">Body Large</span>
-                <span class="body-medium">Body Medium</span>
-                <span class="body-small">Body Small</span>
-
-                <span class="label-large">Label Large</span>
-                <span class="label-medium">Label Medium</span>
-                <span class="label-small">Label Small</span>
-            </div>
-
-            <div class="flex flex-col">
-                <span class="emphasized-display-large">Display Large</span>
-                <span class="emphasized-display-medium">Display Medium</span>
-                <span class="emphasized-display-small">Display Small</span>
-
-                <span class="emphasized-headline-large">Headline Large</span>
-                <span class="emphasized-headline-medium">Headline Medium</span>
-                <span class="emphasized-headline-small">Headline Small</span>
-
-                <span class="emphasized-title-large">Title Large</span>
-                <span class="emphasized-title-medium">Title Medium</span>
-                <span class="emphasized-title-small">Title Small</span>
-
-                <span class="emphasized-body-large">Body Large</span>
-                <span class="emphasized-body-medium">Body Medium</span>
-                <span class="emphasized-body-small">Body Small</span>
-
-                <span class="emphasized-label-large">Label Large</span>
-                <span class="emphasized-label-medium">Label Medium</span>
-                <span class="emphasized-label-small">Label Small</span>
-            </div>
+    <div class="headline-medium">Spacing</div>
+    <div class="flex flex-col">
+        <style>
+            .spacing-box {
+                display: inline-flex;
+                align-items: center;
+                box-sizing: border-box;
+                width: fit-content;
+            }
+            .box {
+                width: 40px;
+                height: 40px;
+                border-right-width: 1px;
+            }
+            .box+div {
+                border-left-width: 1px;
+                padding-inline-start: 8px;
+            }
+        </style>
+        <div class="spacing-box inline-flex gap-0">
+            <div class="box"></div>
+            <div>Space0 - gap-0</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)/4)]">
+            <div class="box"></div>
+            <div>Space25 - gap-[calc(var(--spacing)/4)]</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)/2)]">
+            <div class="box"></div>
+            <div>Space50 - gap-[calc(var(--spacing)/2)]</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)*(3/4))]">
+            <div class="box"></div>
+            <div>Space75 - gap-[calc(var(--spacing)*(3/4))]</div>
+        </div>
+        <div class="spacing-box inline-flex gap-1">
+            <div class="box"></div>
+            <div>Space100 - gap-1</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)*1.25)]">
+            <div class="box"></div>
+            <div>Space125 - gap-[calc(var(--spacing)*1.25)]</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)*1.5)]">
+            <div class="box"></div>
+            <div>Space150 - gap-[calc(var(--spacing)*1.5)]</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)*1.75)]">
+            <div class="box"></div>
+            <div>Space175 - gap-[calc(var(--spacing)*1.75)]</div>
+        </div>
+        <div class="spacing-box inline-flex gap-2">
+            <div class="box"></div>
+            <div>Space200 - gap-2</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)*2.5)]">
+            <div class="box"></div>
+            <div>Space250 - gap-[calc(var(--spacing)*2.5)]</div>
+        </div>
+        <div class="spacing-box inline-flex gap-3">
+            <div class="box"></div>
+            <div>Space300 - gap-3</div>
+        </div>
+        <div class="spacing-box inline-flex gap-4">
+            <div class="box"></div>
+            <div>Space400 - gap-4</div>
+        </div>
+        <div class="spacing-box inline-flex gap-5">
+            <div class="box"></div>
+            <div>Space500 - gap-5</div>
+        </div>
+        <div class="spacing-box inline-flex gap-6">
+            <div class="box"></div>
+            <div>Space600 - gap-6</div>
+        </div>
+        <div class="spacing-box inline-flex gap-7">
+            <div class="box"></div>
+            <div>Space700 - gap-7</div>
+        </div>
+        <div class="spacing-box inline-flex gap-8">
+            <div class="box"></div>
+            <div>Space800 - gap-8</div>
+        </div>
+        <div class="spacing-box inline-flex gap-9">
+            <div class="box"></div>
+            <div>Space900 - gap-9</div>
         </div>
 
-        <h2 class="emphasized-headline-medium">Shape</h2>
+    </div>
 
-        <div class="card" style="display: grid; grid-template-columns: repeat(9, 96px); gap: 12px;">
+    <div class="headline-medium">Color</div>
+    <div>
+        <div class="w-4 h-4 bg-primary"></div>
+        <div class="w-4 h-4 bg-secondary"></div>
+        <div class="w-4 h-4 bg-tertiary"></div>
+        <div class="w-4 h-4 bg-error"></div>
 
-            <span class="shape-block rounded-none"></span>
-            <span class="shape-block rounded-extra-small"></span>
-            <span class="shape-block rounded-small"></span>
-            <span class="shape-block rounded-medium"></span>
-            <span class="shape-block rounded-large"></span>
-            <span class="shape-block rounded-large-increased"></span>
-            <span class="shape-block rounded-extra-large"></span>
-            <span class="shape-block rounded-extra-large-increased"></span>
-            <span class="shape-block rounded-extra-extra-large"></span>
+        <div class="w-4 h-4 bg-primary-container"></div>
+        <div class="w-4 h-4 bg-secondary-container"></div>
+        <div class="w-4 h-4 bg-tertiary-container"></div>
+        <div class="w-4 h-4 bg-error-container"></div>
+    </div>
 
-            <span class="shape-block rounded-t-none"></span>
-            <span class="shape-block rounded-t-extra-small"></span>
-            <span class="shape-block rounded-t-small"></span>
-            <span class="shape-block rounded-t-medium"></span>
-            <span class="shape-block rounded-t-large"></span>
-            <span class="shape-block rounded-t-large-increased"></span>
-            <span class="shape-block rounded-t-extra-large"></span>
-            <span class="shape-block rounded-t-extra-large-increased"></span>
-            <span class="shape-block rounded-t-extra-extra-large"></span>
+    <div class="emphasized-headline-medium">Typography</div>
+    <div class="card" style="display: grid; grid-template-columns: 1fr 1fr;">
+        <div class="flex flex-col">
+            <span class="display-large">Display Large</span>
+            <span class="display-medium">Display Medium</span>
+            <span class="display-small">Display Small</span>
 
-            <span class="shape-block rounded-r-none"></span>
-            <span class="shape-block rounded-r-extra-small"></span>
-            <span class="shape-block rounded-r-small"></span>
-            <span class="shape-block rounded-r-medium"></span>
-            <span class="shape-block rounded-r-large"></span>
-            <span class="shape-block rounded-r-large-increased"></span>
-            <span class="shape-block rounded-r-extra-large"></span>
-            <span class="shape-block rounded-r-extra-large-increased"></span>
-            <span class="shape-block rounded-r-extra-extra-large"></span>
+            <span class="headline-large">Headline Large</span>
+            <span class="headline-medium">Headline Medium</span>
+            <span class="headline-small">Headline Small</span>
 
-            <span class="shape-block rounded-b-none"></span>
-            <span class="shape-block rounded-b-extra-small"></span>
-            <span class="shape-block rounded-b-small"></span>
-            <span class="shape-block rounded-b-medium"></span>
-            <span class="shape-block rounded-b-large"></span>
-            <span class="shape-block rounded-b-large-increased"></span>
-            <span class="shape-block rounded-b-extra-large"></span>
-            <span class="shape-block rounded-b-extra-large-increased"></span>
-            <span class="shape-block rounded-b-extra-extra-large"></span>
+            <span class="title-large">Title Large</span>
+            <span class="title-medium">Title Medium</span>
+            <span class="title-small">Title Small</span>
 
-            <span class="shape-block rounded-l-none"></span>
-            <span class="shape-block rounded-l-extra-small"></span>
-            <span class="shape-block rounded-l-small"></span>
-            <span class="shape-block rounded-l-medium"></span>
-            <span class="shape-block rounded-l-large"></span>
-            <span class="shape-block rounded-l-large-increased"></span>
-            <span class="shape-block rounded-l-extra-large"></span>
-            <span class="shape-block rounded-l-extra-large-increased"></span>
-            <span class="shape-block rounded-l-extra-extra-large"></span>
+            <span class="body-large">Body Large</span>
+            <span class="body-medium">Body Medium</span>
+            <span class="body-small">Body Small</span>
+
+            <span class="label-large">Label Large</span>
+            <span class="label-medium">Label Medium</span>
+            <span class="label-small">Label Small</span>
         </div>
 
-        <h2 class="emphasized-headline-medium">Motion</h2>
+        <div class="flex flex-col">
+            <span class="emphasized-display-large">Display Large</span>
+            <span class="emphasized-display-medium">Display Medium</span>
+            <span class="emphasized-display-small">Display Small</span>
 
-        <div class="card" style="display: flex; flex-direction: column; gap: 12px;">
-            <div style="display: flex;flex-wrap: nowrap;gap: 0px;">
-                <button
-                    class="filled-button transition-duration-expressive-fast-spatial transition-easing-expressive-fast-spatial"></button>
-                <button
-                    class="filled-button transition-duration-expressive-default-spatial transition-easing-expressive-default-spatial"></button>
-                <button
-                    class="filled-button transition-duration-expressive-slow-spatial transition-easing-expressive-slow-spatial"></button>
-                <button
-                    class="filled-button transition-duration-expressive-fast-effects transition-easing-expressive-fast-effects"></button>
-                <button
-                    class="filled-button transition-duration-expressive-default-effects transition-easing-expressive-default-effects"></button>
-                <button
-                    class="filled-button transition-duration-expressive-slow-effects transition-easing-expressive-slow-effects"></button>
-            </div>
+            <span class="emphasized-headline-large">Headline Large</span>
+            <span class="emphasized-headline-medium">Headline Medium</span>
+            <span class="emphasized-headline-small">Headline Small</span>
 
-            <div style="display: flex;flex-wrap: nowrap;gap: 0px;">
-                <button
-                    class="filled-button transition-duration-standard-fast-spatial transition-easing-standard-fast-spatial"></button>
-                <button
-                    class="filled-button transition-duration-standard-default-spatial transition-easing-standard-default-spatial"></button>
-                <button
-                    class="filled-button transition-duration-standard-slow-spatial transition-easing-standard-slow-spatial"></button>
-                <button
-                    class="filled-button transition-duration-standard-fast-effects transition-easing-standard-fast-effects"></button>
-                <button
-                    class="filled-button transition-duration-standard-default-effects transition-easing-standard-default-effects"></button>
-                <button
-                    class="filled-button transition-duration-standard-slow-effects transition-easing-standard-slow-effects"></button>
-            </div>
-        </div>
+            <span class="emphasized-title-large">Title Large</span>
+            <span class="emphasized-title-medium">Title Medium</span>
+            <span class="emphasized-title-small">Title Small</span>
 
+            <span class="emphasized-body-large">Body Large</span>
+            <span class="emphasized-body-medium">Body Medium</span>
+            <span class="emphasized-body-small">Body Small</span>
 
-        <h2 class="emphasized-headline-medium">Color</h2>
-
-        <div class="card" style="display: grid; grid-template-columns: repeat(6, 1fr);gap: 0px;">
-            <span class="color-block text-on-background              bg-background">background</span>
-            <span class="color-block text-on-surface                 bg-surface">surface</span>
-            <span class="color-block text-on-surface                 bg-surface-dim">surface-dim</span>
-            <span class="color-block text-on-surface                 bg-surface-bright">surface-bright</span>
-            <span
-                class="color-block text-on-surface                 bg-surface-container-lowest">surface-container-lowest</span>
-            <span
-                class="color-block text-on-surface                 bg-surface-container-low">surface-container-low</span>
-            <span class="color-block text-on-surface                 bg-surface-container">surface-container</span>
-            <span
-                class="color-block text-on-surface                 bg-surface-container-high">surface-container-high</span>
-            <span
-                class="color-block text-on-surface                 bg-surface-container-highest">surface-container-highest</span>
-            <span class="color-block text-on-surface                 bg-surface-variant">surface-variant</span>
-            <span class="color-block text-inverse-on-surface         bg-inverse-surface">inverse-surface</span>
-            <span class="color-block text-inverse-on-surface         bg-outline">outline</span>
-            <span class="color-block text-on-surface                 bg-outline-variant">outline-variant</span>
-            <span class="color-block text-inverse-on-surface         bg-shadow">shadow</span>
-            <span class="color-block text-inverse-on-surface         bg-scrim">scrim</span>
-            <span class="color-block text-inverse-on-surface         bg-surface-tint">surface-tint</span>
-            <span class="color-block text-on-primary                 bg-primary">primary</span>
-            <span class="color-block text-on-primary-container       bg-primary-container">primary-container</span>
-            <span class="color-block text-primary                    bg-inverse-primary">inverse-primary</span>
-            <span class="color-block text-on-secondary               bg-secondary">secondary</span>
-            <span class="color-block text-on-secondary-container     bg-secondary-container">secondary-container</span>
-            <span class="color-block text-on-tertiary                bg-tertiary">tertiary</span>
-            <span class="color-block text-on-tertiary-container      bg-tertiary-container">tertiary-container</span>
-            <span class="color-block text-on-error                   bg-error">error</span>
-            <span class="color-block text-on-error-container         bg-error-container">error-container</span>
-            <span class="color-block text-on-primary-fixed           bg-primary-fixed">primary-fixed</span>
-            <span class="color-block text-on-primary-fixed-variant   bg-primary-fixed-dim">primary-fixed-dim</span>
-            <span class="color-block text-on-secondary-fixed         bg-secondary-fixed">secondary-fixed</span>
-            <span class="color-block text-on-secondary-fixed-variant bg-secondary-fixed-dim">secondary-fixed-dim</span>
-            <span class="color-block text-on-tertiary-fixed          bg-tertiary-fixed">tertiary-fixed</span>
-            <span class="color-block text-on-tertiary-fixed-variant  bg-tertiary-fixed-dim">tertiary-fixed-dim</span>
+            <span class="emphasized-label-large">Label Large</span>
+            <span class="emphasized-label-medium">Label Medium</span>
+            <span class="emphasized-label-small">Label Small</span>
         </div>
     </div>
 
 </body>
-
 </html>

@@ -14,6 +14,7 @@
 - Prebuilt Palettes
 - Motion
 - Shape
+- Spacing
 - Typography
 
 It also **supports TailwindCSS v4**.
@@ -53,7 +54,7 @@ import '@sandlada/material-design-css/palette/text-utilities.css'
 import '@sandlada/material-design-css/palette/bg-utilities.css'
 
 // display-large
-import '@sandlada/material-design-css/typography/typography-utilities.css'
+import '@sandlada/material-design-css/typography/utilities.css'
 
 // rounded-medium
 import '@sandlada/material-design-css/shape/shape-utilities.css'
@@ -81,16 +82,16 @@ import '@sandlada/material-design-css/motion/transition-utilities.css'
  * bg-primary
  * text-on-primary
  */
-@import "@sandlada/material-design-css/color/tailwind-theme.css";
+@import "@sandlada/material-design-css/color/tw.css";
 
 /**
  * bg-primary-90
  * text-primary-10
  */
-@import "@sandlada/material-design-css/palette/tailwind-theme.css";
+@import "@sandlada/material-design-css/palette/tw.css";
 
 /* rounded-medium */
-@import "@sandlada/material-design-css/shape/tailwind-theme.css";
+@import "@sandlada/material-design-css/shape/tw.css";
 
 /*
  * font-display-large
@@ -99,16 +100,22 @@ import '@sandlada/material-design-css/motion/transition-utilities.css'
  * leading-display-large
  * font-weight-display-large
  */
-@import "@sandlada/material-design-css/typography/tailwind-theme.css";
+@import "@sandlada/material-design-css/typography/tw.css";
 
 /* display-large */
-@import "@sandlada/material-design-css/typography/tailwind-utilities.css";
+@import "@sandlada/material-design-css/typography/utilities.css";
 
 /**
  * ease-emphasized
  * duration-[var(--duration-medium1)]
  */
-@import "@sandlada/material-design-css/motion/tailwind-theme.css";
+@import "@sandlada/material-design-css/motion/tw.css";
+
+/**
+ * space-1
+ * gap-4
+ */
+@import "@sandlada/material-design-css/spacing/tw.css";
 
 @layer base {
     :root:not([dark]) {
@@ -128,6 +135,7 @@ import '@sandlada/material-design-css/motion/transition-utilities.css'
 - Prebuilt palette files are organized under `prebuilt-palettes/{variant}/`. Most variants use `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`; `content` and `fidelity` use `h{hue}c{chroma}t{tone}-{year}.css` / `h{hue}c{chroma}t{tone}-{year}-minimal.css`; `monochrome` uses `black-{year}.css` / `black-{year}-minimal.css`.
 - Shape utilities use `rounded-*` plus directional suffixes like `-t`, `-r`, `-b`, and `-l`.
 - Motion utilities use `animation-*` and `transition-*` with `duration-*` and `easing-*` tokens.
+- Spacing utilities use `space-*` and `gap-*`.
 - Typography utilities use `emphasized-*` for emphasized variants and the base type scale names for standard variants.
 
 ## Usage

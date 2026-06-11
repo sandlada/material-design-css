@@ -19,7 +19,7 @@
     --ease-standard-slow-effects     : var(--md-sys-motion-easing-standard-slow-effects, cubic-bezier(0.34, 0.88, 0.34, 1.00));
 }
 
-@theme static {
+@theme static inline {
     --duration-short1                    : var(--md-sys-motion-duration-short1, 50ms);
     --duration-short2                    : var(--md-sys-motion-duration-short2, 100ms);
     --duration-short3                    : var(--md-sys-motion-duration-short3, 150ms);
