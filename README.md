@@ -10,12 +10,12 @@
 
 - Color
 - Palette
-- Prebuilt Colors
-- Prebuilt Palettes
 - Motion
 - Shape
 - Spacing
 - Typography
+- Prebuilt Colors
+- Prebuilt Palettes
 
 It also **supports TailwindCSS v4**.
 
@@ -38,32 +38,46 @@ npm i @sandlada/material-design-css
 // If you are using Vite or Webpack.
 // In CSS file, use @import instead. (You may need to adjust the path depending on your setup, e.g., `@import "../node_modules/@sandlada/material-design-css/preset.css";`)
 
-// Load preset before color or prebuilt-color utilities.
-import '@sandlada/material-design-css/preset.css'
+/**
+ * Load preset before color or prebuilt-color utilities.
+ *
+ * :root:not([dark]) {
+ *     color-scheme: light;
+ * }
+ *
+ * :root[dark] {
+ *     color-scheme: dark;
+ * }
+ */
+import "@sandlada/material-design-css/preset.css"
 
-// text-on-surface
-import '@sandlada/material-design-css/color/text-utilities.css'
+// text-on-surface & bg-surface
+import "@sandlada/material-design-css/color/utilities.css"
 
-// bg-surface
-import '@sandlada/material-design-css/color/bg-utilities.css'
+// See more details on the /prebuilt-colors page.
+import "@sandlada/material-design-css/prebuilt-colors/tonal-spot/h0-2025.css"
 
-// text-primary-0
-import '@sandlada/material-design-css/palette/text-utilities.css'
+// text-primary-0 & bg-primary-100
+import "@sandlada/material-design-css/palette/utilities.css"
 
-// bg-primary-100
-import '@sandlada/material-design-css/palette/bg-utilities.css'
+// Prebuilt Palettes. See more details on the /prebuilt-palettes page.
+import "@sandlada/material-design-css/prebuilt-palettes/tonal-spot/h0-2025.css"
 
 // display-large
-import '@sandlada/material-design-css/typography/utilities.css'
+import "@sandlada/material-design-css/typography/utilities.css"
+import "@sandlada/material-design-css/typography/variables.css"
 
 // rounded-medium
-import '@sandlada/material-design-css/shape/shape-utilities.css'
+import "@sandlada/material-design-css/shape/utilities.css"
+import "@sandlada/material-design-css/shape/variables.css"
 
-// animation-easing-expressive-fast-spatial
-import '@sandlada/material-design-css/motion/animation-utilities.css'
+// animation-easing-expressive-fast-spatial & transition-easing-expressive-fast-spatial
+import "@sandlada/material-design-css/motion/utilities.css"
+import "@sandlada/material-design-css/motion/variables.css"
 
-// transition-easing-expressive-fast-spatial
-import '@sandlada/material-design-css/motion/transition-utilities.css'
+// spacing utilities
+import "@sandlada/material-design-css/spacing/utilities.css"
+import "@sandlada/material-design-css/spacing/variables.css"
 ```
 
 
@@ -77,6 +91,7 @@ import '@sandlada/material-design-css/motion/transition-utilities.css'
  * Replace the path with any file under prebuilt-colors/.
  */
 @import "@sandlada/material-design-css/prebuilt-colors/tonal-spot/h0-2025.css";
+@import "@sandlada/material-design-css/prebuilt-palettes/tonal-spot/h0-2025.css";
 
 /**
  * bg-primary
@@ -93,7 +108,11 @@ import '@sandlada/material-design-css/motion/transition-utilities.css'
 /* rounded-medium */
 @import "@sandlada/material-design-css/shape/tw.css";
 
+/* spacing */
+@import "@sandlada/material-design-css/spacing/tw.css";
+
 /*
+ * display-large
  * font-display-large
  * text-display-large
  * tracking-display-large
@@ -102,29 +121,11 @@ import '@sandlada/material-design-css/motion/transition-utilities.css'
  */
 @import "@sandlada/material-design-css/typography/tw.css";
 
-/* display-large */
-@import "@sandlada/material-design-css/typography/utilities.css";
-
 /**
  * ease-emphasized
  * duration-[var(--duration-medium1)]
  */
 @import "@sandlada/material-design-css/motion/tw.css";
-
-/**
- * space-1
- * gap-4
- */
-@import "@sandlada/material-design-css/spacing/tw.css";
-
-@layer base {
-    :root:not([dark]) {
-        color-scheme: light;
-    }
-    :root[dark] {
-        color-scheme: dark;
-    }
-}
 ```
 
 
@@ -270,15 +271,15 @@ Where `{tone}` ranges from `0` to `100`.
 
 There are **9 variants**, organized into subdirectories under `prebuilt-palettes/`:
 
-| Variant     | Directory      | Filename Pattern                                                              | Description                       |
-| ----------- | -------------- | ----------------------------------------------------------------------------- | --------------------------------- |
-| Monochrome  | `monochrome/`  | `black-{year}.css` / `black-{year}-minimal.css`                               | Single-tone grayscale palette     |
-| Neutral     | `neutral/`     | `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`                             | Neutral palette with a subtle hue |
-| Tonal Spot  | `tonal-spot/`  | `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`                             | Balanced tonal palette            |
-| Vibrant     | `vibrant/`     | `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`                             | Highly saturated palette          |
-| Expressive  | `expressive/`  | `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`                             | Expressive and dynamic palette    |
-| Rainbow     | `rainbow/`     | `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`                             | Rainbow-inspired palette          |
-| Fruit Salad | `fruit-salad/` | `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`                             | Diverse multi-hue palette         |
+| Variant     | Directory      | Filename Pattern                                                                  | Description                       |
+| ----------- | -------------- | --------------------------------------------------------------------------------- | --------------------------------- |
+| Monochrome  | `monochrome/`  | `black-{year}.css` / `black-{year}-minimal.css`                                   | Single-tone grayscale palette     |
+| Neutral     | `neutral/`     | `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`                                 | Neutral palette with a subtle hue |
+| Tonal Spot  | `tonal-spot/`  | `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`                                 | Balanced tonal palette            |
+| Vibrant     | `vibrant/`     | `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`                                 | Highly saturated palette          |
+| Expressive  | `expressive/`  | `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`                                 | Expressive and dynamic palette    |
+| Rainbow     | `rainbow/`     | `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`                                 | Rainbow-inspired palette          |
+| Fruit Salad | `fruit-salad/` | `h{hue}-{year}.css` / `h{hue}-{year}-minimal.css`                                 | Diverse multi-hue palette         |
 | Content     | `content/`     | `h{hue}c{chroma}t{tone}-{year}.css` / `h{hue}c{chroma}t{tone}-{year}-minimal.css` | Content-color aligned palette     |
 | Fidelity    | `fidelity/`    | `h{hue}c{chroma}t{tone}-{year}.css` / `h{hue}c{chroma}t{tone}-{year}-minimal.css` | Fidelity-optimized palette        |
 
