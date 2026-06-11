@@ -1,456 +1,441 @@
-@layer material-design-system.shape {
-    :root {
-        --_none: var(--md-sys-shape-corner-value-none, 0px);
-        --_extra-small: var(--md-sys-shape-corner-value-extra-small, 4px);
-        --_small: var(--md-sys-shape-corner-value-small, 8px);
-        --_medium: var(--md-sys-shape-corner-value-medium, 12px);
-        --_large: var(--md-sys-shape-corner-value-large, 16px);
-        --_large-increased: var(--md-sys-shape-corner-value-large-increased, 20px);
-        --_extra-large: var(--md-sys-shape-corner-value-extra-large, 28px);
-        --_extra-large-increased: var(--md-sys-shape-corner-value-extra-large-increased, 32px);
-        --_extra-extra-large: var(--md-sys-shape-corner-value-extra-extra-large, 48px);
-        --_full: var(--md-sys-shape-corner-value-full, 9999px);
-    }
-}
-
-@layer material-design-system.shape {
+@layer material-design-system {
     .rounded-none {
-        border-start-start-radius: var(--_none);
-        border-start-end-radius: var(--_none);
-        border-end-start-radius: var(--_none);
-        border-end-end-radius: var(--_none);
+        border-start-start-radius: var(--md-sys-shape-corner-value-none, 0px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-none, 0px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-none, 0px);
+        border-end-end-radius    : var(--md-sys-shape-corner-value-none, 0px);
     }
 
     .rounded-extra-small {
-        border-start-start-radius: var(--_extra-small);
-        border-start-end-radius: var(--_extra-small);
-        border-end-start-radius: var(--_extra-small);
-        border-end-end-radius: var(--_extra-small);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-small, 4px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-extra-small, 4px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-extra-small, 4px);
+        border-end-end-radius    : var(--md-sys-shape-corner-value-extra-small, 4px);
     }
 
     .rounded-small {
-        border-start-start-radius: var(--_small);
-        border-start-end-radius: var(--_small);
-        border-end-start-radius: var(--_small);
-        border-end-end-radius: var(--_small);
+        border-start-start-radius: var(--md-sys-shape-corner-value-small, 8px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-small, 8px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-small, 8px);
+        border-end-end-radius    : var(--md-sys-shape-corner-value-small, 8px);
     }
 
     .rounded-medium {
-        border-start-start-radius: var(--_medium);
-        border-start-end-radius: var(--_medium);
-        border-end-start-radius: var(--_medium);
-        border-end-end-radius: var(--_medium);
+        border-start-start-radius: var(--md-sys-shape-corner-value-medium, 12px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-medium, 12px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-medium, 12px);
+        border-end-end-radius    : var(--md-sys-shape-corner-value-medium, 12px);
     }
 
     .rounded-large {
-        border-start-start-radius: var(--_large);
-        border-start-end-radius: var(--_large);
-        border-end-start-radius: var(--_large);
-        border-end-end-radius: var(--_large);
+        border-start-start-radius: var(--md-sys-shape-corner-value-large, 16px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-large, 16px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-large, 16px);
+        border-end-end-radius    : var(--md-sys-shape-corner-value-large, 16px);
     }
 
     .rounded-large-increased {
-        border-start-start-radius: var(--_large-increased);
-        border-start-end-radius: var(--_large-increased);
-        border-end-start-radius: var(--_large-increased);
-        border-end-end-radius: var(--_large-increased);
+        border-start-start-radius: var(--md-sys-shape-corner-value-large-increased, 20px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-large-increased, 20px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-large-increased, 20px);
+        border-end-end-radius    : var(--md-sys-shape-corner-value-large-increased, 20px);
     }
 
     .rounded-extra-large {
-        border-start-start-radius: var(--_extra-large);
-        border-start-end-radius: var(--_extra-large);
-        border-end-start-radius: var(--_extra-large);
-        border-end-end-radius: var(--_extra-large);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-large, 28px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-extra-large, 28px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-extra-large, 28px);
+        border-end-end-radius    : var(--md-sys-shape-corner-value-extra-large, 28px);
     }
 
     .rounded-extra-large-increased {
-        border-start-start-radius: var(--_extra-large-increased);
-        border-start-end-radius: var(--_extra-large-increased);
-        border-end-start-radius: var(--_extra-large-increased);
-        border-end-end-radius: var(--_extra-large-increased);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-large-increased, 32px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-extra-large-increased, 32px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-extra-large-increased, 32px);
+        border-end-end-radius    : var(--md-sys-shape-corner-value-extra-large-increased, 32px);
     }
 
     .rounded-extra-extra-large {
-        border-start-start-radius: var(--_extra-extra-large);
-        border-start-end-radius: var(--_extra-extra-large);
-        border-end-start-radius: var(--_extra-extra-large);
-        border-end-end-radius: var(--_extra-extra-large);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-extra-large, 48px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-extra-extra-large, 48px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-extra-extra-large, 48px);
+        border-end-end-radius    : var(--md-sys-shape-corner-value-extra-extra-large, 48px);
     }
 
     .rounded-full {
-        border-start-start-radius: var(--_full);
-        border-start-end-radius: var(--_full);
-        border-end-start-radius: var(--_full);
-        border-end-end-radius: var(--_full);
+        border-start-start-radius: var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
+        border-start-end-radius  : var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
+        border-end-start-radius  : var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
+        border-end-end-radius    : var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
     }
 
 
     .rounded-t-none {
-        border-start-start-radius: var(--_none);
-        border-start-end-radius: var(--_none);
+        border-start-start-radius: var(--md-sys-shape-corner-value-none, 0px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-none, 0px);
     }
 
     .rounded-r-none {
-        border-start-end-radius: var(--_none);
-        border-end-end-radius: var(--_none);
+        border-start-end-radius: var(--md-sys-shape-corner-value-none, 0px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-none, 0px);
     }
 
     .rounded-b-none {
-        border-end-start-radius: var(--_none);
-        border-end-end-radius: var(--_none);
+        border-end-start-radius: var(--md-sys-shape-corner-value-none, 0px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-none, 0px);
     }
 
     .rounded-l-none {
-        border-start-start-radius: var(--_none);
-        border-end-start-radius: var(--_none);
+        border-start-start-radius: var(--md-sys-shape-corner-value-none, 0px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-none, 0px);
     }
 
     .rounded-tl-none {
-        border-start-start-radius: var(--_none);
+        border-start-start-radius: var(--md-sys-shape-corner-value-none, 0px);
     }
 
     .rounded-tr-none {
-        border-start-end-radius: var(--_none);
+        border-start-end-radius: var(--md-sys-shape-corner-value-none, 0px);
     }
 
     .rounded-bl-none {
-        border-end-start-radius: var(--_none);
+        border-end-start-radius: var(--md-sys-shape-corner-value-none, 0px);
     }
 
     .rounded-br-none {
-        border-end-end-radius: var(--_none);
+        border-end-end-radius: var(--md-sys-shape-corner-value-none, 0px);
     }
 
 
     .rounded-t-extra-small {
-        border-start-start-radius: var(--_extra-small);
-        border-start-end-radius: var(--_extra-small);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-small, 4px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-extra-small, 4px);
     }
 
     .rounded-r-extra-small {
-        border-start-end-radius: var(--_extra-small);
-        border-end-end-radius: var(--_extra-small);
+        border-start-end-radius: var(--md-sys-shape-corner-value-extra-small, 4px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-extra-small, 4px);
     }
 
     .rounded-b-extra-small {
-        border-end-start-radius: var(--_extra-small);
-        border-end-end-radius: var(--_extra-small);
+        border-end-start-radius: var(--md-sys-shape-corner-value-extra-small, 4px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-extra-small, 4px);
     }
 
     .rounded-l-extra-small {
-        border-start-start-radius: var(--_extra-small);
-        border-end-start-radius: var(--_extra-small);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-small, 4px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-extra-small, 4px);
     }
 
     .rounded-tl-extra-small {
-        border-start-start-radius: var(--_extra-small);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-small, 4px);
     }
 
     .rounded-tr-extra-small {
-        border-start-end-radius: var(--_extra-small);
+        border-start-end-radius: var(--md-sys-shape-corner-value-extra-small, 4px);
     }
 
     .rounded-bl-extra-small {
-        border-end-start-radius: var(--_extra-small);
+        border-end-start-radius: var(--md-sys-shape-corner-value-extra-small, 4px);
     }
 
     .rounded-br-extra-small {
-        border-end-end-radius: var(--_extra-small);
+        border-end-end-radius: var(--md-sys-shape-corner-value-extra-small, 4px);
     }
 
 
     .rounded-t-small {
-        border-start-start-radius: var(--_small);
-        border-start-end-radius: var(--_small);
+        border-start-start-radius: var(--md-sys-shape-corner-value-small, 8px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-small, 8px);
     }
 
     .rounded-r-small {
-        border-start-end-radius: var(--_small);
-        border-end-end-radius: var(--_small);
+        border-start-end-radius: var(--md-sys-shape-corner-value-small, 8px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-small, 8px);
     }
 
     .rounded-b-small {
-        border-end-start-radius: var(--_small);
-        border-end-end-radius: var(--_small);
+        border-end-start-radius: var(--md-sys-shape-corner-value-small, 8px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-small, 8px);
     }
 
     .rounded-l-small {
-        border-start-start-radius: var(--_small);
-        border-end-start-radius: var(--_small);
+        border-start-start-radius: var(--md-sys-shape-corner-value-small, 8px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-small, 8px);
     }
 
     .rounded-tl-small {
-        border-start-start-radius: var(--_small);
+        border-start-start-radius: var(--md-sys-shape-corner-value-small, 8px);
     }
 
     .rounded-tr-small {
-        border-start-end-radius: var(--_small);
+        border-start-end-radius: var(--md-sys-shape-corner-value-small, 8px);
     }
 
     .rounded-bl-small {
-        border-end-start-radius: var(--_small);
+        border-end-start-radius: var(--md-sys-shape-corner-value-small, 8px);
     }
 
     .rounded-br-small {
-        border-end-end-radius: var(--_small);
+        border-end-end-radius: var(--md-sys-shape-corner-value-small, 8px);
     }
 
 
     .rounded-t-medium {
-        border-start-start-radius: var(--_medium);
-        border-start-end-radius: var(--_medium);
+        border-start-start-radius: var(--md-sys-shape-corner-value-medium, 12px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-medium, 12px);
     }
 
     .rounded-r-medium {
-        border-start-end-radius: var(--_medium);
-        border-end-end-radius: var(--_medium);
+        border-start-end-radius: var(--md-sys-shape-corner-value-medium, 12px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-medium, 12px);
     }
 
     .rounded-b-medium {
-        border-end-start-radius: var(--_medium);
-        border-end-end-radius: var(--_medium);
+        border-end-start-radius: var(--md-sys-shape-corner-value-medium, 12px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-medium, 12px);
     }
 
     .rounded-l-medium {
-        border-start-start-radius: var(--_medium);
-        border-end-start-radius: var(--_medium);
+        border-start-start-radius: var(--md-sys-shape-corner-value-medium, 12px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-medium, 12px);
     }
 
     .rounded-tl-medium {
-        border-start-start-radius: var(--_medium);
+        border-start-start-radius: var(--md-sys-shape-corner-value-medium, 12px);
     }
 
     .rounded-tr-medium {
-        border-start-end-radius: var(--_medium);
+        border-start-end-radius: var(--md-sys-shape-corner-value-medium, 12px);
     }
 
     .rounded-bl-medium {
-        border-end-start-radius: var(--_medium);
+        border-end-start-radius: var(--md-sys-shape-corner-value-medium, 12px);
     }
 
     .rounded-br-medium {
-        border-end-end-radius: var(--_medium);
+        border-end-end-radius: var(--md-sys-shape-corner-value-medium, 12px);
     }
 
 
     .rounded-t-large {
-        border-start-start-radius: var(--_large);
-        border-start-end-radius: var(--_large);
+        border-start-start-radius: var(--md-sys-shape-corner-value-large, 16px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-large, 16px);
     }
 
     .rounded-r-large {
-        border-start-end-radius: var(--_large);
-        border-end-end-radius: var(--_large);
+        border-start-end-radius: var(--md-sys-shape-corner-value-large, 16px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-large, 16px);
     }
 
     .rounded-b-large {
-        border-end-start-radius: var(--_large);
-        border-end-end-radius: var(--_large);
+        border-end-start-radius: var(--md-sys-shape-corner-value-large, 16px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-large, 16px);
     }
 
     .rounded-l-large {
-        border-start-start-radius: var(--_large);
-        border-end-start-radius: var(--_large);
+        border-start-start-radius: var(--md-sys-shape-corner-value-large, 16px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-large, 16px);
     }
 
     .rounded-tl-large {
-        border-start-start-radius: var(--_large);
+        border-start-start-radius: var(--md-sys-shape-corner-value-large, 16px);
     }
 
     .rounded-tr-large {
-        border-start-end-radius: var(--_large);
+        border-start-end-radius: var(--md-sys-shape-corner-value-large, 16px);
     }
 
     .rounded-bl-large {
-        border-end-start-radius: var(--_large);
+        border-end-start-radius: var(--md-sys-shape-corner-value-large, 16px);
     }
 
     .rounded-br-large {
-        border-end-end-radius: var(--_large);
+        border-end-end-radius: var(--md-sys-shape-corner-value-large, 16px);
     }
 
 
     .rounded-t-large-increased {
-        border-start-start-radius: var(--_large-increased);
-        border-start-end-radius: var(--_large-increased);
+        border-start-start-radius: var(--md-sys-shape-corner-value-large-increased, 20px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-large-increased, 20px);
     }
 
     .rounded-r-large-increased {
-        border-start-end-radius: var(--_large-increased);
-        border-end-end-radius: var(--_large-increased);
+        border-start-end-radius: var(--md-sys-shape-corner-value-large-increased, 20px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-large-increased, 20px);
     }
 
     .rounded-b-large-increased {
-        border-end-start-radius: var(--_large-increased);
-        border-end-end-radius: var(--_large-increased);
+        border-end-start-radius: var(--md-sys-shape-corner-value-large-increased, 20px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-large-increased, 20px);
     }
 
     .rounded-l-large-increased {
-        border-start-start-radius: var(--_large-increased);
-        border-end-start-radius: var(--_large-increased);
+        border-start-start-radius: var(--md-sys-shape-corner-value-large-increased, 20px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-large-increased, 20px);
     }
 
     .rounded-tl-large-increased {
-        border-start-start-radius: var(--_large-increased);
+        border-start-start-radius: var(--md-sys-shape-corner-value-large-increased, 20px);
     }
 
     .rounded-tr-large-increased {
-        border-start-end-radius: var(--_large-increased);
+        border-start-end-radius: var(--md-sys-shape-corner-value-large-increased, 20px);
     }
 
     .rounded-bl-large-increased {
-        border-end-start-radius: var(--_large-increased);
+        border-end-start-radius: var(--md-sys-shape-corner-value-large-increased, 20px);
     }
 
     .rounded-br-large-increased {
-        border-end-end-radius: var(--_large-increased);
+        border-end-end-radius: var(--md-sys-shape-corner-value-large-increased, 20px);
     }
 
 
     .rounded-t-extra-large {
-        border-start-start-radius: var(--_extra-large);
-        border-start-end-radius: var(--_extra-large);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-large, 28px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-extra-large, 28px);
     }
 
     .rounded-r-extra-large {
-        border-start-end-radius: var(--_extra-large);
-        border-end-end-radius: var(--_extra-large);
+        border-start-end-radius: var(--md-sys-shape-corner-value-extra-large, 28px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-extra-large, 28px);
     }
 
     .rounded-b-extra-large {
-        border-end-start-radius: var(--_extra-large);
-        border-end-end-radius: var(--_extra-large);
+        border-end-start-radius: var(--md-sys-shape-corner-value-extra-large, 28px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-extra-large, 28px);
     }
 
     .rounded-l-extra-large {
-        border-start-start-radius: var(--_extra-large);
-        border-end-start-radius: var(--_extra-large);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-large, 28px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-extra-large, 28px);
     }
 
     .rounded-tl-extra-large {
-        border-start-start-radius: var(--_extra-large);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-large, 28px);
     }
 
     .rounded-tr-extra-large {
-        border-start-end-radius: var(--_extra-large);
+        border-start-end-radius: var(--md-sys-shape-corner-value-extra-large, 28px);
     }
 
     .rounded-bl-extra-large {
-        border-end-start-radius: var(--_extra-large);
+        border-end-start-radius: var(--md-sys-shape-corner-value-extra-large, 28px);
     }
 
     .rounded-br-extra-large {
-        border-end-end-radius: var(--_extra-large);
+        border-end-end-radius: var(--md-sys-shape-corner-value-extra-large, 28px);
     }
 
 
     .rounded-t-extra-large-increased {
-        border-start-start-radius: var(--_extra-large-increased);
-        border-start-end-radius: var(--_extra-large-increased);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-large-increased, 32px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-extra-large-increased, 32px);
     }
 
     .rounded-r-extra-large-increased {
-        border-start-end-radius: var(--_extra-large-increased);
-        border-end-end-radius: var(--_extra-large-increased);
+        border-start-end-radius: var(--md-sys-shape-corner-value-extra-large-increased, 32px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-extra-large-increased, 32px);
     }
 
     .rounded-b-extra-large-increased {
-        border-end-start-radius: var(--_extra-large-increased);
-        border-end-end-radius: var(--_extra-large-increased);
+        border-end-start-radius: var(--md-sys-shape-corner-value-extra-large-increased, 32px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-extra-large-increased, 32px);
     }
 
     .rounded-l-extra-large-increased {
-        border-start-start-radius: var(--_extra-large-increased);
-        border-end-start-radius: var(--_extra-large-increased);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-large-increased, 32px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-extra-large-increased, 32px);
     }
 
     .rounded-tl-extra-large-increased {
-        border-start-start-radius: var(--_extra-large-increased);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-large-increased, 32px);
     }
 
     .rounded-tr-extra-large-increased {
-        border-start-end-radius: var(--_extra-large-increased);
+        border-start-end-radius: var(--md-sys-shape-corner-value-extra-large-increased, 32px);
     }
 
     .rounded-bl-extra-large-increased {
-        border-end-start-radius: var(--_extra-large-increased);
+        border-end-start-radius: var(--md-sys-shape-corner-value-extra-large-increased, 32px);
     }
 
     .rounded-br-extra-large-increased {
-        border-end-end-radius: var(--_extra-large-increased);
+        border-end-end-radius: var(--md-sys-shape-corner-value-extra-large-increased, 32px);
     }
 
 
     .rounded-t-extra-extra-large {
-        border-start-start-radius: var(--_extra-extra-large);
-        border-start-end-radius: var(--_extra-extra-large);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-extra-large, 48px);
+        border-start-end-radius  : var(--md-sys-shape-corner-value-extra-extra-large, 48px);
     }
 
     .rounded-r-extra-extra-large {
-        border-start-end-radius: var(--_extra-extra-large);
-        border-end-end-radius: var(--_extra-extra-large);
+        border-start-end-radius: var(--md-sys-shape-corner-value-extra-extra-large, 48px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-extra-extra-large, 48px);
     }
 
     .rounded-b-extra-extra-large {
-        border-end-start-radius: var(--_extra-extra-large);
-        border-end-end-radius: var(--_extra-extra-large);
+        border-end-start-radius: var(--md-sys-shape-corner-value-extra-extra-large, 48px);
+        border-end-end-radius  : var(--md-sys-shape-corner-value-extra-extra-large, 48px);
     }
 
     .rounded-l-extra-extra-large {
-        border-start-start-radius: var(--_extra-extra-large);
-        border-end-start-radius: var(--_extra-extra-large);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-extra-large, 48px);
+        border-end-start-radius  : var(--md-sys-shape-corner-value-extra-extra-large, 48px);
     }
 
     .rounded-tl-extra-extra-large {
-        border-start-start-radius: var(--_extra-extra-large);
+        border-start-start-radius: var(--md-sys-shape-corner-value-extra-extra-large, 48px);
     }
 
     .rounded-tr-extra-extra-large {
-        border-start-end-radius: var(--_extra-extra-large);
+        border-start-end-radius: var(--md-sys-shape-corner-value-extra-extra-large, 48px);
     }
 
     .rounded-bl-extra-extra-large {
-        border-end-start-radius: var(--_extra-extra-large);
+        border-end-start-radius: var(--md-sys-shape-corner-value-extra-extra-large, 48px);
     }
 
     .rounded-br-extra-extra-large {
-        border-end-end-radius: var(--_extra-extra-large);
+        border-end-end-radius: var(--md-sys-shape-corner-value-extra-extra-large, 48px);
     }
 
 
     .rounded-t-full {
-        border-start-start-radius: var(--_full);
-        border-start-end-radius: var(--_full);
+        border-start-start-radius: var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
+        border-start-end-radius  : var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
     }
 
     .rounded-r-full {
-        border-start-end-radius: var(--_full);
-        border-end-end-radius: var(--_full);
+        border-start-end-radius: var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
+        border-end-end-radius  : var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
     }
 
     .rounded-b-full {
-        border-end-start-radius: var(--_full);
-        border-end-end-radius: var(--_full);
+        border-end-start-radius: var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
+        border-end-end-radius  : var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
     }
 
     .rounded-l-full {
-        border-start-start-radius: var(--_full);
-        border-end-start-radius: var(--_full);
+        border-start-start-radius: var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
+        border-end-start-radius  : var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
     }
 
     .rounded-tl-full {
-        border-start-start-radius: var(--_full);
+        border-start-start-radius: var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
     }
 
     .rounded-tr-full {
-        border-start-end-radius: var(--_full);
+        border-start-end-radius: var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
     }
 
     .rounded-bl-full {
-        border-end-start-radius: var(--_full);
+        border-end-start-radius: var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
     }
 
     .rounded-br-full {
-        border-end-end-radius: var(--_full);
+        border-end-end-radius: var(--md-sys-shape-corner-value-full, calc(infinity * 1px));
     }
 }
