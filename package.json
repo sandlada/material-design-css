@@ -12,7 +12,7 @@
         "./prebuilt-palettes/*": "./prebuilt-palettes/*",
         "./prebuilt-palettes/**/*": "./prebuilt-palettes/**/*",
         "./shape/*": "./shape/*",
-        "./spacing/*": "./spacing/*",
+        "./space/*": "./space/*",
         "./typography/*": "./typography/*"
     },
     "files": [
@@ -24,7 +24,7 @@
         "prebuilt-palettes/**/*",
         "preset.css",
         "shape/**/*",
-        "spacing/**/*",
+        "space/**/*",
         "typography/**/*"
     ],
     "homepage": "https://material-design-css.sandlada.com",

@@ -12,8 +12,7 @@
 - Palette
 - Motion
 - Shape
-- Spacing
-- Typography
+- Space
 - Prebuilt Colors
 - Prebuilt Palettes
 
@@ -76,10 +75,9 @@ import "@sandlada/material-design-css/motion/utilities.css"
 import "@sandlada/material-design-css/motion/variables.css"
 
 // spacing utilities
-import "@sandlada/material-design-css/spacing/utilities.css"
-import "@sandlada/material-design-css/spacing/variables.css"
+import "@sandlada/material-design-css/space/utilities.css"
+import "@sandlada/material-design-css/space/variables.css"
 ```
-
 
 ### For TailwindCSS v4
 
@@ -109,7 +107,7 @@ import "@sandlada/material-design-css/spacing/variables.css"
 @import "@sandlada/material-design-css/shape/tw.css";
 
 /* spacing */
-@import "@sandlada/material-design-css/spacing/tw.css";
+@import "@sandlada/material-design-css/space/tw.css";
 
 /*
  * display-large
@@ -127,7 +125,6 @@ import "@sandlada/material-design-css/spacing/variables.css"
  */
 @import "@sandlada/material-design-css/motion/tw.css";
 ```
-
 
 ## Naming Conventions
 
@@ -195,6 +192,7 @@ h{hue}-{year}.css
 - `{year}`: Material Design spec version. Values: `2021` or `2025`
 
 Example filenames:
+
 - `prebuilt-colors/tonal-spot/h0-2025.css`
 - `prebuilt-colors/vibrant/h180-2021.css`
 
@@ -222,6 +220,7 @@ h{hue}c{chroma}t{tone}-{year}.css
 - `{year}`: Material Design spec version. Values: `2021` or `2025`
 
 Example filenames:
+
 - `prebuilt-colors/content/h0c30t20-2025.css`
 - `prebuilt-colors/fidelity/h180c60t50-2021.css`
 
@@ -230,12 +229,14 @@ Each file also contains three built-in contrast levels.
 ##### Examples by Variant
 
 **Monochrome**
+
 ```typescript
 import '@sandlada/material-design-css/preset.css'
 import '@sandlada/material-design-css/prebuilt-colors/monochrome/black.css'
 ```
 
 **Neutral / Tonal Spot / Vibrant / Expressive / Rainbow / Fruit Salad**
+
 ```typescript
 import '@sandlada/material-design-css/preset.css'
 import '@sandlada/material-design-css/prebuilt-colors/neutral/h120-2025.css'
@@ -244,6 +245,7 @@ import '@sandlada/material-design-css/prebuilt-colors/vibrant/h240-2025.css'
 ```
 
 **Content / Fidelity**
+
 ```typescript
 import '@sandlada/material-design-css/preset.css'
 import '@sandlada/material-design-css/prebuilt-colors/content/h0c30t20-2025.css'
