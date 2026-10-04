@@ -100,8 +100,6 @@
     --md-ref-palette-primary-98: #fff8f5;
     --md-ref-palette-primary-99: #fffbff;
     --md-ref-palette-primary-100: #ffffff;
-}
-:root {
     --md-ref-palette-secondary-0: #000000;
     --md-ref-palette-secondary-1: #000407;
     --md-ref-palette-secondary-2: #00090e;
@@ -203,8 +201,6 @@
     --md-ref-palette-secondary-98: #f3faff;
     --md-ref-palette-secondary-99: #fafdff;
     --md-ref-palette-secondary-100: #ffffff;
-}
-:root {
     --md-ref-palette-tertiary-0: #000000;
     --md-ref-palette-tertiary-1: #000505;
     --md-ref-palette-tertiary-2: #00090a;
@@ -306,8 +302,6 @@
     --md-ref-palette-tertiary-98: #e4feff;
     --md-ref-palette-tertiary-99: #f1ffff;
     --md-ref-palette-tertiary-100: #ffffff;
-}
-:root {
     --md-ref-palette-error-0: #000000;
     --md-ref-palette-error-1: #100000;
     --md-ref-palette-error-2: #1a0000;
@@ -409,8 +403,6 @@
     --md-ref-palette-error-98: #fff8f7;
     --md-ref-palette-error-99: #fffbff;
     --md-ref-palette-error-100: #ffffff;
-}
-:root {
     --md-ref-palette-neutral-0: #000000;
     --md-ref-palette-neutral-1: #000504;
     --md-ref-palette-neutral-2: #020909;
@@ -512,8 +504,6 @@
     --md-ref-palette-neutral-98: #f1fbfa;
     --md-ref-palette-neutral-99: #f4fefd;
     --md-ref-palette-neutral-100: #ffffff;
-}
-:root {
     --md-ref-palette-neutral-variant-0: #000000;
     --md-ref-palette-neutral-variant-1: #000505;
     --md-ref-palette-neutral-variant-2: #000909;

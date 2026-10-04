@@ -1,4 +1,4 @@
-@theme inline {
+@theme static inline {
     --font-display-large       : var(--md-sys-typescale-display-large-font, var(--md-ref-typeface-brand, "Roboto"));
     --text-display-large       : var(--md-sys-typescale-display-large-size, 57px);
     --tracking-display-large   : var(--md-sys-typescale-display-large-tracking, -0.25px);
