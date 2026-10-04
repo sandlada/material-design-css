@@ -1,0 +1,180 @@
+---
+layout: ../layouts/Document.astro
+
+headerProps:
+  title: "Shape"
+
+pageMetaProps:
+  title: "Shape Corner Radius - Material Design CSS"
+  description: "Material Design 3 shape system with @sandlada/material-design-css. Rounded utilities from none to extra-extra-large with directional suffixes (t, r, b, l, tl, tr, bl, br). Supports TailwindCSS v4 theme integration."
+  keywords: "Material Design shape, corner radius, rounded utilities, @sandlada/material-design-css, rounded-medium, rounded-large, shape tokens, CSS border radius, directional corners, TailwindCSS v4"
+---
+import ArticleComponentShow from "../components/ArticleComponentShow.astro";
+
+# Shape
+
+The Material Design 3 shape system uses a size-based scale with ten styles:
+
+| Corner                | Value               |
+| :-------------------- | ------------------- |
+| none                  | 0px                 |
+| extra-small           | 4px                 |
+| small                 | 8px                 |
+| medium                | 12px                |
+| large                 | 16px                |
+| large-increased       | 20px                |
+| extra-large           | 28px                |
+| extra-large-increased | 32px                |
+| extra-extra-large     | 48px                |
+| full                  | calc(infinity* 1px) |
+
+`rounded-full` is implemented with `calc(infinity * 1px)` instead of a large value such as `9999px`, so it does not break element transitions. Note that `shape/tw.css` (the TailwindCSS v4 theme file) maps everything except `full`.
+
+Each style provides a different orientation:
+
+- t
+- r
+- b
+- l
+- tl
+- tr
+- bl
+- br
+
+For a detailed description of M3 Shape, see [Definition of M3 Shape](https://m3.material.io/styles/shape/corner-radius-scale).
+
+## Import
+
+### For CSS
+
+```css
+@import "@sandlada/material-design-css/shape/utilities.css";
+@import "@sandlada/material-design-css/shape/variables.css";
+```
+
+### For TailwindCSS v4
+
+```css
+@import "tailwindcss";
+@import "@sandlada/material-design-css/shape/tw.css";
+```
+
+## Usage
+
+### Rounded corners
+
+<ArticleComponentShow>
+<div class="flex gap-1">
+    <div class="box rounded-none bg-primary"></div>
+    <div class="box rounded-extra-small bg-primary"></div>
+    <div class="box rounded-small bg-primary"></div>
+    <div class="box rounded-medium bg-primary"></div>
+    <div class="box rounded-large bg-primary"></div>
+    <div class="box rounded-large-increased bg-primary"></div>
+    <div class="box rounded-extra-large bg-primary"></div>
+    <div class="box rounded-extra-large-increased bg-primary"></div>
+    <div class="box rounded-extra-extra-large bg-primary"></div>
+</div>
+</ArticleComponentShow>
+
+```html
+<div class="flex gap-1">
+    <div class="box rounded-none bg-primary"></div>
+    <div class="box rounded-extra-small bg-primary"></div>
+    <div class="box rounded-small bg-primary"></div>
+    <div class="box rounded-medium bg-primary"></div>
+    <div class="box rounded-large bg-primary"></div>
+    <div class="box rounded-large-increased bg-primary"></div>
+    <div class="box rounded-extra-large bg-primary"></div>
+    <div class="box rounded-extra-large-increased bg-primary"></div>
+    <div class="box rounded-extra-extra-large bg-primary"></div>
+</div>
+
+<style>
+    .box {
+        height: 96px;
+        width: 96px;
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .flex {
+        display: flex;
+        overflow: auto;
+    }
+</style>
+```
+
+### Directional suffixes
+
+You can combine shape styles with directional suffixes to target specific corners.
+
+<ArticleComponentShow>
+<div class="flex gap-1">
+    <div class="box rounded-t-extra-large bg-primary"></div>
+    <div class="box rounded-r-extra-large bg-primary"></div>
+    <div class="box rounded-b-extra-large bg-primary"></div>
+    <div class="box rounded-l-extra-large bg-primary"></div>
+</div>
+</ArticleComponentShow>
+
+```html
+<div class="flex gap-1">
+    <div class="box rounded-t-extra-large bg-primary"></div>
+    <div class="box rounded-r-extra-large bg-primary"></div>
+    <div class="box rounded-b-extra-large bg-primary"></div>
+    <div class="box rounded-l-extra-large bg-primary"></div>
+</div>
+
+<style>
+    .box {
+        height: 96px;
+        width: 96px;
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .flex {
+        display: flex;
+        overflow: auto;
+    }
+</style>
+```
+
+### Corner pairs
+
+You can also target corner pairs with two-letter suffixes.
+
+<ArticleComponentShow>
+<div class="flex gap-1">
+    <div class="box rounded-tl-extra-large bg-primary"></div>
+    <div class="box rounded-tr-extra-large bg-primary"></div>
+    <div class="box rounded-bl-extra-large bg-primary"></div>
+    <div class="box rounded-br-extra-large bg-primary"></div>
+</div>
+</ArticleComponentShow>
+
+```html
+<div class="flex gap-1">
+    <div class="box rounded-tl-extra-large bg-primary"></div>
+    <div class="box rounded-tr-extra-large bg-primary"></div>
+    <div class="box rounded-bl-extra-large bg-primary"></div>
+    <div class="box rounded-br-extra-large bg-primary"></div>
+</div>
+
+<style>
+    .box {
+        height: 96px;
+        width: 96px;
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .flex {
+        display: flex;
+        overflow: auto;
+    }
+</style>

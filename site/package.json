@@ -1,0 +1,28 @@
+{
+    "name": "com-sandlada-material-design-css",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@material-design-icons/svg": "^0.14.13",
+        "@material/web": "^2.4.1",
+        "@sandlada/material-design-css": "file:..",
+        "astro": "^6.4.4",
+        "typescript": "^6.0.3"
+    },
+    "devDependencies": {
+        "@astrojs/mdx": "^6.0.2",
+        "@astrojs/sitemap": "^3.7.3",
+        "@sandlada/astro-page-meta": "^0.0.1-20260430.b",
+        "@sandlada/consts.js": "^0.0.1-20260430.a",
+        "@sandlada/document-context": "^0.0.1-20260430.d",
+        "@tailwindcss/vite": "^4.3.0",
+        "tailwindcss": "^4.3.0",
+        "vite": "^7.3.5"
+    }
+}

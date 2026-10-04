@@ -1,0 +1,95 @@
+---
+import MenuSvg from "@material-design-icons/svg/round/menu.svg?raw"
+import DS from '@material-design-icons/svg/round/dark_mode.svg?raw'
+import LS from '@material-design-icons/svg/round/light_mode.svg?raw'
+
+export interface IHeaderProps {
+    title: string
+}
+
+type Props = IHeaderProps
+
+const { title } = Astro.props
+---
+
+<header class="header">
+    <md-icon-button id="navigation-drawer-open-button" aria-label="Open or close the side modal navigation drawer" aria-controls="navigation-drawer-dialog">
+        <md-icon set:html={MenuSvg} />
+    </md-icon-button>
+
+    <h1 class="title-medium">{title}</h1>
+
+    <div class="actions">
+        <md-icon-button id="switch-theme-button">
+            <md-icon hidden class="dark" set:html={DS}></md-icon>
+            <md-icon hidden class="light" set:html={LS}></md-icon>
+        </md-icon-button>
+    </div>
+</header>
+
+<script>
+import "@material/web/focus/md-focus-ring"
+import "@material/web/icon/icon"
+import "@material/web/iconbutton/icon-button"
+import "@material/web/ripple/ripple"
+</script>
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const openButton = document.querySelector(`#navigation-drawer-open-button`) as HTMLButtonElement
+
+        openButton.addEventListener("click", () => {
+            document.dispatchEvent(new Event("toggle-drawer"))
+        })
+    })
+</script>
+
+<script is:inline type="module">
+    import { ContextSymbol } from '@sandlada/document-context';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const button = document.querySelector(`#switch-theme-button`)
+        const l = button?.querySelector(`.light`)
+        const d = button?.querySelector(`.dark`)
+
+        if(!button || !l || !d) {
+            return
+        }
+
+        const updateButtonUI = (isDark) => {
+            if(isDark) {
+                d.setAttribute('hidden', '')
+                l.removeAttribute('hidden')
+            } else {
+                d.removeAttribute('hidden')
+                l.setAttribute('hidden', '')
+            }
+        }
+
+        button.addEventListener('click', () => {
+            document.dispatchEvent(new Event(!document[ContextSymbol].themeConfig.isDark ? 'theme:change-to-dark' : 'theme:change-to-light'))
+            document.dispatchEvent(new Event(document[ContextSymbol].themeConfig.isDark ? 'attr:change-to-dark' : 'attr:change-to-light'))
+            document.dispatchEvent(new Event('theme:save-changes'))
+            updateButtonUI(document[ContextSymbol].themeConfig.isDark)
+        })
+
+        // Init
+        updateButtonUI(document[ContextSymbol].themeConfig.isDark)
+    })
+</script>
+
+<style>
+    .header {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        padding: 0px 12px;
+        height: 56px;
+        gap: 8px;
+        background-color: var(--md-sys-color-surface-container);
+
+        &>.action {
+            display: flex;
+        }
+    }
+</style>

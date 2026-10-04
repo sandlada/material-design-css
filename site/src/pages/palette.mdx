@@ -1,0 +1,199 @@
+---
+layout: ../layouts/Document.astro
+
+headerProps:
+  title: "Palette"
+
+pageMetaProps:
+  title: "Tonal Palette Utilities - Material Design CSS"
+  description: "Access Material Design 3 tonal palettes with @sandlada/material-design-css. bg-{role}-{tone} and text-{role}-{tone} utilities for primary, secondary, tertiary, error, neutral, and neutral-variant tones from 0 to 100."
+  keywords: "Material Design palette, tonal palette, @sandlada/material-design-css, bg-primary-40, text-secondary-90, palette utilities, M3 palette, color tones, CSS palette tokens, TailwindCSS v4"
+---
+import ArticleComponentShow from "../components/ArticleComponentShow.astro";
+
+# Palette
+
+The Material Design 3 Palette system provides tonal palettes for each color role. Each palette contains a range of tones from `0` to `100`, where `0` is the darkest and `100` is the lightest. This allows fine-grained control over color selection.
+
+The palette utilities include:
+
+- `bg-primary-0`
+- `text-primary-100`
+
+## Import
+
+### For CSS
+
+```css
+@import "@sandlada/material-design-css/preset.css";
+@import "@sandlada/material-design-css/palette/utilities.css";
+```
+
+### For TailwindCSS v4
+
+```css
+@import "tailwindcss";
+@import "@sandlada/material-design-css/palette/tw.css";
+```
+
+## Usage
+
+### Use bg-*
+
+<ArticleComponentShow>
+<div class="flex">
+    <div class="box bg-primary-0"></div>
+    <div class="box bg-primary-1"></div>
+    <div class="box bg-primary-2"></div>
+    <div class="box bg-primary-3"></div>
+    <div class="box bg-primary-4"></div>
+    <div class="box bg-primary-5"></div>
+    <div class="box bg-primary-10"></div>
+    <div class="box bg-primary-20"></div>
+    <div class="box bg-primary-30"></div>
+    <div class="box bg-primary-40"></div>
+    <div class="box bg-primary-50"></div>
+    <div class="box bg-primary-60"></div>
+    <div class="box bg-primary-70"></div>
+    <div class="box bg-primary-80"></div>
+    <div class="box bg-primary-90"></div>
+    <div class="box bg-primary-95"></div>
+    <div class="box bg-primary-96"></div>
+    <div class="box bg-primary-97"></div>
+    <div class="box bg-primary-98"></div>
+    <div class="box bg-primary-99"></div>
+    <div class="box bg-primary-100"></div>
+</div>
+</ArticleComponentShow>
+
+
+```html
+<div class="flex">
+    <div class="box bg-primary-0"></div>
+    <div class="box bg-primary-1"></div>
+    <div class="box bg-primary-2"></div>
+    <div class="box bg-primary-3"></div>
+    <div class="box bg-primary-4"></div>
+    <div class="box bg-primary-5"></div>
+    <div class="box bg-primary-10"></div>
+    <div class="box bg-primary-20"></div>
+    <div class="box bg-primary-30"></div>
+    <div class="box bg-primary-40"></div>
+    <div class="box bg-primary-50"></div>
+    <div class="box bg-primary-60"></div>
+    <div class="box bg-primary-70"></div>
+    <div class="box bg-primary-80"></div>
+    <div class="box bg-primary-90"></div>
+    <div class="box bg-primary-95"></div>
+    <div class="box bg-primary-96"></div>
+    <div class="box bg-primary-97"></div>
+    <div class="box bg-primary-98"></div>
+    <div class="box bg-primary-99"></div>
+    <div class="box bg-primary-100"></div>
+</div>
+
+<style>
+    .box {
+        height: 96px;
+        width: 96px;
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .flex {
+        display: flex;
+        overflow: auto;
+    }
+</style>
+```
+
+### Use text-*
+<ArticleComponentShow>
+<div class="flex">
+    <div class="box bg-primary-99 text-primary-0">0</div>
+    <div class="box bg-primary-99 text-primary-1">1</div>
+    <div class="box bg-primary-99 text-primary-2">2</div>
+    <div class="box bg-primary-99 text-primary-3">3</div>
+    <div class="box bg-primary-99 text-primary-4">4</div>
+    <div class="box bg-primary-99 text-primary-5">5</div>
+    <div class="box bg-primary-99 text-primary-10">10</div>
+    <div class="box bg-primary-99 text-primary-20">20</div>
+    <div class="box bg-primary-99 text-primary-30">30</div>
+    <div class="box bg-primary-99 text-primary-40">40</div>
+    <div class="box bg-primary-99 text-primary-50">50</div>
+    <div class="box bg-primary-99 text-primary-60">60</div>
+    <div class="box bg-primary-1 text-primary-70">70</div>
+    <div class="box bg-primary-1 text-primary-80">80</div>
+    <div class="box bg-primary-1 text-primary-90">90</div>
+    <div class="box bg-primary-1 text-primary-95">95</div>
+    <div class="box bg-primary-1 text-primary-95">96</div>
+    <div class="box bg-primary-1 text-primary-95">97</div>
+    <div class="box bg-primary-1 text-primary-95">98</div>
+    <div class="box bg-primary-1 text-primary-99">99</div>
+    <div class="box bg-primary-1 text-primary-100">100</div>
+</div>
+</ArticleComponentShow>
+
+```html
+<div class="flex">
+    <div class="box bg-primary-99 text-primary-0">0</div>
+    <div class="box bg-primary-99 text-primary-1">1</div>
+    <div class="box bg-primary-99 text-primary-2">2</div>
+    <div class="box bg-primary-99 text-primary-3">3</div>
+    <div class="box bg-primary-99 text-primary-4">4</div>
+    <div class="box bg-primary-99 text-primary-5">5</div>
+    <div class="box bg-primary-99 text-primary-10">10</div>
+    <div class="box bg-primary-99 text-primary-20">20</div>
+    <div class="box bg-primary-99 text-primary-30">30</div>
+    <div class="box bg-primary-99 text-primary-40">40</div>
+    <div class="box bg-primary-99 text-primary-50">50</div>
+    <div class="box bg-primary-99 text-primary-60">60</div>
+    <div class="box bg-primary-1 text-primary-70">70</div>
+    <div class="box bg-primary-1 text-primary-80">80</div>
+    <div class="box bg-primary-1 text-primary-90">90</div>
+    <div class="box bg-primary-1 text-primary-95">95</div>
+    <div class="box bg-primary-1 text-primary-95">96</div>
+    <div class="box bg-primary-1 text-primary-95">97</div>
+    <div class="box bg-primary-1 text-primary-95">98</div>
+    <div class="box bg-primary-1 text-primary-99">99</div>
+    <div class="box bg-primary-1 text-primary-100">100</div>
+</div>
+
+<style>
+    .box {
+        height: 96px;
+        width: 96px;
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .flex {
+        display: flex;
+        overflow: auto;
+    }
+</style>
+```
+
+## All available palette roles
+
+Each role provides tone values from `0` to `100` (including intermediate values such as `4`, `6`, `12`, `17`, `22`, `24`, `87`, `92`, `94`, `96`, `98`, `99`). Use the pattern `{role}-{tone}` with `bg-` or `text-` prefixes.
+
+| Role | Description |
+| ---- | ----------- |
+| primary | Primary brand color tonal palette |
+| secondary | Secondary brand color tonal palette |
+| tertiary | Tertiary accent color tonal palette |
+| error | Error state color tonal palette |
+| neutral | Neutral gray tonal palette |
+| neutral-variant | Neutral variant tonal palette |
+
+Example tokens:
+
+- `bg-primary-40`
+- `text-secondary-90`
+- `bg-tertiary-10`
+- `text-error-80`
+- `bg-neutral-50`
+- `text-neutral-variant-30`

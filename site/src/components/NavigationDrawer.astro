@@ -1,0 +1,269 @@
+---
+import CloseSvg from "@material-design-icons/svg/round/close.svg?raw"
+
+const navigationLinks = [
+    { label: "Home", href: "/" },
+    { label: "Color", href: "/color/" },
+    { label: "Palette", href: "/palette/" },
+    { label: "Motion", href: "/motion/" },
+    { label: "Shape", href: "/shape/" },
+    { label: "Spacing", href: "/spacing/" },
+    { label: "Typography", href: "/typography/" },
+    { label: "Prebuilt Colors", href: "/prebuilt-colors/" },
+    { label: "Prebuilt Palettes", href: "/prebuilt-palettes/" },
+]
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+---
+
+<span aria-hidden="true" id="navigation-drawer-scrim" class="scrim transition-expressive-default-spatial"></span>
+<dialog class="drawer-wrapper" id="navigation-drawer-dialog">
+    <div class="top-action">
+        <md-icon-button id="navigation-drawer-close-button" aria-label="Close the side modal navigation drawer" aria-controls="navigation-drawer-dialog">
+            <icon set:html={CloseSvg} />
+        </md-icon-button>
+    </div>
+
+    <nav class="links">
+        {
+            navigationLinks.map((link) => (
+                <a tabindex="0" class="link" class:list={{ active: canonicalURL.pathname === link.href }} href={link.href} aria-label={`Open ${link.label} page in this tab`}>
+                    <span class="line-clamp-1">{link.label}</span>
+                    <md-ripple />
+                    <md-focus-ring />
+                </a>
+            ))
+        }
+    </nav>
+</dialog>
+
+<script>
+    import "@material/web/focus/md-focus-ring"
+import "@material/web/icon/icon"
+import "@material/web/iconbutton/icon-button"
+import "@material/web/ripple/ripple"
+</script>
+
+<script>
+
+    type State = {
+        isOpend: boolean
+    }
+    class NavigationDrawerState implements State {
+        private constructor(opt: Partial<State>) {
+            for(const [k, v] of Object.entries(opt)) {
+                // @ts-ignore
+                this[k] = v
+            }
+        }
+
+        public isOpend: boolean = false
+
+        public static init() {
+            const opt = JSON.parse(localStorage.getItem('__material-design-css-navigation-drawer-state') ?? '{}') as State | undefined
+            const instance = new this({isOpend: opt?.isOpend ?? false})
+            return instance
+        }
+
+        public saveChanges() {
+            localStorage.setItem('__material-design-css-navigation-drawer-state', JSON.stringify({ isOpend: this.isOpend, } as State))
+        }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const dialog = document.querySelector(`#navigation-drawer-dialog`) as HTMLDialogElement
+        const closeButton = document.querySelector(`#navigation-drawer-close-button`) as HTMLButtonElement
+        const scrim = document.querySelector(`#navigation-drawer-scrim`) as HTMLElement
+
+        const state = NavigationDrawerState.init()
+
+
+        const close = async (quick: boolean = false) => {
+            abort.abort()
+            abort = new AbortController()
+
+            pending = true
+            await animate('close', quick)
+            dialog.close()
+            pending = false
+
+            state.isOpend = false
+            state.saveChanges()
+        }
+        const show = async (quick: boolean = false) => {
+            abort.abort()
+            abort = new AbortController()
+
+            pending = true
+
+            dialog.show()
+            await animate('open', quick)
+            pending = false
+
+            state.isOpend = true
+            state.saveChanges()
+        }
+
+        let abort = new AbortController()
+        let pending = false
+        const animate = async (mode: 'close' | 'open', quick: boolean = false) => {
+            if(quick) return
+
+            let animation: Animation
+            if(mode === 'open') {
+                animation = dialog.animate([
+                    {width: '0px', opacity: '0' },
+                    {width: `240px`, opacity: '1' },
+                ], {
+                    duration: 500,
+                    // @ts-ignore
+                    signal: abort.signal,
+                    easing: 'cubic-bezier(0.05, 0.7, 0.1, 1.0)'
+                })
+            } else {
+                animation = dialog.animate([
+                    {width: `240px`, opacity: '1' },
+                    {width: '0px', opacity: '0' },
+                ], {
+                    duration: 200,
+                    // @ts-ignore
+                    signal: abort.signal,
+                    easing: 'cubic-bezier(0.2, 0.0, 0, 1.0)'
+                })
+            }
+
+            abort.signal.addEventListener('abort', () => {
+                animation.cancel()
+            })
+
+            await animation.finished
+        }
+
+        const handleShow = async () => {
+            if(dialog.open) return
+            try {
+                await show()
+            } catch(e) {}
+        }
+        const handleToggle = async () => {
+            if(pending) return
+            try {
+                if (dialog.open) {
+                    await close()
+                } else {
+                    await show()
+                }
+            } catch {}
+        }
+        const handleClose = async () => {
+            if(!dialog.open) return
+            try {
+                await close()
+            } catch(e) {}
+        }
+
+        document.addEventListener("open-drawer", handleShow)
+        document.addEventListener("toggle-drawer", handleToggle)
+
+        closeButton.addEventListener("click", handleClose)
+        scrim.addEventListener("click", handleClose)
+
+        if (window.innerWidth >= 840 && state.isOpend) {
+            show(true)
+        }
+    })
+</script>
+
+<style>
+
+.scrim {
+    position: fixed;
+    opacity: 0;
+    inset: 0;
+    transition-property: opacity;
+    transition-duration: 500ms;
+    z-index: 1;
+    display: flex;
+    background: var(--md-sys-color-scrim);
+    pointer-events: none;
+
+    @media (min-width: 840px) {
+        opacity: 0;
+    }
+}
+
+.scrim:has(+.drawer-wrapper[open]) {
+    display: flex;
+    opacity: 0.38;
+    pointer-events: all;
+    @media (min-width: 840px) {
+        display: none;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.drawer-wrapper {
+    all: unset;
+    margin: 0;
+    background-color: var(--md-sys-color-secondary-container);
+    width: 240px;
+    height: 100svh;
+    max-height: 100svh;
+    box-sizing: border-box;
+    flex-direction: column;
+    overflow: auto;
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+
+    & .top-action {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 24px 24px 0px;
+        @media (min-width: 840px) {
+            display: none;
+            pointer-events: none;
+        }
+    }
+
+    & .links {
+        padding: 24px 16px;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        flex-shrink: 1;
+        overflow: hidden;
+
+        & > .link {
+            all: unset;
+            display: inline-flex;
+            height: 48px;
+            border-radius: 24px;
+            position: relative;
+            align-items: center;
+            padding-left: 24px;
+            cursor: pointer;
+            overflow: hidden;
+
+            &.active {
+                background-color: var(--md-sys-color-secondary);
+                color: var(--md-sys-color-on-secondary);
+            }
+        }
+    }
+
+    &[open] {
+        display: flex;
+    }
+
+    @media (min-width: 840px) {
+        position: relative;
+        background-color: var(--md-sys-color-surface-container);
+    }
+}
+</style>

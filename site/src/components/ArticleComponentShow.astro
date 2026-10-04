@@ -1,0 +1,21 @@
+---
+interface Props {
+    noWrapper?: boolean
+    noBoundary?: boolean
+}
+
+const { noWrapper = false, noBoundary = false, } = Astro.props
+
+const classes = [
+    noWrapper
+    ? 'w-full'
+    : 'w-full border border-outline-variant bg-surface rounded-large p-1',
+
+    noBoundary ? 'overflow-clip' : 'overflow-auto',
+
+].join(' ')
+---
+
+<div class={classes}>
+    <slot></slot>
+</div>

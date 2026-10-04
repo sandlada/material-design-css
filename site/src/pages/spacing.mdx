@@ -1,0 +1,266 @@
+---
+layout: ../layouts/Document.astro
+
+headerProps:
+  title: "Spacing"
+
+pageMetaProps:
+  title: "Spacing System - Material Design CSS"
+  description: "Material Design 3 spacing tokens with @sandlada/material-design-css. Margin, padding, and gap utilities from 0 to 900 with logical direction support (inline, block). Supports TailwindCSS v4."
+  keywords: "Material Design spacing, margin, padding, gap, @sandlada/material-design-css, spacing utilities, CSS spacing tokens, logical properties, TailwindCSS v4"
+---
+import ArticleComponentShow from "../components/ArticleComponentShow.astro";
+
+# Spacing
+
+The Material Design 3 spacing system provides a scale of measurement tokens used for margin, padding, and gap utilities. The scale ranges from `0` to `900`, with each step mapped to a specific pixel value.
+
+| Token | Value |
+| :---- | ----: |
+| 0     |   0px |
+| 25    |   2px |
+| 50    |   4px |
+| 75    |   6px |
+| 100   |   8px |
+| 125   |  10px |
+| 150   |  12px |
+| 175   |  14px |
+| 200   |  16px |
+| 250   |  20px |
+| 300   |  24px |
+| 400   |  32px |
+| 450   |  36px |
+| 500   |  40px |
+| 600   |  48px |
+| 700   |  56px |
+| 800   |  64px |
+| 900   |  72px |
+
+<ArticleComponentShow noWrapper>
+    <div class="place-self-center overflow-clip flex flex-col items-start box-border [&>.spacing-box]:h-4 [&>.spacing-box]:w-fit [&>*>.box]:w-fit [&>.spacing-box>.inner-box+div]:border-l [&>*>.inner-box]:border-r [&>.spacing-box>.inner-box+div]:pl-2">
+        <div class="spacing-box inline-flex gap-0">
+            <div class="inner-box"></div>
+            <div>Space0</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)/4)]">
+            <div class="inner-box"></div>
+            <div>Space25</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)/2)]">
+            <div class="inner-box"></div>
+            <div>Space50</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)*(3/4))]">
+            <div class="inner-box"></div>
+            <div>Space75</div>
+        </div>
+        <div class="spacing-box inline-flex gap-1">
+            <div class="inner-box"></div>
+            <div>Space100</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)*1.25)]">
+            <div class="inner-box"></div>
+            <div>Space125</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)*1.5)]">
+            <div class="inner-box"></div>
+            <div>Space150</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)*1.75)]">
+            <div class="inner-box"></div>
+            <div>Space175</div>
+        </div>
+        <div class="spacing-box inline-flex gap-2">
+            <div class="inner-box"></div>
+            <div>Space200</div>
+        </div>
+        <div class="spacing-box inline-flex gap-[calc(var(--spacing)*2.5)]">
+            <div class="inner-box"></div>
+            <div>Space250</div>
+        </div>
+        <div class="spacing-box inline-flex gap-3">
+            <div class="inner-box"></div>
+            <div>Space300</div>
+        </div>
+        <div class="spacing-box inline-flex gap-4">
+            <div class="inner-box"></div>
+            <div>Space400</div>
+        </div>
+        <div class="spacing-box inline-flex gap-5">
+            <div class="inner-box"></div>
+            <div>Space500</div>
+        </div>
+        <div class="spacing-box inline-flex gap-6">
+            <div class="inner-box"></div>
+            <div>Space600</div>
+        </div>
+        <div class="spacing-box inline-flex gap-7">
+            <div class="inner-box"></div>
+            <div>Space700</div>
+        </div>
+        <div class="spacing-box inline-flex gap-8">
+            <div class="inner-box"></div>
+            <div>Space800</div>
+        </div>
+        <div class="spacing-box inline-flex gap-9">
+            <div class="inner-box"></div>
+            <div>Space900</div>
+        </div>
+    </div>
+</ArticleComponentShow>
+
+## Import
+
+### For CSS
+
+```css
+@import "@sandlada/material-design-css/space/utilities.css";
+@import "@sandlada/material-design-css/space/variables.css";
+```
+
+### For TailwindCSS v4
+
+```css
+@import "tailwindcss";
+@import "@sandlada/material-design-css/space/tw.css";
+```
+
+## Usage
+
+`padding-100`, `margin-100` and `gap-100` and other `gap-*` / `margin-*` / `padding-*` classes are provided by `space/utilities.css`, with variables from `space/variables.css`.
+
+If you use TailwindCSS, import `space/tw.css` instead: it sets `--spacing: 8px`, so Tailwind's built-in `p-*`, `m-*` and `gap-*` utilities map onto the M3 8px-based measurement scale.
+
+<ArticleComponentShow>
+    <div class="grid grid-cols-3 gap-1">
+        <div class="h-fit w-fit padding-0 bg-primary">
+        <span class="border inline-flex bg-primary-container text-on-primary-container h-fit w-fit">
+            Padding 0
+        </span>
+        </div>
+        <div class="h-fit w-fit padding-50 bg-primary">
+        <span class="border inline-flex bg-primary-container text-on-primary-container h-fit w-fit">
+            Padding 50
+        </span>
+        </div>
+        <div class="h-fit w-fit padding-100 bg-primary">
+        <span class="border inline-flex bg-primary-container text-on-primary-container h-fit w-fit">
+            Padding 100
+        </span>
+        </div>
+        <div class="h-fit w-fit padding-200 bg-primary">
+        <span class="border inline-flex bg-primary-container text-on-primary-container h-fit w-fit">
+            Padding 200
+        </span>
+        </div>
+        <div class="h-fit w-fit padding-300 bg-primary">
+        <span class="border inline-flex bg-primary-container text-on-primary-container h-fit w-fit">
+            Padding 300
+        </span>
+        </div>
+        <div class="h-fit w-fit padding-400 bg-primary">
+        <span class="border inline-flex bg-primary-container text-on-primary-container h-fit w-fit">
+            Padding 400
+        </span>
+        </div>
+        <div class="h-fit w-fit padding-500 bg-primary">
+        <span class="border inline-flex bg-primary-container text-on-primary-container h-fit w-fit">
+            Padding 500
+        </span>
+        </div>
+        <div class="h-fit w-fit padding-600 bg-primary">
+        <span class="border inline-flex bg-primary-container text-on-primary-container h-fit w-fit">
+            Padding 600
+        </span>
+        </div>
+        <div class="h-fit w-fit padding-900 bg-primary">
+        <span class="border inline-flex bg-primary-container text-on-primary-container h-fit w-fit">
+            Padding 900
+        </span>
+        </div>
+    </div>
+</ArticleComponentShow>
+
+```html
+<div class="h-fit w-fit padding-0 bg-primary">
+    <span class="border inline-flex bg-primary-container text-on-primary-container h-fit w-fit">
+        Padding 0
+    </span>
+</div>
+```
+
+### Logical directions
+
+Spacing utilities support logical direction properties:
+
+| Prefix                   | Description                              |
+| ------------------------ | ---------------------------------------- |
+| `padding-inline-*`       | Horizontal padding (left + right in LTR) |
+| `padding-inline-start-*` | Start-side padding                       |
+| `padding-inline-end-*`   | End-side padding                         |
+| `padding-block-*`        | Vertical padding (top + bottom)          |
+| `padding-block-start-*`  | Top padding                              |
+| `padding-block-end-*`    | Bottom padding                           |
+| `margin-inline-*`        | Horizontal margin                        |
+| `margin-inline-start-*`  | Start-side margin                        |
+| `margin-inline-end-*`    | End-side margin                          |
+| `margin-block-*`         | Vertical margin                          |
+| `margin-block-start-*`   | Top margin                               |
+| `margin-block-end-*`     | Bottom margin                            |
+| `col-gap-*`              | Column gap                               |
+| `row-gap-*`              | Row gap                                  |
+
+Example:
+
+```html
+<div class="padding-inline-200 padding-block-100">
+    Content with horizontal 16px and vertical 8px padding
+</div>
+
+<div class="margin-inline-start-300 margin-block-end-200">
+    Content with 24px start margin and 16px bottom margin
+</div>
+```
+
+## All available spacing scales
+
+The following scales are available for all utility prefixes (`padding-`, `padding-inline-`, `padding-inline-start-`, `padding-inline-end-`, `padding-block-`, `padding-block-start-`, `padding-block-end-`, `margin-`, `margin-inline-`, `margin-inline-start-`, `margin-inline-end-`, `margin-block-`, `margin-block-start-`, `margin-block-end-`, `gap-`, `col-gap-`, `row-gap-`):
+
+| Scale | Value |
+| :---: | ----: |
+|   0   |   0px |
+|  25   |   2px |
+|  50   |   4px |
+|  75   |   6px |
+|  100  |   8px |
+|  125  |  10px |
+|  150  |  12px |
+|  175  |  14px |
+|  200  |  16px |
+|  250  |  20px |
+|  300  |  24px |
+|  400  |  32px |
+|  450  |  36px |
+|  500  |  40px |
+|  600  |  48px |
+|  700  |  56px |
+|  800  |  64px |
+|  900  |  72px |
+
+## CSS variables
+
+Use CSS Variables, import `variables.css`.
+
+You can also use the underlying CSS variables directly in your styles:
+
+```css
+.my-element {
+    padding: var(--md-sys-measurement-space200);
+    margin: var(--md-sys-measurement-space100);
+    gap: var(--md-sys-measurement-space300);
+}
+```
+
+Available variables:
+
+- `--md-sys-measurement-space0` through `--md-sys-measurement-space900`

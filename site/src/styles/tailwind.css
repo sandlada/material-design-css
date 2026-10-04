@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@import "@sandlada/material-design-css/preset.css";
+@import "@sandlada/material-design-css/prebuilt-colors/content/h150c60t60-2025.css";
+@import "@sandlada/material-design-css/prebuilt-palettes/content/h150c60t60-2025-minimal.css";
+@import "@sandlada/material-design-css/palette/tw.css";
+@import "@sandlada/material-design-css/color/tw.css";
+@import "@sandlada/material-design-css/motion/tw.css";
+@import "@sandlada/material-design-css/motion/utilities.css";
+@import "@sandlada/material-design-css/shape/tw.css";
+@import "@sandlada/material-design-css/space/tw.css";
+@import "@sandlada/material-design-css/space/variables.css";
+@import "@sandlada/material-design-css/space/utilities.css";
+@import "@sandlada/material-design-css/typography/tw.css";
+@import "@sandlada/material-design-css/typography/variables.css";
+@import "@sandlada/material-design-css/typography/utilities.css";
+
+* {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font-mono: "Noto Sans Mono", "Jetbrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --md-ref-typeface-plain: "Noto Sans", "Noto Sans Mono", "Jetbrains Mono", "Noto Sans TC", "Noto Sans SC";
+}
+
+body {
+    background-color: var(--md-sys-color-surface-container);
+}
+
+.block {
+    display: block;
+}
+
+.box {
+    height: 96px;
+    width: 96px;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.slide-box {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    animation-name: slide-box-animation;
+    animation-iteration-count: infinite;
+}
+@keyframes slide-box-animation {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+.grow-box {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    animation-name: grow-box-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+@keyframes grow-box-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.card {
+    background-color: var(--md-sys-color-surface-container-low);
+    border-radius: 16px;
+    margin: 12px 0px 24px;
+    padding: 12px 24px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+}
+
+[hidden] {
+    display: none;
+}
+
+:root[initiating],
+:root[initiating] * {
+    transition: none !important;
+    transition-property: none !important;
+    transition-duration: 0s !important;
+}
+
+.custom-text {
+    font-family: var(--md-sys-typescale-display-large-font);
+    font-size: var(--md-sys-typescale-title-large-size);
+    font-weight: var(--md-sys-typescale-headline-medium-weight);
+    line-height: var(--md-sys-typescale-body-large-line-height);
+    letter-spacing: var(--md-sys-typescale-label-large-tracking);
+}

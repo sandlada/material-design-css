@@ -51,18 +51,23 @@
         "url": "https://github.com/sandlada/material-design-css.git"
     },
     "type": "module",
-    "version": "3.0.0-20260611.b",
+    "version": "3.0.1-20261004.a",
+    "workspaces": [
+        "site"
+    ],
     "scripts": {
-        "make-prebuild": "node make-prebuild-color.ts"
+        "make-prebuild": "node make-prebuild-color.ts",
+        "site:dev": "npm run dev --workspace site",
+        "site:build": "npm run build --workspace site",
+        "site:preview": "npm run preview --workspace site"
+    },
+    "overrides": {
+        "vite": "^7"
     },
     "devDependencies": {
         "@material/material-color-utilities": "^0.4.0",
         "@sandlada/mcu-helper": "^0.1.0-20260830.a",
-        "@tailwindcss/vite": "^4.3.3",
-        "@types/node": "^26.6.4",
-        "tailwindcss": "^4.3.3",
-        "typescript": "^7.0.2",
-        "vite": "^8.3.2"
+        "@types/node": "^26.6.4"
     },
     "dependencies": {
     }

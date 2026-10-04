@@ -1,0 +1,285 @@
+---
+import type { MarkdownLayoutProps } from "astro"
+import Header, { type IHeaderProps } from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import NavigationDrawer from "../components/NavigationDrawer.astro"
+import PageMeta, { type IPageMetaProps } from "../components/PageMeta.astro"
+import RootHTML from "./RootHTML.astro"
+
+type Props = MarkdownLayoutProps<{
+    headerProps: IHeaderProps
+    pageMetaProps: IPageMetaProps
+}>
+
+const { frontmatter } = Astro.props
+---
+
+<RootHTML>
+    <PageMeta {...frontmatter.pageMetaProps} slot="head" />
+
+    <!-- Fix dark mode transition issue -->
+    <script is:inline>
+        const stored = localStorage.getItem('theme-config')
+        if(stored) {
+            const themeConfig = JSON.parse(stored)
+            if(themeConfig.isDark) {
+                document.documentElement.setAttribute('initiating', '')
+                document.documentElement.toggleAttribute('dark', true)
+                document.documentElement.removeAttribute('initiating')
+            }
+        }
+    </script>
+
+    <!-- Import Modules from https://esm.sh/ -->
+    <script is:inline type="importmap" slot="head">
+        {
+            "imports": {
+                "@sandlada/document-context": "https://esm.sh/@sandlada/document-context@0.0.1-20260430.d"
+            }
+        }
+    </script>
+
+    <!-- Inject themeConfig object into document element. -->
+    <script is:inline type="module" slot="head">
+        import { enhanceDocument } from '@sandlada/document-context';
+        enhanceDocument();
+
+        try {
+            document.dispatchEvent(new Event('theme:init-from-local-storage'))
+        } catch {
+        } finally {
+        }
+    </script>
+
+    <Header title={frontmatter.headerProps.title} />
+
+    <main class="content">
+        <NavigationDrawer />
+        <article class="article">
+            <div class="container" id="article-container">
+                <slot />
+                <Footer />
+            </div>
+        </article>
+    </main>
+</RootHTML>
+
+<!-- Transform the ASTRO-BUILT-IN tables into Material-Design tables -->
+<script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+        /**
+         * @type {NodeListOf<HTMLTableElement>}
+         */
+        const tables = document.querySelectorAll(".article table")
+
+        tables.forEach((table) => {
+            const div = document.createElement("div")
+            div.classList.add("table-wrapper")
+            div.appendChild(table.cloneNode(true))
+            table.after(div)
+            table.remove()
+        })
+    })
+</script>
+
+<!-- Transform Circle SVG -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const svgHtml = `<svg aria-hidden="true" width="100%" height="8" fill="none" xmlns="http://www.w3.org/2000/svg"><pattern id="a" width="91" height="8" patternUnits="userSpaceOnUse"><g clip-path="url(#clip0_2426_11367)"><path d="M114 4c-5.067 4.667-10.133 4.667-15.2 0S88.667-.667 83.6 4 73.467 8.667 68.4 4 58.267-.667 53.2 4 43.067 8.667 38 4 27.867-.667 22.8 4 12.667 8.667 7.6 4-2.533-.667-7.6 4s-10.133 4.667-15.2 0S-32.933-.667-38 4s-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0-10.133-4.667-15.2 0-10.133 4.667-15.2 0" stroke="var(--md-sys-color-outline-variant)" stroke-linecap="square"></path></g></pattern><rect width="100%" height="100%" fill="url(#a)"></rect></svg>`
+        const articleContainer = document.querySelector(`#article-container`)
+
+        const hrs = articleContainer?.querySelectorAll(`h2`)
+
+        if(!hrs) {
+            return
+        }
+
+        for(const e of hrs.values()) {
+            const svg = document.createElement('div')
+            svg.classList.add('divider')
+            svg.setHTMLUnsafe(svgHtml)
+            e.before(svg)
+        }
+    })
+</script>
+
+<style>
+    .content {
+        display: flex;
+        max-height: calc(100svh - 56px);
+        overflow: hidden;
+        transition: all 250ms;
+    }
+
+    .article {
+        flex-grow: 1;
+        flex-shrink: 1;
+        transition: all 250ms;
+        overflow: auto;
+        background: var(--md-sys-color-surface);
+
+        @media (min-width: 600px) {
+            border-radius: 28px;
+            margin-inline: 12px;
+            margin-block-end: 12px;
+        }
+
+    }
+</style>
+
+<style is:global>
+    @reference "../styles/tailwind.css";
+
+    .divider {
+        display: block;
+        margin-top: 48px;
+    }
+
+    .container {
+        box-sizing: border-box;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 24px;
+        overflow: auto;
+
+        @media (width >=640px) {
+            max-width: 640px;
+        }
+
+        @media (width >=768px) {
+            max-width: 768px;
+        }
+
+        @media (width >=1024px) {
+            max-width: 1024px;
+        }
+
+        @media (width >=1280px) {
+            max-width: 1280px;
+        }
+    }
+
+    .article {
+        width: 100%;
+        overflow: auto;
+
+        h1,
+        h2,
+        h3 {
+            margin: 48px 0px 24px;
+        }
+
+        p {
+            margin: 12px 0px;
+        }
+
+        h1 {
+            @apply emphasized-display-large;
+        }
+        h2 {
+            @apply display-medium;
+        }
+        h3 {
+            @apply headline-medium;
+        }
+        a,
+        p {
+            @apply body-large;
+        }
+        a {
+            all: unset;
+            cursor: pointer;
+            color: var(--md-sys-color-tertiary);
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
+        ul {
+            margin: 24px 0px;
+            padding-inline-start: 44px;
+            li {
+                margin-top: 4px;
+                margin-bottom: 4px;
+                list-style-type: disc;
+                @apply body-large;
+            }
+        }
+        ul code,
+        p > code {
+            padding-inline-start: 6px;
+            padding-inline-end: 6px;
+            background-color: var(--md-sys-color-surface-container);
+            border-radius: 4px;
+            @apply body-large;
+        }
+        pre {
+            background-color: var(--md-sys-color-surface) !important;
+            border: 1px solid var(--md-sys-color-outline-variant);
+            border-radius: 16px;
+            padding: 12px 24px;
+            margin: 12px 0px 32px;
+            @apply body-medium;
+
+            & > code {
+                & > .line {
+                    & > span {
+                        color: light-dark(var(--shiki-light), var(--shiki-dark));
+                    }
+                }
+            }
+        }
+
+        & .table-wrapper {
+            overflow: auto;
+            width: fit-content;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 24px;
+            margin-bottom: 24px;
+            border-radius: 18px;
+            border-width: 2px;
+            border-color: var(--md-sys-color-outline);
+
+            & table {
+                all: unset;
+                font-size: 14px;
+                overflow: auto;
+                & tr,
+                & td {
+                    text-wrap: wrap;
+                    text-overflow: ellipsis;
+                    white-space: wrap;
+                    word-wrap: break-word;
+                    overflow: auto;
+                }
+
+                & :is(thead, tbody) > tr > :is(th, td) {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    min-width: 1.5rem;
+                    text-align: start;
+                    overflow: auto;
+                    overflow: auto;
+                }
+
+                & :is(thead, tbody) {
+                    color: var(--md-sys-color-on-surface);
+                }
+
+                & thead {
+                    font-weight: 700;
+                    background-color: var(--md-sys-color-secondary-container);
+                    color: var(--md-sys-color-on-secondary-container);
+                }
+
+                & tbody tr:nth-of-type(2n) {
+                    background-color: var(--md-sys-color-surface-container);
+                }
+            }
+        }
+    }
+</style>

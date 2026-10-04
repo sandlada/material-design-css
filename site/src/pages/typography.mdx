@@ -1,0 +1,178 @@
+---
+layout: ../layouts/Document.astro
+
+headerProps:
+  title: "Typography"
+
+pageMetaProps:
+  title: "Typography Type Scale - Material Design CSS"
+  description: "Material Design 3 typography tokens with @sandlada/material-design-css. 30 styles: display, headline, title, body, and label in large/medium/small sizes, plus emphasized variants. Individual font, size, weight, line-height, and tracking tokens. Supports TailwindCSS v4."
+  keywords: "Material Design typography, type scale, @sandlada/material-design-css, display-large, headline-medium, body-small, label-large, emphasized typography, CSS typography tokens, font utilities, TailwindCSS v4"
+---
+import ArticleComponentShow from "../components/ArticleComponentShow.astro";
+
+# Typography
+
+Typography includes 30 styles, including 15 classic styles and 15 emphasized styles. These 15 styles are composed of 5 parts:
+
+- Display
+- Headline
+- Title
+- Body
+- Label
+
+Each part has three sizes:
+
+- Large
+- Medium
+- Small
+
+Each of the 30 styles has a single token that captures all the default properties. Tokens are separated into the baseline and emphasized sets. Each axis and property, such as font, line height, size, tracking, and weight, also has an individual token for greater customization.
+
+For a detailed description of M3 Typography, see [Definition of M3 Typography](https://m3.material.io/styles/typography/type-scale-tokens).
+
+## Import
+
+### For CSS
+
+```css
+@import "@sandlada/material-design-css/typography/utilities.css";
+@import "@sandlada/material-design-css/typography/variables.css";
+```
+
+### For TailwindCSS v4
+
+```css
+@import "tailwindcss";
+@import "@sandlada/material-design-css/typography/tw.css";
+```
+
+The `tw.css` provides the following utility classes for each style:
+
+- `font-{style}` — font-family
+- `text-{style}` — font-size
+- `tracking-{style}` — letter-spacing
+- `leading-{style}` — line-height
+- `font-weight-{style}` — font-weight
+
+For example: `font-display-large`, `text-display-large`, `tracking-display-large`, `leading-display-large`, `font-weight-display-large`.
+
+The `utilities.css` provides the combined class:
+
+- `{style}` — applies all typography properties at once
+
+For example: `display-large`, `headline-medium`, `body-small`.
+
+## Usage
+
+### Classic Style
+
+<ArticleComponentShow>
+    <span class="block display-large">display-large</span>
+    <span class="block display-medium">display-medium</span>
+    <span class="block display-small">display-small</span>
+    <span class="block headline-large">headline-large</span>
+    <span class="block headline-medium">headline-medium</span>
+    <span class="block headline-small">headline-small</span>
+    <span class="block title-large">title-large</span>
+    <span class="block title-medium">title-medium</span>
+    <span class="block title-small">title-small</span>
+    <span class="block body-large">body-large</span>
+    <span class="block body-medium">body-medium</span>
+    <span class="block body-small">body-small</span>
+    <span class="block label-large">label-large</span>
+    <span class="block label-medium">label-medium</span>
+    <span class="block label-small">label-small</span>
+</ArticleComponentShow>
+
+```html
+<section>
+    <span class="block display-large">display-large</span>
+    <span class="block display-medium">display-medium</span>
+    <span class="block display-small">display-small</span>
+    <span class="block headline-large">headline-large</span>
+    <span class="block headline-medium">headline-medium</span>
+    <span class="block headline-small">headline-small</span>
+    <span class="block title-large">title-large</span>
+    <span class="block title-medium">title-medium</span>
+    <span class="block title-small">title-small</span>
+    <span class="block body-large">body-large</span>
+    <span class="block body-medium">body-medium</span>
+    <span class="block body-small">body-small</span>
+    <span class="block label-large">label-large</span>
+    <span class="block label-medium">label-medium</span>
+    <span class="block label-small">label-small</span>
+</section>
+```
+
+### Emphasized Style
+
+<ArticleComponentShow>
+    <span class="block emphasized-display-large">display-large</span>
+    <span class="block emphasized-display-medium">display-medium</span>
+    <span class="block emphasized-display-small">display-small</span>
+    <span class="block emphasized-headline-large">headline-large</span>
+    <span class="block emphasized-headline-medium">headline-medium</span>
+    <span class="block emphasized-headline-small">headline-small</span>
+    <span class="block emphasized-title-large">title-large</span>
+    <span class="block emphasized-title-medium">title-medium</span>
+    <span class="block emphasized-title-small">title-small</span>
+    <span class="block emphasized-body-large">body-large</span>
+    <span class="block emphasized-body-medium">body-medium</span>
+    <span class="block emphasized-body-small">body-small</span>
+    <span class="block emphasized-label-large">label-large</span>
+    <span class="block emphasized-label-medium">label-medium</span>
+    <span class="block emphasized-label-small">label-small</span>
+</ArticleComponentShow>
+
+```html
+<section>
+    <span class="block emphasized-display-large">display-large</span>
+    <span class="block emphasized-display-medium">display-medium</span>
+    <span class="block emphasized-display-small">display-small</span>
+    <span class="block emphasized-headline-large">headline-large</span>
+    <span class="block emphasized-headline-medium">headline-medium</span>
+    <span class="block emphasized-headline-small">headline-small</span>
+    <span class="block emphasized-title-large">title-large</span>
+    <span class="block emphasized-title-medium">title-medium</span>
+    <span class="block emphasized-title-small">title-small</span>
+    <span class="block emphasized-body-large">body-large</span>
+    <span class="block emphasized-body-medium">body-medium</span>
+    <span class="block emphasized-body-small">body-small</span>
+    <span class="block emphasized-label-large">label-large</span>
+    <span class="block emphasized-label-medium">label-medium</span>
+    <span class="block emphasized-label-small">label-small</span>
+</section>
+```
+
+### Individual property tokens
+
+For fine-grained control, you can use individual property tokens to customize specific aspects of typography.
+
+<ArticleComponentShow>
+    <span class="custom-text">Custom typography using individual tokens</span>
+</ArticleComponentShow>
+
+```html
+<span class="custom-text">Custom typography using individual tokens</span>
+
+<style>
+    .custom-text {
+        font-family: var(--md-sys-typescale-display-large-font);
+        font-size: var(--md-sys-typescale-title-large-size);
+        font-weight: var(--md-sys-typescale-headline-medium-weight);
+        line-height: var(--md-sys-typescale-body-large-line-height);
+        letter-spacing: var(--md-sys-typescale-label-large-tracking);
+    }
+</style>
+```
+
+Available individual property tokens follow this pattern:
+
+- `--md-sys-typescale-{style}-font`
+- `--md-sys-typescale-{style}-size`
+- `--md-sys-typescale-{style}-weight`
+- `--md-sys-typescale-{style}-line-height`
+- `--md-sys-typescale-{style}-tracking`
+
+Replace `{style}` with any of the 15 style names (e.g., `display-large`, `body-medium`, `label-small`).

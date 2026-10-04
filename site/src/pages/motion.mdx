@@ -1,0 +1,247 @@
+---
+layout: ../layouts/Document.astro
+
+headerProps:
+  title: "Motion"
+
+pageMetaProps:
+  title: "Motion Easing & Duration - Material Design CSS"
+  description: "Material Design 3 motion tokens with @sandlada/material-design-css. Animation and transition utilities for easing (emphasized, standard), duration (short to extra-long), and spring effects. Supports TailwindCSS v4."
+  keywords: "Material Design motion, easing, duration, @sandlada/material-design-css, animation utilities, transition utilities, emphasized easing, standard easing, spring animation, CSS motion tokens, TailwindCSS v4"
+---
+import ArticleComponentShow from "../components/ArticleComponentShow.astro";
+
+# Motion
+
+Motion consists of three parts:
+
+- Easing
+  - emphasized
+  - emphasized-decelerate
+  - emphasized-accelerate
+  - standard
+  - standard-decelerate
+  - standard-accelerate
+- Duration
+  - short1
+  - short2
+  - short3
+  - short4
+  - medium1
+  - medium2
+  - medium3
+  - medium4
+  - long1
+  - long2
+  - long3
+  - long4
+  - extra-long1
+  - extra-long2
+  - extra-long3
+  - extra-long4
+- Springs
+  - expressive-fast-spatial
+  - expressive-default-spatial
+  - expressive-slow-spatial
+  - expressive-fast-effects
+  - expressive-default-effects
+  - expressive-slow-effects
+  - standard-fast-spatial
+  - standard-default-spatial
+  - standard-slow-spatial
+  - standard-fast-effects
+  - standard-default-effects
+  - standard-slow-effects
+
+For a detailed description of M3 Motion, see [Definition of M3 Motion](https://m3.material.io/styles/motion/easing-and-duration/tokens-specs).
+
+## Import
+
+### For CSS
+
+```css
+@import "@sandlada/material-design-css/motion/utilities.css";
+@import "@sandlada/material-design-css/motion/variables.css";
+```
+
+### For TailwindCSS v4
+
+```css
+@import "tailwindcss";
+@import "@sandlada/material-design-css/motion/tw.css";
+```
+
+## Usage
+
+### Duration
+
+All duration utilities are available for both animations and transitions: `animation-duration-*` and `transition-duration-*`.
+
+<ArticleComponentShow noBoundary>
+<div class="flex flex-col">
+    <div class="slide-box bg-primary animation-duration-short1"></div>
+    <div class="slide-box bg-primary animation-duration-short2"></div>
+    <div class="slide-box bg-primary animation-duration-short3"></div>
+    <div class="slide-box bg-primary animation-duration-short4"></div>
+    <div class="slide-box bg-primary animation-duration-medium1"></div>
+    <div class="slide-box bg-primary animation-duration-medium2"></div>
+    <div class="slide-box bg-primary animation-duration-medium3"></div>
+    <div class="slide-box bg-primary animation-duration-medium4"></div>
+    <div class="slide-box bg-primary animation-duration-long1"></div>
+    <div class="slide-box bg-primary animation-duration-long2"></div>
+    <div class="slide-box bg-primary animation-duration-long3"></div>
+    <div class="slide-box bg-primary animation-duration-long4"></div>
+    <div class="slide-box bg-primary animation-duration-extra-long1"></div>
+    <div class="slide-box bg-primary animation-duration-extra-long2"></div>
+    <div class="slide-box bg-primary animation-duration-extra-long3"></div>
+    <div class="slide-box bg-primary animation-duration-extra-long4"></div>
+</div>
+</ArticleComponentShow>
+
+```html
+<div class="flex flex-col">
+    <div class="slide-box bg-primary animation-duration-short1"></div>
+    <div class="slide-box bg-primary animation-duration-short2"></div>
+    <div class="slide-box bg-primary animation-duration-short3"></div>
+    <div class="slide-box bg-primary animation-duration-short4"></div>
+    <div class="slide-box bg-primary animation-duration-medium1"></div>
+    <div class="slide-box bg-primary animation-duration-medium2"></div>
+    <div class="slide-box bg-primary animation-duration-medium3"></div>
+    <div class="slide-box bg-primary animation-duration-medium4"></div>
+    <div class="slide-box bg-primary animation-duration-long1"></div>
+    <div class="slide-box bg-primary animation-duration-long2"></div>
+    <div class="slide-box bg-primary animation-duration-long3"></div>
+    <div class="slide-box bg-primary animation-duration-long4"></div>
+    <div class="slide-box bg-primary animation-duration-extra-long1"></div>
+    <div class="slide-box bg-primary animation-duration-extra-long2"></div>
+    <div class="slide-box bg-primary animation-duration-extra-long3"></div>
+    <div class="slide-box bg-primary animation-duration-extra-long4"></div>
+</div>
+
+<style>
+    .flex {
+        display: flex;
+        overflow: auto;
+    }
+
+    .flex-col {
+        flex-direction: column;
+    }
+
+    .slide-box {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        animation-name: slide-box-animation;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes slide-box-animation {
+        from {
+            left: 0;
+        }
+
+        to {
+            left: 100%;
+        }
+    }
+</style>
+```
+
+### Easing
+
+The same applies to easing: `animation-easing-*` pairs with `transition-easing-*`.
+
+<ArticleComponentShow noBoundary>
+<div class="grid grid-cols-3 gap-8 py-4 items-center justify-items-center">
+    <div class="grow-box bg-primary animation-easing-emphasized"></div>
+    <div class="grow-box bg-primary animation-easing-emphasized-decelerate"></div>
+    <div class="grow-box bg-primary animation-easing-emphasized-accelerate"></div>
+    <div class="grow-box bg-primary animation-easing-standard"></div>
+    <div class="grow-box bg-primary animation-easing-standard-decelerate"></div>
+    <div class="grow-box bg-primary animation-easing-standard-accelerate"></div>
+</div>
+</ArticleComponentShow>
+
+```html
+<div class="grid grid-cols-3 gap-8 py-4 items-center justify-items-center">
+    <div class="grow-box bg-primary animation-easing-emphasized"></div>
+    <div class="grow-box bg-primary animation-easing-emphasized-decelerate"></div>
+    <div class="grow-box bg-primary animation-easing-emphasized-accelerate"></div>
+    <div class="grow-box bg-primary animation-easing-standard"></div>
+    <div class="grow-box bg-primary animation-easing-standard-decelerate"></div>
+    <div class="grow-box bg-primary animation-easing-standard-accelerate"></div>
+</div>
+
+<style>
+.grow-box {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    animation-name: grow-box-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+@keyframes grow-box-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+</style>
+```
+
+### Springs
+
+<ArticleComponentShow noBoundary>
+<div class="grid grid-cols-3 gap-8 py-4 items-center justify-items-center">
+    <div class="grow-box bg-primary animation-easing-expressive-fast-spatial"></div>
+    <div class="grow-box bg-primary animation-easing-expressive-default-spatial"></div>
+    <div class="grow-box bg-primary animation-easing-expressive-slow-spatial"></div>
+    <div class="grow-box bg-primary animation-easing-standard-fast-spatial"></div>
+    <div class="grow-box bg-primary animation-easing-standard-default-spatial"></div>
+    <div class="grow-box bg-primary animation-easing-standard-slow-spatial"></div>
+</div>
+</ArticleComponentShow>
+
+```html
+<div class="grid grid-cols-3 gap-8 py-4 items-center justify-items-center">
+    <div class="grow-box bg-primary animation-easing-expressive-fast-spatial"></div>
+    <div class="grow-box bg-primary animation-easing-expressive-default-spatial"></div>
+    <div class="grow-box bg-primary animation-easing-expressive-slow-spatial"></div>
+    <div class="grow-box bg-primary animation-easing-standard-fast-spatial"></div>
+    <div class="grow-box bg-primary animation-easing-standard-default-spatial"></div>
+    <div class="grow-box bg-primary animation-easing-standard-slow-spatial"></div>
+</div>
+
+<style>
+.grow-box {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    animation-name: grow-box-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+@keyframes grow-box-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+</style>
+```
