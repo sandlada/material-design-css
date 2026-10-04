@@ -52,13 +52,18 @@
     },
     "type": "module",
     "version": "3.0.0-20260611.b",
+    "scripts": {
+        "make-prebuild": "node make-prebuild-color.ts"
+    },
     "devDependencies": {
         "@material/material-color-utilities": "^0.4.0",
-        "@sandlada/material-theme-cli": "^1.0.0-20260525.a",
-        "@tailwindcss/vite": "^4.3.0",
-        "@types/node": "^25.9.2",
-        "tailwindcss": "^4.3.0",
-        "typescript": "^6.0.3",
-        "vite": "^8.0.16"
+        "@sandlada/mcu-helper": "^0.1.0-20260830.a",
+        "@tailwindcss/vite": "^4.3.3",
+        "@types/node": "^26.6.4",
+        "tailwindcss": "^4.3.3",
+        "typescript": "^7.0.2",
+        "vite": "^8.3.2"
+    },
+    "dependencies": {
     }
 }
